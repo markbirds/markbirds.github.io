@@ -271,6 +271,7 @@ li{
   border-bottom-style: solid;
   border-bottom-width: 1px;
   border-bottom-color: #cdd3d8;
+  text-align: center;
 }
 
 .card-header a{
