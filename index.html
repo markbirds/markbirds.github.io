@@ -4,161 +4,136 @@
   <title>Hi! I'm Owen</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="static/styles.css">
   <style>
-    .center {
-      margin: auto;
-      width: 50%;
-    }
-    @media screen and (max-width: 992px) {
-      .center {
-      margin: auto;
-      width: 95%;
-      }
-    }
+
   </style>
 </head>
-<body>
+<body onload="typeWriter()">
 <div id="owen">
 </div>
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-  <a class="navbar-brand" onclick="topFunction()" style="cursor: pointer;">Hi! I'm Owen</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="collapsibleNavbar">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="#about">About me</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#project">Projects</a>
-      </li>  
-      <li class="nav-item">
-        <a class="nav-link" href="#socials">My Socials</a>
-      </li>  
-    </ul>
-  </div>  
-</nav>
-<div class="text-center text-dark p-5 mt-5">
-  <p class="display-3">Hi! I'm Owen.</p>
-  <p class="display-4" style="font-size: 30px;">Welcome to my website!</p>
+
+<div class="topnav" id="myTopnav">
+  <a onclick="topFunction()" id="logo">Hi! I'm Owen</a>
+  <a href="#about">About me</a>
+  <a href="#project">Projects</a>
+  <a href="#socials">My Socials</a>
+  <a href="javascript:void(0);" style="padding: 5px;" class="icon_container icon" onclick="drop_menu(this)">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+  </a>
+</div>
+<div class="progress-container">
+  <div class="progress-bar" id="myBar"></div>
+</div>  
+<div class="header">
+  <p class="display-3" id="type"></p>
+  <p class="display-4" style="font-size: 30px;" id="type2"></p>
   <div id="about"></div>
 </div>
-<div class="container-fluid"> <!-- container -->
-<div class="row bg-dark text-light"> <!-- row -->
-  <div class="col-lg-6 p-3">
+<div class="container"> <!-- container -->
+<div class="row"> <!-- row -->
+  <div class="column-left">
     <div class="card">
-     <img class="card-img-top mx-auto d-block" src="images/profile.jpg" alt="Card image" style="width:50%">     
-      <div class="card-body text-center text-dark">
-        <h4 class="card-title">Owen Patrick Falculan</h4>
-        <p class="card-text">Currently taking BS Information Technology at Batangas State University.</p>
-        <p class="card-text">Program of Study: Business Analytics Track</p>
+     <img src="images/profile.jpg" alt="Profile Picture" style="width:50%">     
+      <div style="padding: 20px;">
+        <p style="font-size: 24px;font-weight: 600;margin: 15px;">Owen Patrick Falculan</p>
+        <p>Currently taking BS Information Technology at Batangas State University.</p>
+        <p style="margin-top: 15px;">Program of Study:<br> Business Analytics Track</p>
       </div>
     </div>
   </div> <!-- col-sm-4 -->
-  <div class="col-lg-6 p-3"><!-- col-sm-8 -->
+  <div class="column-right"><!-- col-sm-8 -->
     <div><!-- About me -->
-      <div>
-        <h3>About me</h3>        
-      </div>
-      <div class="my-4">
-      <p class="text-justify">
+      <div style="text-align: center;">
+        <p style="font-size: 30px;font-weight: 600;margin-bottom: 20px;">About me</p>       
+    </div>
         <ul>
           <li>Started learning Computer Programming in 2019 with C++. Nothing special, just learned that your code must be in int main and functions outside of it. We also learned Java for Object Oriented Programming. Got interested in learning gui than classes. And then Python which is my favorite programming language. This is the time where I actually learned the concept of programming and why it exists in this world.</li>
           <li>Learned Web Development last April 2020 cause there's nothing else to do, it's pandemic.</li>
-          <li>I do self-recording since I bought a webcam and think of a way to use it. I upload my videos on Youtube, no editing, low quality video and audio,but still receiving "You are a legend" and "Thank you" comments. Mostly the views from my channel comes from my videos answering computer networking activities in netacad. I also have playlists in Excel, making simple projects and Data Structures and Algorithms. You can check out my channel at this <a class="text-light" href="https://www.youtube.com/channel/UCoTHZEIuf_LuQs24--uRHUg" target="_blank"><u>link</u></a>.</li>
+          <li>I do self-recording since I bought a webcam and think of a way to use it. I upload my videos on Youtube, no editing, low quality video and audio,but still receiving "You are a legend" and "Thank you" comments. Mostly the views from my channel comes from my videos answering computer networking activities in netacad. I also have playlists in Excel, making simple projects and Data Structures and Algorithms. You can check out my channel at this <a style="color: #fff;" href="https://www.youtube.com/channel/UCoTHZEIuf_LuQs24--uRHUg" target="_blank"><u>link</u></a>.</li>
         </ul>    
-      </div>
     </div><!-- About me -->
     
   </div> <!-- col-sm-8 -->
 </div> <!-- row -->
 
-<div><!-- Skills / Education -->
-  <div class="mt-5 mb-4"><!-- Navs -->
-    <!-- Nav tabs -->
-  <ul class="nav nav-tabs" role="tablist">
-    <li class="nav-item w-50">
-      <a class="nav-link active text-center text-dark" data-toggle="tab" href="#skills">
-      <h4>Skills</h4> 
-      </a>
-    </li>
-    <li class="nav-item w-50">
-      <a class="nav-link text-center text-dark" data-toggle="tab" href="#education">
-      <h4>Education</h4> 
-      </a>
-    </li>
-  </ul>
+<div style="margin: 50px 20px"><!-- Skills / Education --> 
+  <div class="tab">
+    <div class="tablinks" onclick="openTab(event, 'skills')" id="defaultOpen" style="font-size: 20px; font-weight: 500;">
+       Skills
+    </div>
+    <div class="tablinks" onclick="openTab(event, 'education')" style="font-size: 20px;font-weight: 500;">Education</div>
+  </div>
+
   <!-- Tab panes -->
-  <div class="tab-content">
-  <div id="skills" class="container tab-pane active"><br>
+  <div id="skills" class="tabcontent">
     <ul>
-      <li>Programming</li>
-      <dd class="m-0">C++ / Java / Python</dd>
+      <li>Fundamentals of Programming</li>
       <li>Web Development</li>
-      <dd class="m-0">HTML / CSS / Bootstrap / Javascript / PHP / Python Flask</dd>
+      <dd>HTML / CSS / Javascript / PHP</dd>
+      <li>Frameworks and Libraries</li>
+      <dd>Bootstrap / Flask / Django / Jquery</dd>
       <li>Data Structures and Algorithms</li>
       <li>SQL</li>
-      <li>Data Analysis and Visualization in MS Excel</li>
+      <li>Microsoft Excel</li>
       <li>Data Analysis and Visualization in Python</li>
-      <dd class="m-0">Pandas / Matplotlib / Seaborn</dd>
+      <dd>Pandas / Matplotlib / Seaborn</dd>
       <li>Familiarity with Machine Learning</li>
-      <dd class="m-0">Regression / Classification / Clustering / scikit-learn</dd>
+      <dd>Regression / Classification / Clustering / scikit-learn</dd>
       <li>Cisco</li>
-      <span id="project"></span>
       <dd>Introduction to Networks / Switching,Routing,Wireless Essentials</dd>
     </ul>
   </div>
-  <div id="education" class="container tab-pane fade"><br>
+
+  <div id="education" class="tabcontent">
+    <p style=" font-weight: 500;font-size: 18px;margin: 5px 0px">BS Information Technology</p>
     <p>
-      <span class="font-weight-bold" style="font-size: 18px;">BS Information Technology</span><br>
       Business Analytics Track<br>
       Batangas State University<br>
       Expected to graduate in 2022<br>
     </p>
+    <p style="font-weight: 500;font-size: 18px;margin: 5px 0px">Senior High School</p>
     <p>
-      <span class="font-weight-bold" style="font-size: 18px;">Senior High School</span><br>
       Science, Technology, Engineering, and Mathematics Strand<br>
       The Mabini Academy<br>
       2016-2018<br>
     </p>
+    <p style="font-weight: 500;font-size: 18px;margin: 5px 0px">Junior High School</p>
     <p>
-      <span class="font-weight-bold" style="font-size: 18px;">Junior High School</span><br>
       The Mabini Academy<br>
       2012-2016<br>
     </p>
+    
   </div>
-  </div>
-
-  <!-- Tab panes -->
-</div><!-- Navs -->
+  <span id="project"></span>
 </div><!-- Skills / Education -->
-
-<div class="bg-dark text-light row my-3">
-  <div class="col-sm-12">
-    <div class="text-center py-3">
-      <h3>Projects</h3>
+  <div style="background-color: #343a40;padding-bottom: 30px;">
+    <div style="text-align: center;color: #fff;padding: 10px 0px;">
+      <p style="font-size: 30px;font-weight: 600;">Projects</p>   
     </div>
     <div class="center" id="projects"></div>
-    <div id="socials" class="my-4 text-light text-center">
-      See more of my projects at my <a class="text-light" href="https://github.com/markbirds" target="_blank"><u>github</u></a>.
+    <div id="socials" style="text-align: center;color: #fff;margin-top: 30px;">
+      See more of my projects at my <a style="color: #fff;" href="https://github.com/markbirds" target="_blank"><u>github</u></a>.
     </div>
   </div>
-</div>
 
-<div class="text-dark row my-3">
-  <div class="col-sm-12">
-    <div class="text-center py-3">
-      <h3>My socials</h3>
+<div style="padding: 0px 30px 30px;">
+    <div style="text-align: center;padding:20px;">
+      <p style="font-size: 30px;font-weight: 600;">My socials</p>  
     </div>
 
-    <div class="card bg-primary text-white center my-2">
-      <div class="card-body clearfix">
+    <div class="card-social center" style="background-color: #007bff;">
+      <div class="card-body-social">
         <div>
-          <i class='fab fa-twitter float-left' style='font-size:48px;color:white'></i>
-          <div class="float-right py-2">
-            <a class="text-light" href="https://twitter.com/bosstalong" target="_blank">
+          <div style="float: left;">
+            <i class='fab fa-twitter' style='font-size:48px;color:white'></i>
+          </div>
+
+          <div style="float: right;padding-top: 10px;">
+            <a class="card-social-link" href="https://twitter.com/bosstalong" target="_blank">
               <u>
                 View my tweets.
               </u>
@@ -168,12 +143,14 @@
       </div>
     </div>
 
-    <div class="card bg-danger text-white center my-2">
-      <div class="card-body clearfix">
+    <div class="card-social center" style="background-color: #dc3545;">
+      <div class="card-body-social">
         <div>
-          <i class='fab fa-youtube float-left' style='font-size:48px;color:white'></i>
-          <div class="float-right py-2">
-            <a class="text-light" href="https://www.youtube.com/channel/UCoTHZEIuf_LuQs24--uRHUg" target="_blank">
+          <div style="float: left;">
+            <i class='fab fa-youtube' style='font-size:48px;color:white'></i>
+          </div>
+          <div style="float: right;padding-top: 10px;">
+            <a class="card-social-link" href="https://www.youtube.com/channel/UCoTHZEIuf_LuQs24--uRHUg" target="_blank">
               <u>
                 Watch my videos.
               </u>
@@ -182,12 +159,16 @@
         </div>
       </div>
     </div>
-    <div class="card bg-dark text-white center my-2">
-      <div class="card-body clearfix">
+
+    <div class="card-social center" style="background-color: #343a40;">
+      <div class="card-body-social">
         <div>
-          <i class='fab fa-github float-left' style='font-size:48px;color:white'></i>
-          <div class="float-right py-2">
-            <a class="text-light" href="https://github.com/markbirds" target="_blank">
+          <div style="float: left;">
+            <i class='fab fa-github' style='font-size:48px;color:white'></i>
+          </div>
+
+          <div style="float: right;padding-top: 10px;">
+            <a class="card-social-link" href="https://github.com/markbirds" target="_blank">
               <u>
                 See my repos.
               </u>
@@ -196,80 +177,40 @@
         </div>
       </div>
     </div>
+
   </div>
-</div>
 
 </div> <!-- container -->
 
-<div class="bg-dark text-center text-dark p-3">
-  <div>
+<footer>
+  <div class="social-icons">
     <a class="text-secondary" href="https://www.facebook.com/owenpatrick.falculan" target="_blank">
-     <i class='fab fa-facebook-square p-1' style='font-size:36px'></i>      
+     <i class='fab fa-facebook-square p-1'></i>      
     </a>
     <a class="text-secondary" href="https://twitter.com/bosstalong" target="_blank">
-     <i class='fab fa-twitter-square p-1' style='font-size:36px'></i>      
+     <i class='fab fa-twitter-square p-1'></i>      
     </a>
     <a class="text-secondary" href="https://www.instagram.com/owenfalculan/" target="_blank">
-     <i class='fab fa-instagram p-1' style='font-size:36px'></i>      
+     <i class='fab fa-instagram p-1'></i>      
     </a>
     <a class="text-secondary" href="https://www.youtube.com/channel/UCoTHZEIuf_LuQs24--uRHUg" target="_blank">
-     <i class='fab fa-youtube p-1' style='font-size:36px'></i>      
+     <i class='fab fa-youtube p-1'></i>      
     </a>
     <a class="text-secondary" href="https://github.com/markbirds" target="_blank">
-     <i class='fab fa-github-square p-1' style='font-size:36px'></i>          
+     <i class='fab fa-github-square p-1'></i>          
     </a>
   </div>
-  <div class="my-2 text-secondary">
+  <div style="margin-top: 10px;">
     <i class='fas fa-envelope p-1' style='font-size:24px'></i>
     <span>fowenpatrick@gmail.com</span>
-  </div>
-  <div class="text-secondary mt-3">
     <p>&copy; 2020 | markbirds</p>
-  </div>
-  <div class="text-secondary">
-    <p>Last updated on 9/15/2020</p>
-  </div>
-  <div>
     <a class="text-secondary" onclick="topFunction()" style="cursor: pointer;"><u>Back to Top</u></a>
   </div>
-</div>
-
+</footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.6.7/jquery.timeago.min.js"></script>
-
-<script>
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
-$(document).ready(function(){
-  $.get('https://api.github.com/users/markbirds/repos',function(data){
-    var projects = ["C-Phone","Password-Manager","Resistor-Color-Coding","Used-Car-Price-Prediction","PHP-Login-Signup"];
-    var project_name = ["C++ Phone","Password Manager","PHP Login-Signup","Resistor Color Coding","Used Car Price Prediction"];
-    var tag_colors = ["primary","success","danger","warning","info","dark"]
-    var counter = 0;
-    var cards = "";
-    for(var i=0;i<data.length;i++){
-      if(projects.includes(data[i].name)){
-        cards+=
-        '<div class="card bg-light text-dark my-2">'+
-          '<div class="card-header"><h5><a class="text-dark" href="'+data[i].html_url+'" target="_blank">'+ project_name[counter] +'</a></h5></div>'+
-          '<div class="card-body">'+
-          '<p>' + data[i].description + '</p>' +
-          '<p>Created ' + jQuery.timeago(data[i].created_at)  + '</p>' +
-          '<p>Tags: <span class="badge badge-'+ tag_colors[Math.floor((Math.random() * 6))] +'">' + data[i].language + '</span></p>' + 
-          '</div>' +
-        '</div>';
-        counter++;
-      }
-    }
-    $('#projects').html(cards);
-  });
-});
-
-</script>
+<script src="static/script.js"></script>
 </body>
 </html>
 
