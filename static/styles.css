@@ -355,6 +355,10 @@ footer{
   padding: 20px 0px;
 }
 
+.social-icons a{
+  text-decoration: none;
+}
+
 .social-icons i{
   font-size:36px;
   color:#6c757d;
