@@ -45,7 +45,7 @@ $(document).ready(function(){
       if(projects.includes(data[i].name)){
         cards+=
         '<div class="card-project">'+
-          '<div class="card-header"><h5><a href="'+data[i].html_url+'" target="_blank">'+ project_name[counter] +'</a></h5></div>'+
+          '<div class="card-header"><h5>'+ project_name[counter] +'</h5></div>'+
           '<div class="card-body">'+
           '<p>' + data[i].description + '</p>' +
           '<p style="margin-top: 10px;"><strong>Source Code: </strong><a href="'+ data[i].html_url +'" target="_blank">'+ data[i].html_url +'</a></p>' +

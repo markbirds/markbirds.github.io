@@ -28,17 +28,17 @@ html {
 .loader-wrapper img{
   margin-top: -5%;
   animation-name: fade-in;
-  animation-duration: 1s;
+  animation-duration: 3s;
 }
 
 @keyframes fade-in{
   from { 
     transform: rotate(0deg);
-    width: 50px;
+    max-width: 50px;
   }
   to { 
-    transform: rotate(360deg);
-    width: 200px;
+    transform: rotate(1080deg);
+    max-width: 200px;
   }
 }
 
@@ -110,7 +110,7 @@ nav {
 
 li{
   line-height: 25px;
-  margin-left: 30px;
+  margin-left: 20px;
 }
 
 .about-me {
@@ -238,6 +238,9 @@ li{
     margin: 10px 0px;
     border-radius: 8px;
     color: $dark-color;
+    a{
+      color: $dark-color;
+    }
     .card-header{
       padding: 20px;
       font-size: 24px;
@@ -245,10 +248,6 @@ li{
       border-top-right-radius: 8px;
       border-bottom: 1px solid #e6eaec;
       text-align: center;
-      a{
-        text-decoration: none;
-        color: $dark-color;
-      }
     }   
     .card-body{
       padding: 10px 20px;  
