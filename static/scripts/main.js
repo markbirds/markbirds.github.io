@@ -18,7 +18,7 @@ function openTab(evt, tabName) {
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
   }
-  tablinks = document.getElementsByClassName("tablinks");
+  tablinks = document.querySelectorAll(".skills-education .tab div");
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
@@ -36,8 +36,8 @@ function topFunction() {
 
 $(document).ready(function(){
   $.get('https://api.github.com/users/markbirds/repos',function(data){
-    var projects = ["C-Phone","Password-Manager","Resistor-Color-Coding","Used-Car-Price-Prediction","PHP-Login-Signup","Django-Code-Repo"];
-    var project_name = ["C++ Phone","Django Code Repo","Password Manager","PHP Login-Signup","Resistor Color Coding","Used Car Price Prediction"];
+    var projects = ["C-Phone","Password-Manager","Resistor-Color-Coding","Used-Car-Price-Prediction","PHP-Login-Signup","Django-Code-Repo","Flask-Chat-Rooms","Python-Chat-App"];
+    var project_name = ["C++ Phone","Django Code Repo","Flask Chat Rooms","Password Manager","PHP Login-Signup","Python Chat App","Resistor Color Coding","Used Car Price Prediction"];
     var tag_colors = ["primary","success","danger","warning","info","dark","secondary"]
     var counter = 0;
     var cards = "";
@@ -48,9 +48,10 @@ $(document).ready(function(){
           '<div class="card-header"><h5><a href="'+data[i].html_url+'" target="_blank">'+ project_name[counter] +'</a></h5></div>'+
           '<div class="card-body">'+
           '<p>' + data[i].description + '</p>' +
-          '<p>Created ' + jQuery.timeago(data[i].created_at)  + '</p>' +
-          '<p style="margin-top:5px;">Tags: <span class="badge badge-'+ tag_colors[Math.floor((Math.random() * 7))] +'">' + data[i].language + '</span></p>' + 
+          '<p style="margin-top: 10px;"><strong>Source Code: </strong><a href="'+ data[i].html_url +'" target="_blank">'+ data[i].html_url +'</a></p>' +
+          '<p><i>Created ' + jQuery.timeago(data[i].created_at)  + '</i></p>' +
           '</div>' +
+          '<p class="tags">Tags: <span class="badge-'+ tag_colors[Math.floor((Math.random() * 7))] +'">' + data[i].language + '</span></p>' + 
         '</div>';
         counter++;
       }
@@ -59,8 +60,18 @@ $(document).ready(function(){
   });
 });
 
+var prevScrollpos = window.pageYOffset;
 // When the user scrolls the page, execute myFunction 
-window.onscroll = function() {scroll()};
+window.onscroll = function() {
+  scroll();
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("myTopnav").style.top = "8px";
+  } else {
+    document.getElementById("myTopnav").style.top = "-50px";
+  }
+  prevScrollpos = currentScrollPos;
+};
 
 function scroll() {
   var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
@@ -68,6 +79,19 @@ function scroll() {
   var scrolled = (winScroll / height) * 100;
   document.getElementById("myBar").style.width = scrolled + "%";
 }
+
+function fadeOut(){
+  loader = $("#loader");
+  main = $("#main");
+  setTimeout(function(){
+    loader.fadeOut(1000);
+  },3000);   
+  setTimeout(function(){
+    main.css("display", "block");
+    typeWriter();
+  },4000);  
+
+}  
 
 var i = 0;
 var txt = "Hi I'm Owen";
@@ -92,6 +116,7 @@ function typeWriter2() {
   if (i2 < txt2.length) {
   document.getElementById("type2").innerHTML += txt2.charAt(i2);
   i2++;
-  setTimeout(typeWriter, speed2);
+  setTimeout(typeWriter2, speed2);
   }
 }
+
