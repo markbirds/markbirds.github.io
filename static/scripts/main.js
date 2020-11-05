@@ -36,8 +36,8 @@ function topFunction() {
 
 $(document).ready(function(){
   $.get('https://api.github.com/users/markbirds/repos',function(data){
-    var projects = ["C-Phone","Password-Manager","Resistor-Color-Coding","Used-Car-Price-Prediction","PHP-Login-Signup","Django-Code-Repo","Flask-Chat-Rooms","Python-Chat-App"];
-    var project_name = ["C++ Phone","Django Code Repo","Flask Chat Rooms","Password Manager","PHP Login-Signup","Python Chat App","Resistor Color Coding","Used Car Price Prediction"];
+    var projects = ["C-Phone","Password-Manager","Resistor-Color-Coding","Used-Car-Price-Prediction","PHP-Login-Signup","Django-Code-Repo","Flask-Chat-Rooms","Python-Chat-App","Django-Chat-Rooms"];
+    var project_name = ["C++ Phone","Django Chat Rooms","Django Code Repo","Flask Chat Rooms","Password Manager","PHP Login-Signup","Python Chat App","Resistor Color Coding","Used Car Price Prediction"];
     var tag_colors = ["primary","success","danger","warning","info","dark","secondary"]
     var counter = 0;
     var cards = "";
