@@ -72,9 +72,6 @@ nav {
   transition: top 0.3s;
   width: 80%;
 
-  a:first-child {
-    color: $dark-color;
-  }
   a{
     color: $dark-color;
     text-align: center;
@@ -84,9 +81,6 @@ nav {
   a:hover {
     color: darken($dark-color,20%);
     cursor: pointer;
-  }
-  .icon {
-    display: none;
   }
 }
 
