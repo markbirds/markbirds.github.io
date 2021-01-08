@@ -44,32 +44,45 @@ html {
   }
 }
 
+#particles-js {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  position: fixed;
+  z-index: -1;
+}
+
+main {
+  max-width: 80%;
+  margin: auto;
+}
+
 /* Navbar */
 nav {
   overflow: hidden;
-  background-color: $dark-color;
   line-height: 60px;
   height: 60px;
+  text-align: right;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: $light-color;
   position: fixed;
-  top: 8px;
+  top: 0;
   transition: top 0.3s;
-  width: 100%;
-  
+  width: 80%;
+
   a:first-child {
-    color: $light-color;
-    font-size: 20px;
+    color: $dark-color;
   }
   a{
-    color: $light-color;
+    color: $dark-color;
     text-align: center;
     padding: 0px 12px;
     text-decoration: none;
-    font-size: 16px;
-    font-family: $secondary-font;
-
   }
   a:hover {
-    color: darken($light-color,20%);
+    color: darken($dark-color,20%);
     cursor: pointer;
   }
   .icon {
@@ -77,37 +90,12 @@ nav {
   }
 }
 
-.progress-container {
-  position: fixed;
-  top: 0px;
-  width: 100%;
-  height: 8px;
-  background: $light-color;
-
-  div {
-    height: 8px;
-    background:$dark-color;
-    width: 0%;
-  }
-}
-
 .header{
   margin-top: 60px;
+  overflow: hidden;
   text-align: center;
   color: $dark-color;
-  padding: 60px;
-
-  .display-1 {
-    font-size: 4.5rem;
-    font-weight: 300;
-    line-height: 1.2;
-  }
-  
-  .display-2 {
-    font-size: 3.5rem;
-    font-weight: 300;
-    line-height: 1.2;
-  }
+  padding: 30px;
 }
 
 li{
@@ -115,206 +103,117 @@ li{
   margin-left: 20px;
 }
 
-.about-me {
+.profile {
+  margin: 10px 0px;
   display: flex;
   flex-direction: row;
-  background-color: $dark-color;
-
-  .about-me-profile {
-    flex: 50%;
-    padding: 20px;
-    color: $dark-color;
-
-    div{
-      border-radius: 5px; /* 5px rounded corners */
-      background-color: $light-color;
-      text-align: center;
-      padding: 20px 0px;  
-      img {
-        border-radius: 10px;
-        width:50%
-      }
-      section{
-        padding: 20px;
-        .name{
-          font-size: 24px;
-          font-weight: 600;
-          margin: 15px;
-        }
-      }
+  .profile-image {
+    flex: 50%; 
+    text-align: center;
+    img{
+      width: 60%;
     }
   }
   
-  .about-me-description {
+  .profile-description {
     flex: 50%;
-    color: $light-color;
-    padding: 20px 30px;
-    header{
-      margin-top: 0;
+    color: $dark-color;
+    padding: 20px 0 0 0;
+    display: flex;
+    align-items: center;
+    section{
       text-align: center;
-      font-size: 30px;
-      font-weight: 600;
-      margin-bottom: 20px;
-    }
-    a{
-      color: $light-color;
     }
   }
 }
 
-/* Skills / Education */
-
-.skills-education{
-  margin: 50px 20px;
-  .tab {
-    overflow: hidden;   
-    div {
-      background-color: inherit;
-      float: left;
-      border: none;
-      outline: none;
-      cursor: pointer;
-      padding: 14px 16px;
-      border-bottom: 1px solid #ccc;
-      width: 50%;
-      text-align: center;
-      border-radius: 2px;
+.about-me{
+  header{
+    text-align: center;
+  }
+  section{
+    max-width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    text-align: justify;
+  }
+  ul li{
+    margin: 10px 0;
+    a{
       color: $dark-color;
-      font-size: 20px; 
-      font-weight: 500;
-    }
-    div:hover {
-      padding-top: 13px;
-      border-top: 1px solid rgb(240, 239, 239);
-      border-left: 1px solid rgb(240, 239, 239);
-      border-right: 1px solid rgb(240, 239, 239);
-    }
-
-    /* Create an active/current tablink class */
-    div.active {
-      border-top: 1px solid #ccc;
-      border-left: 1px solid #ccc;
-      border-right: 1px solid #ccc;
-      border-bottom: none;
-      padding-top: 13px;
-    }
-  }
-
-  /* Style the tab content */
-  .tabcontent {
-    display: none;
-    padding: 40px 30px;
-    color: $dark-color;
-    .heading{
-      font-weight: 500;
-      font-size: 18px;
-      margin: 5px 0px
-    }
-  }
-  #skills{
-    li{
-      font-size: 18px;
-      font-weight: 500;
-    }
-    dd{
-      margin: 5px 0px;
-      margin-left: 30px;
     }
   }
 }
 
 .projects{
-  background-color: $dark-color;
-  padding-bottom: 30px;
-  margin-bottom: 0;
+  max-width: 80%;
+  margin: auto;
   header{
     text-align: center;
-    color: $light-color;
-    padding: 10px 0px;
-    font-size: 30px;
-    font-weight: 600;
-  }
-  .card-project {
-    border-radius: 5px; /* 5px rounded corners */
-    background-color: $light-color;
-    margin: 10px 0px;
-    border-radius: 8px;
     color: $dark-color;
-    a{
-      color: $dark-color;
-    }
-    .card-header{
-      padding: 20px;
-      font-size: 24px;
-      border-top-left-radius: 8px;
-      border-top-right-radius: 8px;
-      border-bottom: 1px solid #e6eaec;
-      text-align: center;
-    }   
-    .card-body{
-      padding: 10px 20px;  
-      p{
-        line-height: 30px;  
+  }
+  section{
+    .github-projects{
+      display: flex;
+      flex-wrap: wrap;
+      .card-project {
+        flex: 40%;
+        margin: 20px 5px;
+        border: 2px solid #e6eaec;
+        border-radius: 5px;
+        color: $dark-color;
+        a{
+          color: $dark-color;
+        }
+        .card-header{
+          font-size: 18px;
+          border-top-left-radius: 8px;
+          border-top-right-radius: 8px;
+          border-bottom: 1px solid #e6eaec;
+          text-align: center;
+          padding: 10px 0;
+        }   
+        .card-body{
+          overflow: hidden;
+          padding: 15px;
+          p{
+            line-height: 30px;
+          }
+          .description{
+            text-align: center;
+          }
+          .source-code{
+            margin: 20px 0 0 0;
+          }
+          div{
+            text-align: center;
+          }
+        }
       }
-
     }
-    .tags{
-      padding: 10px 20px;
-      border-top: 1px solid #e6eaec;
+    .github-link{
+      text-align: center;
+      color: $dark-color;
+      margin-top: 10px;
+      a{
+        color: $dark-color;
+      }
     }
-  }
-  #socials{
-    text-align: center;
-    color: $light-color;
-    margin-top: 30px;
-    a{
-      color: $light-color;
-    }
-  }
-}
-
-.socials{
-  padding: 0px 30px 30px;
-  header{
-    margin-top: 0;
-    text-align: center;
-    padding:20px;
-    font-size: 30px;
-    font-weight: 600;
-  }
-  .card-social{
-    border-radius: 8px;
-    margin-top: 10px;
-    .card-body-social{
-      overflow: auto;
-      padding: 25px;
-      align-items: center;
-    }
-    i{
-      font-size:48px;
-      color: $light-color;
-    }
-    a{
-      color: $light-color;
-      margin-top: 15px;
-    }
-  }
-  .twitter{
-    background-color: $primary-color;
-  }
-  .youtube{
-    background-color: $danger-color;
-  }
-  .github{
-    background-color: $dark-color;
   }
 }
 
 footer{
   text-align: center;
-  background-color: $dark-color;
-  color: #6c757d;
+  color: $dark-color;
   padding: 20px 0px;
+  margin-top: 10px;
+  div{
+    a{
+      font-size:30px;
+      text-decoration: none;
+      color: $dark-color;
+    }
+  }
 }
 
 

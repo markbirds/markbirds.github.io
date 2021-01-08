@@ -12,174 +12,76 @@
 <div id="loader" class="loader-wrapper">
   <img src="static/images/logo.png" alt="preloader">
 </div>
-  
-<main id="main" style="display: none;">
 
-<div id="owen">
-</div>
+
+<div id="particles-js"></div>
+<main style="display: none;">  
 
 <nav class="topnav" id="myTopnav">
-  <a onclick="topFunction()">Hi! I'm Owen</a>
-  <a href="#about">About me</a>
-  <a href="#project">Projects</a>
-  <a href="#socials">My Socials</a>
-  <a href="javascript:void(0);" style="padding: 5px;" class="icon_container icon" onclick="drop_menu(this)">
-      <div class="bar1"></div>
-      <div class="bar2"></div>
-      <div class="bar3"></div>
-  </a>
+  <a onclick="topFunction()" >Hi! I'm Owen</a>
+  <a href="#projects">Projects</a>
 </nav>
 
-<div class="progress-container">
-  <div id="myBar"></div>
-</div>  
-
 <header class="header">
-  <p class="display-1" id="type"></p>
-  <p class="display-2" style="font-size: 30px;" id="type2"></p>
-  <div id="about"></div>
+  <p class="display-4" id="type">What's up!</p>
+  <p class="display-1 my-1" id="type2">Welcome to my website!</p>
 </header>
 
-<article class="about-me">
-    <section class="about-me-profile">  <!-- column-left -->
-      <div>
-        <img src="static/images/profile.jpg" alt="Profile Picture">     
-        <section>
-          <p class="name">Owen Patrick Falculan</p>
-          <p>Currently taking BS Information Technology at Batangas State University.</p>
-          <p style="margin-top: 15px;">Program of Study:<br> Business Analytics Track</p>
-        </section>
-      </div>
-    </section> <!-- column-left -->
+<article class="profile">
+  <section class="profile-image">
+    <img src="static/images/profile.png" alt="Profile Picture">
+  </section> 
 
-    <section class="about-me-description">
-      <header>About me</header>
-        <div>
-          <ul>
-            <li>Started learning Computer Programming in 2019 with C++. Nothing special, just learned that your code must be in int main and functions outside of it. We also learned Java for Object Oriented Programming. Got interested in learning gui than classes. And then Python which is my favorite programming language. This is the time where I actually learned the concept of programming and why it exists in this world.</li>
-            <li>Learned Web Development last April 2020 cause there's nothing else to do, it's pandemic!!!</li>
-            <li>I do self-recording since I bought a webcam and think of a way to use it. I upload my videos on Youtube, no editing, low quality video and audio,but still receiving "You are a legend" and "Thank you" comments. Mostly the views from my channel comes from my videos answering computer networking activities in netacad. I also have playlists in Excel, making simple projects and Data Structures and Algorithms. You can check out my channel at this <a href="https://www.youtube.com/channel/UCoTHZEIuf_LuQs24--uRHUg" target="_blank"><u>link</u></a>.</li>
-          </ul>      
-        </div>
+    <section class="profile-description">
+      <section>
+        <p class="display-2">Owen Patrick Falculan</p>
+        <p class="my-1">IT student</p>
+      </section>
     </section>
 </article>
 
-<article class="skills-education">
-    <div class="tab">
-      <div onclick="openTab(event, 'skills')" id="defaultOpen">
-         Skills
-      </div>
-      <div onclick="openTab(event, 'education')">Education</div>
-    </div>
-  
-    <!-- Tab panes -->
-    <div id="skills" class="tabcontent">
-      <ul>
-        <li>Fundamentals of Programming</li>
-        <li>Web Development</li>
-        <dd>HTML / CSS / Sass / Javascript / PHP</dd>
-        <li>Frameworks and Libraries</li>
-        <dd>Bootstrap / Flask / Django / Jquery</dd>
-        <li>Data Structures and Algorithms</li>
-        <li>SQL</li>
-        <li>Microsoft Excel</li>
-        <li>Data Analysis and Visualization in Python</li>
-        <dd>Pandas / Matplotlib / Seaborn</dd>
-        <li>Familiarity with Machine Learning</li>
-        <dd>Regression / Classification / Clustering / scikit-learn</dd>
-        <li>Cisco</li>
-        <dd>Introduction to Networks / Switching,Routing,Wireless Essentials</dd>
-      </ul>
-    </div>
-  
-    <div id="education" class="tabcontent">
-      <p class="heading">BS Information Technology</p>
-      <p>
-        Business Analytics Track<br>
-        Batangas State University<br>
-        Expected to graduate in 2022<br>
-      </p>
-      <p class="heading">Senior High School</p>
-      <p>
-        Science, Technology, Engineering, and Mathematics Strand<br>
-        The Mabini Academy<br>
-        2016-2018<br>
-      </p>
-      <p class="heading">Junior High School</p>
-      <p>
-        The Mabini Academy<br>
-        2012-2016<br>
-      </p>
-      
-    </div>
-    <span id="project"></span>
+<article class="about-me my-3">
+  <header class="display-1">
+    About me
+  </header>
+  <section>
+    <ul>
+      <li>Started learning Computer Programming in 2019 with C++ as my first language. Learned Java for Object Oriented Programming. And then got introduced to Python where ... I just loved it.</li>
+      <li>Learned Web Development last April 2020 cause there's nothing else to do, it's pandemic!!!</li>
+      <li>Currently learning AI (Machine Leaning and Deep Learning).</li>
+      <li>I create contents in Youtube and most of my contents were unedited/raw clips of me doing networking activities, programming and many more. Here is the <a href="https://www.youtube.com/channel/UCoTHZEIuf_LuQs24--uRHUg" target="_blank"><u>link</u></a> of my channel and you can subscribe if you want.</li>
+      <li>My favorite outdoor sport is basketball and for the indoor sport is reverse checkers (perdigana).</li>
+    </ul>     
+  </section>
+  <span id="projects"></span>
 </article>
 
 <article class="projects">
-  <header>
-    Projects
+  <header class="display-1 my-1">
+    GitHub Projects
   </header>
   <section>
-    <div class="center" id="projects"></div>
-    <div id="socials">
+    <section class="github-projects"></section>
+    <div class="github-link">
       See more of my projects at my <a href="https://github.com/markbirds" target="_blank"><u>github</u></a>.
     </div>
   </section>
 </article>
 
-<article class="socials">
-  <header>My socials</header>
-    <div class="card-social center twitter">
-      <div class="card-body-social">
-          <div style="float: left;">
-            <i class='fab fa-twitter'></i>
-          </div>
-
-          <div style="float: right;padding-top: 10px;">
-            <a href="https://twitter.com/bosstalong" target="_blank">
-              <u>
-                View my tweets.
-              </u>
-            </a>
-          </div>
-      </div>
-    </div>
-
-    <div class="card-social center youtube">
-      <div class="card-body-social">
-          <div style="float: left;">
-            <i class='fab fa-youtube'></i>
-          </div>
-          <div style="float: right;padding-top: 10px;">
-            <a href="https://www.youtube.com/channel/UCoTHZEIuf_LuQs24--uRHUg" target="_blank">
-              <u>
-                Watch my videos.
-              </u>
-            </a>
-          </div>
-      </div>
-    </div>
-
-    <div class="card-social center github">
-      <div class="card-body-social">
-          <div style="float: left;">
-            <i class='fab fa-github'></i>
-          </div>
-
-          <div style="float: right;padding-top: 10px;">
-            <a href="https://github.com/markbirds" target="_blank">
-              <u>
-                See my repos.
-              </u>
-            </a>
-          </div>
-      </div>
-    </div>
-</article>
 
 <footer>
-  <div>
-    <p>&copy; 2020 | markbirds</p>
+    <div>
+      <a href="https://twitter.com/bosstalong" target="_blank">
+        <i class='fab fa-twitter'></i>      
+      </a>
+      <a href="https://www.youtube.com/channel/UCoTHZEIuf_LuQs24--uRHUg" target="_blank">
+        <i class='fab fa-youtube p-1'></i>      
+      </a>
+      <a href="https://github.com/markbirds" target="_blank">
+        <i class='fab fa-github p-1'></i>          
+      </a>
+    </div>
+    <p>&copy; 2021 | markbirds</p>
     <a class="text-secondary" onclick="topFunction()" style="cursor: pointer;"><u>Back to Top</u></a>
   </div>
 </footer>
@@ -189,6 +91,12 @@
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 <script src="static/scripts/jquery.timeago.min.js"></script>
 <script src="static/scripts/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script>
+  particlesJS.load('particles-js', 'static/particles.json', function() {
+    console.log('callback - particles.js config loaded');
+  });
+</script>
 </body>
 </html>
 
