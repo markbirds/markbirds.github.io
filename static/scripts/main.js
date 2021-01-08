@@ -38,7 +38,6 @@ $(document).ready(function(){
 var prevScrollpos = window.pageYOffset;
 // When the user scrolls the page, execute myFunction 
 window.onscroll = function() {
-  scroll();
   var currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
     document.getElementById("myTopnav").style.top = "0px";
