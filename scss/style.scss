@@ -83,11 +83,10 @@ nav {
 }
 
 .header{
-  margin-top: 60px;
   overflow: hidden;
   text-align: center;
   color: $dark-color;
-  padding: 30px;
+  padding: 80px 30px 30px 30px;
 }
 
 li{
@@ -207,20 +206,6 @@ footer{
     }
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 @import 'media';

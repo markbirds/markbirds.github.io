@@ -5,8 +5,8 @@ function topFunction() {
 
 $(document).ready(function(){
   $.get('https://api.github.com/users/markbirds/repos?per_page=100',function(data){
-    var projects = ["Anime-Recommendation-System","Django-Chat-Rooms","Mobile-Price-Classification","PHP-Login-Signup","Spam-Email-Classification","Used-Car-Price-Prediction"];
-    var project_name = ["Anime Recommendation System","Django Chat Rooms","Mobile Price Classification","PHP Login-Signup","Spam Email Classification","Used Car Price Prediction"];
+    var projects = ["Anime-Recommendation-System","Deep-Learning-Projects","Flask-Chat-Rooms","Machine-Learning-Projects","Natural-Language-Processing-Projects","Youtube-Contents"];
+    var project_name = ["Anime Recommendation System","Deep Learning Projects","Flask Chat Rooms","Machine Learning Projects","Natural Language Processing Projects","Youtube Contents"];
     var tag_colors = ["primary","success","danger","warning","info","dark","secondary"]
     var counter = 0;
     var cards = "";
