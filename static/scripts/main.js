@@ -11,7 +11,7 @@ $(document).ready(function(){
     var counter = 0;
     var cards = "";
     for(var i=0;i<data.length;i++){
-      if(projects.includes(data[i].name)){
+      if(projects.includes(data[i].name)){ 
         cards+=
         '<div class="card-project">'+
           '<div class="card-header">'+ 
