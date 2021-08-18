@@ -9,6 +9,7 @@ $light-color: #f8f9fa;
 // $dark-color: #3d3942;//390075 1b0137 393440
 $primary-font: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
 
+
 @for $i from 1 through 5 {
   .display-#{$i} {
     font-size: #{$i+0.5}rem;
