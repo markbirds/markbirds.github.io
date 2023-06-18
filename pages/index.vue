@@ -16,4 +16,8 @@ const loaded = ref(false)
 onMounted(() => {
   loaded.value = true;
 })
+
+useHead({
+  title: "Hi! I'm Owen",
+})
 </script>
