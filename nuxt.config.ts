@@ -6,4 +6,5 @@ export default defineNuxtConfig({
         'dayjs-nuxt',
         'nuxt-icon'
     ],
+    ssr: false
 })
