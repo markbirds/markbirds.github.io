@@ -1,5 +1,5 @@
 <template>
-  <section  class="transition-opacity duration-[2000ms] ease-in-out" :class="loaded ? 'opacity-100' : 'opacity-0'">
+  <section  class="transition-opacity duration-[1000ms] ease-in-out" :class="loaded ? 'opacity-100' : 'opacity-0'">
     <Profile/>
     <AboutMe/>
     <Gallery/>

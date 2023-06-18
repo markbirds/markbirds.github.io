@@ -34,7 +34,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr v-for="project of projects">
+        <tr v-for="project of projects" class="cursor-pointer" @click="openProject(project.html_url)">
           <td class="border-2 border-slate-100 p-3">{{ project.name }}</td>
           <td class="border-2 border-slate-100 p-3">{{ project.language }}</td>
           <td class="border-2 border-slate-100 p-3">{{ formatDate(project.created_at) }}</td>
@@ -99,6 +99,9 @@ const getProjects = async (page = 1) => {
   projects.value = results.value
 }
 
+const openProject = (url) => {
+  window.open(url)
+}
 
 onMounted(async () => {
   const { data: result } = await useFetch(
