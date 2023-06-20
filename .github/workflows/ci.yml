@@ -32,7 +32,7 @@ jobs:
         run: yarn lint
 
       - name: Generate
-        run: yarn generate
+        run: yarn generate && cp CNAME ./.output/public
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
