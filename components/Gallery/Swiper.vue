@@ -1,33 +1,33 @@
 <template>
   <swiper
-      :effect="'coverflow'"
-      :grabCursor="true"
-      :centeredSlides="true"
-      :slidesPerView="'auto'"
-      :loop="true"
-      :coverflowEffect="{
+    :effect="'coverflow'"
+    :grab-cursor="true"
+    :centered-slides="true"
+    :slides-per-view="'auto'"
+    :loop="true"
+    :coverflow-effect="{
       rotate: 50,
       stretch: 1,
       depth: 100,
       modifier: 1,
       slideShadows: true,
     }"
-      :autoplay="{
+    :autoplay="{
       delay: 2500,
       disableOnInteraction: false,
     }"
-      :pagination="true"
-      :modules="modules"
-      @autoplayTimeLeft="onAutoplayTimeLeft"
-      class="mySwiper"
+    :pagination="true"
+    :modules="modules"
+    class="mySwiper"
+    @autoplayTimeLeft="onAutoplayTimeLeft"
   >
-    <swiper-slide v-for="image of images">
-      <img :src="image" alt="image"/>
+    <swiper-slide v-for="image of images" :key="image">
+      <img :src="image" alt="image" />
     </swiper-slide>
 
     <template #container-end>
       <div class="autoplay-progress">
-        <svg viewBox="0 0 48 48" ref="progressCircle">
+        <svg ref="progressCircle" viewBox="0 0 48 48">
           <circle cx="24" cy="24" r="20"></circle>
         </svg>
         <span ref="progressContent"></span>
@@ -36,7 +36,7 @@
   </swiper>
 </template>
 <script>
-import { ref } from 'vue';
+import { ref } from "vue";
 // Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from "swiper/vue";
 
@@ -57,21 +57,19 @@ export default {
   props: {
     images: {
       type: Array,
-      default: () => []
+      default: () => [],
     },
-    test: String
   },
   setup() {
     const progressCircle = ref(null);
     const progressContent = ref(null);
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const onAutoplayTimeLeft = (s, time, progress) => {
-      progressCircle.value.style.setProperty('--progress', 1 - progress);
+      progressCircle.value.style.setProperty("--progress", 1 - progress);
       progressContent.value.textContent = `${Math.ceil(time / 1000)}s`;
     };
-    const testImage = "~assets/images/gallery/family1.png"
 
     return {
-      testImage,
       onAutoplayTimeLeft,
       progressCircle,
       progressContent,
@@ -115,9 +113,10 @@ export default {
 
 .autoplay-progress svg {
   --progress: 0;
+
   position: absolute;
   left: 0;
-  top: 0px;
+  top: 0;
   z-index: 10;
   width: 100%;
   height: 100%;

@@ -7,9 +7,8 @@
     </div>
     <div class="flex justify-center items-center">
       <span class="mx-2">Powered by</span>
-      <Icon name="logos:nuxt" size="64"/>
+      <Icon name="logos:nuxt" size="64" />
     </div>
   </section>
 </template>
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
