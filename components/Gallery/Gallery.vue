@@ -1,9 +1,9 @@
 <template>
   <section
-    class="mw-full md:w-[80%] lg:w-[60%] mx-4 md:mx-auto md:mt-24 my-16 text-gray-600 cursor-default"
+    class="mw-full mx-4 my-16 cursor-default text-gray-600 md:mx-auto md:mt-24 md:w-[80%] lg:w-[60%]"
   >
     <div
-      class="text-xl bg-gradient-to-r from-slate-600 text-slate-100 rounded-lg py-3 px-4 font-bold uppercase"
+      class="rounded-lg bg-gradient-to-r from-slate-600 px-4 py-3 text-xl font-bold uppercase text-slate-100"
     >
       Gallery
     </div>

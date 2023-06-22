@@ -1,15 +1,15 @@
 <template>
   <section
-    class="mw-full md:w-[80%] lg:w-[60%] mx-4 md:mx-auto md:mt-24 my-16 text-gray-600 cursor-default"
+    class="mw-full mx-4 my-16 cursor-default text-gray-600 md:mx-auto md:mt-24 md:w-[80%] lg:w-[60%]"
   >
     <div
-      class="text-xl bg-gradient-to-r from-slate-600 text-slate-100 rounded-lg py-3 px-4 font-bold uppercase"
+      class="rounded-lg bg-gradient-to-r from-slate-600 px-4 py-3 text-xl font-bold uppercase text-slate-100"
     >
       GitHub
     </div>
-    <section class="my-2 grid md:grid-cols-3 gap-2 w-full">
+    <section class="my-2 grid w-full gap-2 md:grid-cols-3">
       <section
-        class="bg-slate-100 rounded-lg transition hover:bg-slate-200 duration-500"
+        class="rounded-lg bg-slate-100 transition duration-500 hover:bg-slate-200"
       >
         <div class="bg-slate-200 p-3">
           <div>Public repositories: {{ profile.public_repos }}</div>
@@ -17,7 +17,7 @@
         </div>
       </section>
       <section
-        class="bg-slate-100 rounded-lg transition hover:bg-slate-200 duration-500"
+        class="rounded-lg bg-slate-100 transition duration-500 hover:bg-slate-200"
       >
         <div class="bg-slate-200 p-3">
           <div>Followers: {{ profile.followers }}</div>
@@ -25,7 +25,7 @@
         </div>
       </section>
       <section
-        class="bg-slate-100 rounded-lg transition hover:bg-slate-200 duration-500"
+        class="rounded-lg bg-slate-100 transition duration-500 hover:bg-slate-200"
       >
         <div class="bg-slate-200 p-3">
           <div>Date created: {{ formatDate(profile.created_at) }}</div>
@@ -35,7 +35,7 @@
     </section>
     <section class="overflow-x-auto">
       <table
-        class="w-full border-collapse bg-slate-50 border-2 border-slate-100 table-auto p-2 text-left"
+        class="w-full table-auto border-collapse border-2 border-slate-100 bg-slate-50 p-2 text-left"
       >
         <thead>
           <tr>
@@ -66,7 +66,7 @@
         </tbody>
       </table>
     </section>
-    <section class="flex justify-center cursor-pointer my-4">
+    <section class="my-4 flex cursor-pointer justify-center">
       <div>
         <Icon
           name="iconamoon:arrow-left-6-circle"

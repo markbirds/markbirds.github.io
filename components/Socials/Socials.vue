@@ -1,18 +1,18 @@
 <template>
   <section
-    class="mw-full md:w-[80%] lg:w-[60%] mx-4 md:mx-auto md:mt-24 my-16 text-gray-600 cursor-default"
+    class="mw-full mx-4 my-16 cursor-default text-gray-600 md:mx-auto md:mt-24 md:w-[80%] lg:w-[60%]"
   >
     <div
-      class="text-xl bg-gradient-to-r from-slate-600 text-slate-100 rounded-lg py-3 px-4 font-bold uppercase"
+      class="rounded-lg bg-gradient-to-r from-slate-600 px-4 py-3 text-xl font-bold uppercase text-slate-100"
     >
       Follow me
     </div>
-    <section class="my-2 grid md:grid-cols-3 gap-2 w-full text-center">
+    <section class="my-2 grid w-full gap-2 text-center md:grid-cols-3">
       <section
-        class="bg-slate-100 rounded-lg transition hover:bg-slate-200 duration-500"
+        class="rounded-lg bg-slate-100 transition duration-500 hover:bg-slate-200"
       >
         <div
-          class="flex justify-center items-center font-medium bg-slate-200 py-3"
+          class="flex items-center justify-center bg-slate-200 py-3 font-medium"
         >
           <span class="mx-1">Instagram</span>
           <Icon name="ri:instagram-fill" size="24" />
@@ -24,10 +24,10 @@
         </div>
       </section>
       <section
-        class="bg-slate-100 rounded-lg transition hover:bg-slate-200 duration-500"
+        class="rounded-lg bg-slate-100 transition duration-500 hover:bg-slate-200"
       >
         <div
-          class="flex justify-center items-center font-medium bg-slate-200 py-3"
+          class="flex items-center justify-center bg-slate-200 py-3 font-medium"
         >
           <span class="mx-1">LinkedIn</span>
           <Icon name="mdi:linkedin" size="24" />
@@ -42,10 +42,10 @@
         </div>
       </section>
       <section
-        class="bg-slate-100 rounded-lg transition hover:bg-slate-200 duration-500"
+        class="rounded-lg bg-slate-100 transition duration-500 hover:bg-slate-200"
       >
         <div
-          class="flex justify-center items-center font-medium bg-slate-200 py-3"
+          class="flex items-center justify-center bg-slate-200 py-3 font-medium"
         >
           <span class="mx-1">GitHub</span>
           <Icon name="ri:github-fill" size="24" />

@@ -1,16 +1,16 @@
 <template>
-  <section class="flex flex-col md:flex-row w-full md:w-[60%] mx-auto my-24">
-    <div class="flex justify-center md:justify-end flex-1 md:pr-10">
+  <section class="mx-auto my-24 flex w-full flex-col md:w-[60%] md:flex-row">
+    <div class="flex flex-1 justify-center md:justify-end md:pr-10">
       <img
-        class="rounded-full max-w-[250px]"
+        class="max-w-[250px] rounded-full"
         src="~assets/images/profile/profile_pic.jpg"
         alt="profile_pic1"
       />
     </div>
     <div
-      class="flex justify-center md:justify-start items-center flex-1 mt-10 md:mt-0"
+      class="mt-10 flex flex-1 items-center justify-center md:mt-0 md:justify-start"
     >
-      <div class="flex items-center font-sans text-gray-600 text-3xl">
+      <div class="flex items-center font-sans text-3xl text-gray-600">
         <span class="mr-2">Hey there! I'm Owen</span>
         <Icon name="twemoji:waving-hand" :horizontal-flip="evenSecond" />
       </div>
