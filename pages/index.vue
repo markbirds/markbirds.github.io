@@ -5,10 +5,9 @@
   >
     <Profile />
     <AboutMe />
+    <Favorites />
+    <SportsAndGames />
     <Gallery />
-    <Projects />
-    <Socials />
-    <Footer />
   </section>
 </template>
 <script setup lang="ts">

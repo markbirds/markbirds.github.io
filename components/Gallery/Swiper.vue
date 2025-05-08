@@ -1,130 +1,101 @@
 <template>
-  <swiper
-    :effect="'coverflow'"
-    :grab-cursor="true"
-    :centered-slides="true"
-    :slides-per-view="'auto'"
-    :loop="true"
-    :coverflow-effect="{
-      rotate: 50,
-      stretch: 1,
-      depth: 100,
-      modifier: 1,
-      slideShadows: true,
-    }"
-    :autoplay="{
-      delay: 2500,
-      disableOnInteraction: false,
-    }"
-    :pagination="true"
-    :modules="modules"
-    class="mySwiper"
-    @autoplayTimeLeft="onAutoplayTimeLeft"
-  >
-    <swiper-slide v-for="image of images" :key="image">
-      <img :src="image" alt="image" />
-    </swiper-slide>
-
-    <template #container-end>
-      <div class="autoplay-progress">
-        <svg ref="progressCircle" viewBox="0 0 48 48">
-          <circle cx="24" cy="24" r="20"></circle>
-        </svg>
-        <span ref="progressContent"></span>
+  <ClientOnly>
+    <div class="relative">
+      <swiper-container
+        ref="containerRef"
+        class="swiper-container bg-white bg-opacity-60 px-10 py-3"
+        :init="false"
+      >
+        <swiper-slide class="swiper-slide">
+          <img src="~/assets/images/gallery/pic1.jpeg" alt="pic1" />
+        </swiper-slide>
+        <swiper-slide class="swiper-slide">
+          <img src="~/assets/images/gallery/pic2.jpeg" alt="pic2" />
+        </swiper-slide>
+        <swiper-slide class="swiper-slide">
+          <img src="~/assets/images/gallery/pic3.jpg" alt="pic3" />
+        </swiper-slide>
+        <swiper-slide class="swiper-slide">
+          <img src="~/assets/images/gallery/pic4.jpeg" alt="pic4" />
+        </swiper-slide>
+        <swiper-slide class="swiper-slide">
+          <img src="~/assets/images/gallery/pic5.jpeg" alt="pic5" />
+        </swiper-slide>
+        <swiper-slide class="swiper-slide">
+          <img src="~/assets/images/gallery/pic6.jpeg" alt="pic6" />
+        </swiper-slide>
+        <swiper-slide class="swiper-slide">
+          <img src="~/assets/images/gallery/pic7.jpg" alt="pic7" />
+        </swiper-slide>
+        <swiper-slide class="swiper-slide">
+          <img src="~/assets/images/gallery/pic8.jpg" alt="pic8" />
+        </swiper-slide>
+        <swiper-slide class="swiper-slide">
+          <img src="~/assets/images/gallery/pic9.jpeg" alt="pic9" />
+        </swiper-slide>
+        <swiper-slide class="swiper-slide">
+          <img src="~/assets/images/gallery/pic10.jpeg" alt="pic10" />
+        </swiper-slide>
+        <swiper-slide class="swiper-slide">
+          <img src="~/assets/images/gallery/pic11.jpeg" alt="pic11" />
+        </swiper-slide>
+        <swiper-slide class="swiper-slide">
+          <img src="~/assets/images/gallery/pic12.jpeg" alt="pic12" />
+        </swiper-slide>
+        <swiper-slide class="swiper-slide">
+          <img src="~/assets/images/gallery/pic13.jpg" alt="pic13" />
+        </swiper-slide>
+        <swiper-slide class="swiper-slide">
+          <img src="~/assets/images/gallery/pic14.jpeg" alt="pic14" />
+        </swiper-slide>
+      </swiper-container>
+      <div class="flex justify-center gap-4">
+        <div class="swiper-button-prev">
+          <Icon
+            name="material-symbols:arrow-left-alt-rounded"
+            size="36"
+            :class="progressValue > 0 ? 'text-primary' : 'text-secondary'"
+          />
+        </div>
+        <div class="swiper-button-next">
+          <Icon
+            name="material-symbols:arrow-right-alt-rounded"
+            size="36"
+            :class="progressValue < 1 ? 'text-primary' : 'text-secondary'"
+          />
+        </div>
       </div>
-    </template>
-  </swiper>
+    </div>
+  </ClientOnly>
 </template>
-<script>
-import { ref } from "vue";
-// Import Swiper Vue.js components
-import { Swiper, SwiperSlide } from "swiper/vue";
+<script setup lang="ts">
+const containerRef = ref(null);
+const progressValue = ref(0);
 
-// Import Swiper styles
-import "swiper/css";
-
-import "swiper/css/effect-coverflow";
-import "swiper/css/pagination";
-
-// import required modules
-import { Autoplay, EffectCoverflow, Pagination } from "swiper";
-
-export default {
-  components: {
-    Swiper,
-    SwiperSlide,
+useSwiper(containerRef, {
+  slidesPerView: 4,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
-  props: {
-    images: {
-      type: Array,
-      default: () => [],
+  grid: {
+    fill: "row",
+    rows: 2,
+  },
+  spaceBetween: 10,
+  on: {
+    progress: (_, progress) => {
+      progressValue.value = progress;
     },
   },
-  setup() {
-    const progressCircle = ref(null);
-    const progressContent = ref(null);
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const onAutoplayTimeLeft = (s, time, progress) => {
-      progressCircle.value.style.setProperty("--progress", 1 - progress);
-      progressContent.value.textContent = `${Math.ceil(time / 1000)}s`;
-    };
-
-    return {
-      onAutoplayTimeLeft,
-      progressCircle,
-      progressContent,
-      modules: [Autoplay, EffectCoverflow, Pagination],
-    };
-  },
-};
+});
 </script>
-<style>
-.swiper {
-  width: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
 
-.swiper-slide {
-  background-position: center;
-  background-size: cover;
-  width: 300px;
-  height: 300px;
-}
-
+<style scoped>
 .swiper-slide img {
-  display: block;
-  width: 100%;
-}
-
-.autoplay-progress {
-  position: absolute;
-  right: 16px;
-  bottom: 16px;
-  z-index: 10;
-  width: 48px;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  color: var(--swiper-theme-color);
-}
-
-.autoplay-progress svg {
-  --progress: 0;
-
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 10;
   width: 100%;
   height: 100%;
-  stroke-width: 4px;
-  stroke: var(--swiper-theme-color);
-  fill: none;
-  stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
-  stroke-dasharray: 125.6;
-  transform: rotate(-90deg);
+  object-fit: cover;
+  border-radius: 12px;
 }
 </style>

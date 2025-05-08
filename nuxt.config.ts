@@ -1,17 +1,22 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+import { defineNuxtConfig } from "nuxt/config";
+
 export default defineNuxtConfig({
   app: {
     head: {
       title: "Hi! I'm Owen",
     },
   },
+  css: ["~/assets/css/tailwind.css", "~/assets/css/main.css"],
+
   modules: [
-    "@nuxtjs/tailwindcss",
-    "@nuxtjs/eslint-module",
-    "@nuxtjs/stylelint-module",
-    "nuxt-swiper",
     "dayjs-nuxt",
-    "nuxt-icon",
+    "@nuxtjs/tailwindcss",
+    "@nuxt/eslint",
+    "@nuxtjs/stylelint-module",
+    "@nuxt/icon",
+    "nuxt-swiper",
   ],
+
   ssr: false,
+  compatibilityDate: "2024-08-11",
 });
