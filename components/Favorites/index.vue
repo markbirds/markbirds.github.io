@@ -1,17 +1,18 @@
 <template>
-  <div class="bg-food py-8">
-    <section class="grid grid-cols-2 gap-4 mx-auto p-16 rounded-lg">
-      <div class="w-[80%] ml-auto">
+  <div id="favorites" class="bg-food py-1 sm:py-8">
+    <section
+      class="container grid grid-cols-1 gap-8 rounded-lg py-4 lg:grid-cols-2"
+    >
+      <div class="mx-auto w-full max-w-[500px]">
         <Divider>
           <template #title>
-            <span
-              class="flex items-center bg-white bg-opacity-60 p-2 rounded-xl"
-            >
+            <span class="section-title">
               <span class="mr-2">My Favorites </span>
-              <Icon name="twemoji:red-heart" />
+              <Icon name="twemoji:red-heart" size="24" class="animate-wiggle" />
             </span>
           </template>
         </Divider>
+        <Swiper v-if="mdView" effect="creative" @change="change" />
         <section class="min-h-[700px]">
           <keep-alive>
             <Movies v-show="index === 0" />
@@ -27,9 +28,7 @@
           </keep-alive>
         </section>
       </div>
-      <div class="flex items-center justify-center">
-        <Swiper @change="change" />
-      </div>
+      <Swiper v-if="!mdView" effect="cards" @change="change" />
     </section>
   </div>
 </template>
@@ -42,8 +41,25 @@ import Foods from "@/components/Favorites/Foods.vue";
 import Anime from "@/components/Favorites/Anime.vue";
 
 const index = ref(0);
+const windowWidth = ref(0);
 
 const change = (activeIndex: number) => {
   index.value = activeIndex;
 };
+
+const mdView = computed(() => windowWidth.value < 1024);
+
+onMounted(() => {
+  windowWidth.value = window.innerWidth;
+
+  const updateWidth = () => {
+    windowWidth.value = window.innerWidth;
+  };
+
+  window.addEventListener("resize", updateWidth);
+
+  onUnmounted(() => {
+    window.removeEventListener("resize", updateWidth);
+  });
+});
 </script>

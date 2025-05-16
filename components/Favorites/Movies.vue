@@ -1,16 +1,21 @@
 <template>
-  <section class="rounded-xl p-5" :class="loaded && 'bg-white bg-opacity-80'">
-    <div class="text-lg flex items-center leading-[2] text-justify">
-      I really enjoy sci-fi movies, especially ones with dystopian or
-      apocalyptic stories because they’re exciting and make you think. Knowing
-      (2009) is one of my favorites because of its mix of mystery, disaster, and
-      deeper themes that feel connected to God or angels. I’ve embedded the
-      trailer below if you want to check it out.
+  <section
+    class="rounded-xl px-3 py-3 sm:px-0"
+    :class="loaded && 'bg-white bg-opacity-60'"
+  >
+    <div class="text-justify text-lg leading-[2]">
+      I really enjoy sci-fi movies, especially those with dystopian or
+      apocalyptic themes. I like how different the settings are from everyday
+      life, and they make me imagine what it would be like to live in those
+      worlds. Knowing (2009) is one of my favorites because of how well the
+      story is written, and I find the connection to higher beings beyond humans
+      really fascinating. I’ve embedded the trailer below if you want to check
+      it out.
     </div>
     <div class="mt-8">
       <div
         v-if="!loaded"
-        class="flex justify-center items-center"
+        class="flex items-center justify-center"
         style="margin-top: 120px"
       >
         <Loading />
@@ -19,7 +24,7 @@
         <iframe
           style="border-radius: 12px"
           width="100%"
-          height="300"
+          height="350"
           class="mx-auto"
           src="https://www.youtube.com/embed/C2zSFElhgE0?si=eqzmPqDecSzpbd9A"
           title="YouTube video player"
@@ -30,9 +35,7 @@
           @load="loaded = true"
         ></iframe>
       </div>
-      <div class="mt-2 text-sm text-gray-500 italic text-center">
-        Knowing (2009) Trailer
-      </div>
+      <div class="media-description">Knowing (2009) Trailer</div>
     </div>
   </section>
 </template>

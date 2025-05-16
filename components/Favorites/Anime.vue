@@ -1,9 +1,9 @@
 <template>
   <section
-    class="rounded-xl p-5"
-    :class="allLoaded && 'bg-white bg-opacity-80'"
+    class="rounded-xl p-3"
+    :class="allLoaded && 'bg-white bg-opacity-60'"
   >
-    <div class="text-lg flex items-center leading-[2] text-justify">
+    <div class="text-justify text-lg leading-[2]">
       These are some of the anime shows I really enjoyed watching. For Bleach,
       the soundtrack hits just as hard as the fights, so I added a few of my
       favorite tracks below.
@@ -11,7 +11,7 @@
     <section class="my-8">
       <div
         v-if="!allLoaded"
-        class="flex justify-center items-center"
+        class="flex items-center justify-center"
         style="margin-top: 200px"
       >
         <Loading />

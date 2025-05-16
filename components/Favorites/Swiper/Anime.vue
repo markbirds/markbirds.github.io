@@ -1,7 +1,7 @@
 <template>
   <div class="flex items-center justify-center text-2xl">
     <div
-      class="flex items-center bg-white rounded-full py-1 px-4 bg-opacity-20 shadow-lg"
+      class="flex items-center rounded-full bg-white bg-opacity-20 px-4 py-1 shadow-lg"
     >
       <span>Anime</span>
       <Icon name="twemoji:television" class="ml-2" />
@@ -9,9 +9,9 @@
   </div>
   <div class="mt-10">
     <section>
-      <div class="flex items-center mb-2 mt-4">
+      <div class="mb-2 mt-4 flex items-center">
         <div
-          class="bg-white rounded-full w-7 h-7 flex items-center justify-center"
+          class="flex h-7 w-7 items-center justify-center rounded-full bg-white"
         >
           <Icon name="twemoji:crossed-swords" size="18" />
         </div>
@@ -26,15 +26,15 @@
           </a>
         </div>
       </div>
-      <div class="text-sm text-justify">
-        It’s a mix of awesome action and cool characters, all about a teen who
-        becomes a Soul Reaper to protect both the living and the dead.
+      <div class="text-justify text-sm">
+        A mix of epic action and cool characters. It follows a teen who becomes
+        a Soul Reaper to protect both the living and the dead.
       </div>
     </section>
     <section>
-      <div class="flex items-center mb-2 mt-4">
+      <div class="mb-2 mt-4 flex items-center">
         <div
-          class="bg-white rounded-full w-7 h-7 flex items-center justify-center"
+          class="flex h-7 w-7 items-center justify-center rounded-full bg-white"
         >
           <Icon name="twemoji:oncoming-fist-medium-light-skin-tone" size="20" />
         </div>
@@ -49,15 +49,15 @@
           </a>
         </div>
       </div>
-      <div class="text-sm text-justify">
-        This anime is hilarious! It’s about a superhero (bald) who’s so strong
-        he beats everyone in one punch.
+      <div class="text-justify text-sm">
+        This anime is hilarious! It’s about a superhero (bald) who’s so strong,
+        he defeats every enemy with just one punch.
       </div>
     </section>
     <section>
-      <div class="flex items-center mb-2 mt-4">
+      <div class="mb-2 mt-4 flex items-center">
         <div
-          class="bg-white rounded-full w-7 h-7 flex items-center justify-center"
+          class="flex h-7 w-7 items-center justify-center rounded-full bg-white"
         >
           <Icon name="twemoji:basketball" size="20" />
         </div>
@@ -72,10 +72,9 @@
           </a>
         </div>
       </div>
-      <div class="text-sm text-justify">
-        This one’s about Kuroko, a quiet player who’s amazing at passing and
-        wants to beat his old teammates, the “Generation of Miracles”, through
-        real teamwork.
+      <div class="text-justify text-sm">
+        It’s about Kuroko, a quiet but amazing passer who wants to take down his
+        old teammates — the “Generation of Miracles” — using real teamwork.
       </div>
     </section>
   </div>

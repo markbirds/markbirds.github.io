@@ -6,7 +6,7 @@ export default defineNuxtConfig({
       title: "Hi! I'm Owen",
     },
   },
-  css: ["~/assets/css/tailwind.css", "~/assets/css/main.css"],
+  css: ["~/assets/css/main.css"],
 
   modules: [
     "dayjs-nuxt",

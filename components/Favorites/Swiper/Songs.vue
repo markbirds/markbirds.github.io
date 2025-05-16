@@ -1,7 +1,7 @@
 <template>
   <div class="flex items-center justify-center text-2xl">
     <div
-      class="flex items-center bg-white rounded-full py-1 px-4 bg-opacity-20 shadow-lg"
+      class="flex items-center rounded-full bg-white bg-opacity-20 px-4 py-1 shadow-lg"
     >
       <span>Songs</span>
       <Icon name="logos:spotify-icon" class="ml-2" />
@@ -9,9 +9,9 @@
   </div>
   <div class="mt-10">
     <section>
-      <div class="flex items-center mb-2 mt-4">
+      <div class="mb-2 mt-4 flex items-center">
         <div
-          class="bg-white rounded-full w-7 h-7 flex items-center justify-center"
+          class="flex h-7 w-7 items-center justify-center rounded-full bg-white"
         >
           <Icon name="twemoji:smiling-face-with-heart-eyes" size="20" />
         </div>
@@ -26,16 +26,16 @@
           </a>
         </div>
       </div>
-      <div class="text-sm text-justify">
+      <div class="text-justify text-sm">
         This song is just so sweet. Jason Mraz’s voice is soothing, and the
-        lyrics really capture the feeling of loving someone in a calm, sincere
-        way.
+        lyrics beautifully capture the calm, sincere feeling of loving someone
+        unconditionally.
       </div>
     </section>
     <section>
-      <div class="flex items-center mb-2 mt-4">
+      <div class="mb-2 mt-4 flex items-center">
         <div
-          class="bg-white rounded-full w-7 h-7 flex items-center justify-center"
+          class="flex h-7 w-7 items-center justify-center rounded-full bg-white"
         >
           <Icon name="twemoji:smiling-face-with-hearts" size="20" />
         </div>
@@ -44,21 +44,21 @@
           <a
             href="https://open.spotify.com/track/2uImdLlBYr2PeGdzmWIYwJ?si=bebd1ab007ee4fc8"
             target="_blank"
-            class="ml-2 pt-1.5 text-decoration-none"
+            class="text-decoration-none ml-2 pt-1.5"
           >
             <Icon name="carbon:play-filled" size="24" color="#16a34a" />
           </a>
         </div>
       </div>
-      <div class="text-sm text-justify">
-        I love how this song feels so gentle and hopeful. It’s about holding on
-        to someone you care about, even when things are tough.
+      <div class="text-justify text-sm">
+        I love how gentle and hopeful this song feels. It’s about holding on to
+        someone you care about, even when things get tough.
       </div>
     </section>
     <section>
-      <div class="flex items-center mb-2 mt-4">
+      <div class="mb-2 mt-4 flex items-center">
         <div
-          class="bg-white rounded-full w-7 h-7 flex items-center justify-center"
+          class="flex h-7 w-7 items-center justify-center rounded-full bg-white"
         >
           <Icon name="twemoji:heart-with-ribbon" size="20" />
         </div>
@@ -67,15 +67,15 @@
           <a
             href="https://open.spotify.com/track/73Nw51XTNstlk3Wu1K26cB?si=360be6328a204497"
             target="_blank"
-            class="ml-2 pt-1.5 text-decoration-none"
+            class="text-decoration-none ml-2 pt-1.5"
           >
             <Icon name="carbon:play-filled" size="24" color="#16a34a" />
           </a>
         </div>
       </div>
-      <div class="text-sm text-justify">
-        This song just fits perfectly when I’m driving with my girlfriend, it’s
-        like the soundtrack to our little moments.
+      <div class="text-justify text-sm">
+        This one’s perfect for when I’m driving with my girlfriend. It feels
+        like the soundtrack to our little moments together.
       </div>
     </section>
   </div>

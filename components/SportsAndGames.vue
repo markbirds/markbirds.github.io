@@ -1,107 +1,90 @@
 <template>
-  <div class="bg-bathroom py-24">
-    <section class="w-[80%] mx-auto">
+  <div id="sports-and-games" class="bg-shapes py-8">
+    <div class="mx-auto max-w-[500px] lg:container">
       <Divider>
         <template #title>
-          <span class="flex items-center bg-white bg-opacity-60 p-2 rounded-xl">
+          <span class="section-title">
             <span class="mr-2">Sports and Games </span>
-            <Icon name="twemoji:basketball" />
+            <Icon name="twemoji:basketball" size="24" class="animate-wiggle" />
           </span>
         </template>
       </Divider>
-      <div>
-        <section
-          class="grid grid-cols-2 gap-4 bg-white bg-opacity-60 p-16 rounded-lg"
-        >
-          <div>
-            <div class="flex items-center justify-center p-2 rounded-xl">
-              <span class="mr-2 text-xl">Basketball </span>
-              <Icon name="twemoji:basketball" />
-            </div>
-            <div
-              class="text-lg flex items-center leading-[2] text-center bg-white bg-opacity-60 p-5 rounded-xl"
-            >
-              I play a lot of sports like volleyball, badminton, and table
-              tennis, but my absolute favorite is basketball. I don’t think I
-              have the moves, but what I do have is shooting. This is my one and
-              only basketball highlight video (yes, I dug it up from the grave).
-              We were losing badly, so the starters took a break and let me take
-              over — the greatest shooter ever (according to me).
-            </div>
+    </div>
+    <div class="py-0 lg:py-8">
+      <section class="container grid grid-cols-1 gap-8 lg:grid-cols-2">
+        <div class="mx-auto my-auto max-w-[500px]">
+          <div class="flex items-center justify-center">
+            <span class="mr-1 rounded-xl bg-white bg-opacity-60 p-2 text-lg"
+              >Basketball
+            </span>
+            <Icon name="twemoji:basketball" size="20" />
           </div>
-          <div
-            class="flex flex-col items-center justify-center w-full mr-auto bg-white bg-opacity-60"
+          <div class="section-description">
+            I play a lot of sports like volleyball, badminton, and table tennis,
+            but basketball is my absolute favorite. I’m not really “that” good
+            at sports, but it’s fun to play, especially with friends. This is my
+            one and only basketball highlight video (yes, I dug it up from the
+            grave). We were losing badly, so the starters took a break and let
+            me take over—the greatest shooter ever, just kidding.
+          </div>
+        </div>
+        <div class="bg-opacity-60 px-3 text-center sm:px-0">
+          <video
+            class="mx-auto w-full max-w-[500px] rounded-lg shadow-xl"
+            controls
+            preload="metadata"
           >
-            <video
-              class="w-full max-w-2xl mx-auto rounded-lg shadow-lg"
-              controls
-              preload="metadata"
-            >
-              <source src="/videos/basketball.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-            <div class="mt-2 text-sm text-gray-500 italic">
-              The greatest shot with the greatest cheers. (2017)
-            </div>
+            <source src="/videos/basketball.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div class="media-description">
+            The greatest shot with the greatest cheers. (2017)
           </div>
-        </section>
-        <section
-          class="grid grid-cols-2 gap-4 bg-white bg-opacity-60 p-16 rounded-lg"
-        >
-          <div
-            class="flex flex-col items-center justify-center bg-white bg-opacity-60"
-          >
-            <div>
-              <img
-                class="max-w-[500px] rounded-xl"
-                src="~assets/images/chess.jpeg"
-                alt="chess"
-              />
-            </div>
+        </div>
+      </section>
+      <section
+        class="container mt-8 flex flex-col-reverse gap-8 lg:mt-10 lg:flex-row"
+      >
+        <div class="mx-auto max-w-[500px] px-3 sm:px-0">
+          <img
+            class="w-full rounded-xl"
+            src="~assets/images/chess.jpeg"
+            alt="chess"
+          />
+        </div>
+        <div class="mx-auto my-auto max-w-[500px] flex-1">
+          <div class="flex items-center justify-center">
+            <span class="mr-1 rounded-xl bg-white bg-opacity-60 p-2 text-lg"
+              >Chess and Perdigana
+            </span>
+            <Icon name="twemoji:chess-pawn" size="20" />
           </div>
-          <div>
-            <div class="flex items-center justify-center p-2 rounded-xl">
-              <span class="mr-2 text-xl">Chess and Perdigana </span>
-              <Icon name="twemoji:chess-pawn" />
-            </div>
-            <div
-              class="text-lg flex items-center leading-[2] text-center bg-white bg-opacity-60 p-5 rounded-xl"
-            >
-              In the Philippines, there's this game called Dama where the goal
-              is to capture all your opponent’s pieces to win. It's kind of like
-              chess, but all the pieces move the same way. There's also a game
-              called Perdigana, which is the opposite because you win by losing
-              all your pieces. I actually like Perdigana more because it’s more
-              fun to play and it makes you think more about your strategy.
-            </div>
-            <div
-              class="text-lg flex items-center leading-[2] text-center bg-white bg-opacity-60 p-5 rounded-xl"
-            >
-              Sadly, it is hard to find someone to play with, even online, since
-              it is not really popular. So I decided to learn chess instead. I
-              started playing in March 2024, and yeah, I am still stuck at 500
-              Elo lol.
-            </div>
-            <div
-              class="text-lg flex items-center leading-[2] text-center bg-white bg-opacity-60 p-5 rounded-xl"
-            >
-              If you want to play with me, challenge me by clicking the button
-              below!
-            </div>
-            <div class="mt-5">
-              <a
-                class="btn-primary-blue flex items-center justify-center w-[150px] mx-auto"
-                href="https://link.chess.com/play/ui9YE2"
-                target="_blank"
-              >
-                <span class="mr-2 text-white">Let's play!</span>
-                <Icon name="twemoji:beaming-face-with-smiling-eyes" size="20" />
-              </a>
-            </div>
+          <div class="section-description">
+            Perdigana, if you didn’t know, is a game similar to checkers or dama
+            (a popular Filipino board game), but it’s the opposite because you
+            win by losing all your pieces. I first learned about it through
+            Sci-Dama, a game with similar rules but has calculations and points,
+            where I even participated in a competition. I actually like
+            Perdigana more than Dama because it’s faster to play and more fun.
           </div>
-        </section>
-      </div>
-    </section>
+          <div class="section-description">
+            Since Perdigana isn’t very popular and it’s hard to find players,
+            even online, I learned chess instead. If you have the time, let’s
+            play!
+          </div>
+          <div class="mt-5">
+            <a
+              class="btn-primary-blue mx-auto flex w-[180px] items-center justify-center"
+              href="https://www.chess.com/member/markbirds"
+              target="_blank"
+            >
+              <span class="mr-2 text-white">Challenge me!</span>
+              <Icon name="twemoji:beaming-face-with-smiling-eyes" size="20" />
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
   </div>
 </template>
 <script setup lang="ts">

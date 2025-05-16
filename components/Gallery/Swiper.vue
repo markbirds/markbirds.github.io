@@ -3,7 +3,7 @@
     <div class="relative">
       <swiper-container
         ref="containerRef"
-        class="swiper-container bg-white bg-opacity-60 px-10 py-3"
+        class="swiper-container bg-white bg-opacity-60"
         :init="false"
       >
         <swiper-slide class="swiper-slide">
@@ -48,20 +48,26 @@
         <swiper-slide class="swiper-slide">
           <img src="~/assets/images/gallery/pic14.jpeg" alt="pic14" />
         </swiper-slide>
+        <swiper-slide class="swiper-slide">
+          <img src="~/assets/images/gallery/pic15.jpg" alt="pic15" />
+        </swiper-slide>
+        <swiper-slide class="swiper-slide">
+          <img src="~/assets/images/gallery/pic16.jpg" alt="pic16" />
+        </swiper-slide>
       </swiper-container>
-      <div class="flex justify-center gap-4">
+      <div class="mt-5 flex justify-center gap-4">
         <div class="swiper-button-prev">
           <Icon
             name="material-symbols:arrow-left-alt-rounded"
             size="36"
-            :class="progressValue > 0 ? 'text-primary' : 'text-secondary'"
+            class="text-primary"
           />
         </div>
         <div class="swiper-button-next">
           <Icon
             name="material-symbols:arrow-right-alt-rounded"
             size="36"
-            :class="progressValue < 1 ? 'text-primary' : 'text-secondary'"
+            class="text-primary"
           />
         </div>
       </div>
@@ -70,10 +76,9 @@
 </template>
 <script setup lang="ts">
 const containerRef = ref(null);
-const progressValue = ref(0);
 
 useSwiper(containerRef, {
-  slidesPerView: 4,
+  slidesPerView: 1,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -82,10 +87,22 @@ useSwiper(containerRef, {
     fill: "row",
     rows: 2,
   },
+  loop: true,
   spaceBetween: 10,
-  on: {
-    progress: (_, progress) => {
-      progressValue.value = progress;
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  grabCursor: true,
+  breakpoints: {
+    1024: {
+      slidesPerView: 4,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    520: {
+      slidesPerView: 2,
     },
   },
 });

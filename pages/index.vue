@@ -8,6 +8,7 @@
     <Favorites />
     <SportsAndGames />
     <Gallery />
+    <FollowMe />
   </section>
 </template>
 <script setup lang="ts">

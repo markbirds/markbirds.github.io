@@ -22,6 +22,9 @@ importers:
       nuxt-swiper:
         specifier: 2.0.0
         version: 2.0.0(magicast@0.3.5)
+      typed.js:
+        specifier: ^2.1.0
+        version: 2.1.0
       vue:
         specifier: ^3.5.13
         version: 3.5.13(typescript@5.8.3)
@@ -8360,6 +8363,12 @@ packages:
       }
     engines: { node: ">= 0.6" }
 
+  typed.js@2.1.0:
+    resolution:
+      {
+        integrity: sha512-bDuXEf7YcaKN4g08NMTUM6G90XU25CK3bh6U0THC/Mod/QPKlEt9g/EjvbYB8x2Qwr2p6J6I3NrsoYaVnY6wsQ==,
+      }
+
   typescript@5.8.3:
     resolution:
       {
@@ -14522,6 +14531,8 @@ snapshots:
     dependencies:
       media-typer: 0.3.0
       mime-types: 2.1.35
+
+  typed.js@2.1.0: {}
 
   typescript@5.8.3: {}
 
