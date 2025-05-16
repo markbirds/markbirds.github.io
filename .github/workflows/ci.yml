@@ -13,7 +13,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        node: [18.6.0]
+        node: [22.15.1]
 
     steps:
       - name: Checkout 🛎
@@ -25,14 +25,19 @@ jobs:
           node-version: ${{ matrix.node }}
           check-latest: true
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
       - name: Install dependencies 👨🏻‍💻
-        run: yarn
+        run: pnpm install
 
       - name: Run linter 👀
-        run: yarn lint
+        run: pnpm lint
 
       - name: Generate
-        run: yarn generate && cp CNAME ./.output/public
+        run: pnpm generate && cp CNAME ./.output/public
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
