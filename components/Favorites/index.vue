@@ -11,7 +11,7 @@
           </template>
         </Divider>
         <Swiper v-if="mdView" effect="creative" @change="change" />
-        <section class="min-h-[700px]">
+        <section class="min-h-[750px]">
           <keep-alive>
             <Movies v-show="index === 0" />
           </keep-alive>
