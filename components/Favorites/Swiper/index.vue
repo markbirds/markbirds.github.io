@@ -74,7 +74,7 @@ useSwiper(containerRef, {
 .swiper-container {
   --swiper-theme-color: white;
   width: 100%;
-  height: 580px;
+  height: 650px;
 }
 
 @media (width > 560px) {
@@ -86,8 +86,8 @@ useSwiper(containerRef, {
 
 @media (width > 1023px) {
   .swiper-container {
-    width: 310px;
-    height: 580px;
+    width: 290px;
+    height: 650px;
   }
 }
 

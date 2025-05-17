@@ -29,3 +29,60 @@
   font-weight: 700;
   font-style: normal;
 }
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-white font-quicksand text-text;
+  }
+}
+
+@layer components {
+  .container {
+    @apply mx-auto w-full max-w-[1280px] px-4 sm:px-8;
+  }
+  .grid-lg-two {
+    @apply grid grid-cols-1 gap-8 lg:grid-cols-2;
+  }
+  .btn-primary {
+    @apply rounded-full bg-primary px-5 py-2 text-white hover:bg-primary-dark;
+  }
+  .bg-soft-white {
+    @apply rounded-xl bg-white bg-opacity-60;
+  }
+  .content-padding-x {
+    @apply px-3 sm:px-0;
+  }
+  .content-centered-500 {
+    @apply mx-auto w-full max-w-[500px];
+  }
+  .content-centered-800 {
+    @apply mx-auto w-full max-w-[800px];
+  }
+  .content-centered-850 {
+    @apply mx-auto w-full max-w-[850px];
+  }
+  .content-centered-1187 {
+    @apply mx-auto w-full max-w-[1187px];
+  }
+  .title {
+    @apply bg-soft-white flex items-center p-2;
+  }
+  .text-description {
+    @apply text-justify text-lg leading-[2];
+  }
+  .description {
+    @apply content-padding-x text-description bg-soft-white py-0 sm:py-3;
+  }
+  .media-description {
+    @apply bg-soft-white p-3 text-center text-sm italic text-gray-500;
+  }
+  .swiper-card-title {
+    @apply flex items-center rounded-full bg-white bg-opacity-20 px-4 py-1 shadow-lg;
+  }
+  .swiper-card-item-icon {
+    @apply flex h-7 w-7 items-center justify-center rounded-full bg-white;
+  }
+}

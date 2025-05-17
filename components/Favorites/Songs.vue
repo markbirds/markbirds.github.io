@@ -1,13 +1,10 @@
 <template>
-  <section
-    class="rounded-xl p-3"
-    :class="allLoaded && 'bg-white bg-opacity-60'"
-  >
-    <div class="text-justify text-lg leading-[2]">
+  <section class="p-3">
+    <div class="text-description bg-soft-white">
       These are some of my favorite songs. I’ve embedded them here from Spotify
       so you can listen right away.
     </div>
-    <section class="my-8">
+    <section class="bg-soft-white my-8">
       <div
         v-if="!allLoaded"
         class="flex items-center justify-center"

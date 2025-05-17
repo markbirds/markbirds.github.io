@@ -1,9 +1,6 @@
 <template>
-  <section
-    class="rounded-xl px-3 py-3 sm:px-0"
-    :class="loaded && 'bg-white bg-opacity-60'"
-  >
-    <div class="text-justify text-lg leading-[2]">
+  <section class="content-padding-x py-3">
+    <div class="text-description bg-soft-white">
       I really enjoy sci-fi movies, especially those with dystopian or
       apocalyptic themes. I like how different the settings are from everyday
       life, and they make me imagine what it would be like to live in those
@@ -12,7 +9,7 @@
       really fascinating. I’ve embedded the trailer below if you want to check
       it out.
     </div>
-    <div class="mt-8">
+    <div class="bg-soft-white mt-8">
       <div
         v-if="!loaded"
         class="flex items-center justify-center"

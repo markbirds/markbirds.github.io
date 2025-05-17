@@ -1,12 +1,10 @@
 <template>
   <div id="follow-me" class="bg-wiggle pb-4 pt-8">
     <section class="container">
-      <section class="mx-auto w-full max-w-[500px] lg:max-w-[800px]">
+      <section class="content-centered-500 lg:max-w-[800px]">
         <Divider>
           <template #title>
-            <span
-              class="flex items-center rounded-xl bg-white bg-opacity-60 p-2"
-            >
+            <span class="bg-soft-white flex items-center p-2">
               <span class="mr-2 font-medium">Follow Me </span>
               <Icon
                 name="twemoji:mobile-phone"
@@ -17,7 +15,7 @@
           </template>
         </Divider>
         <div class="mx-auto text-lg leading-[2]">
-          <div class="section-description">
+          <div class="description">
             I share code on GitHub (but not on my
             <span class="inline-block">
               <span class="flex items-center"
@@ -33,7 +31,7 @@
         </div>
         <div class="mt-4 flex items-center justify-center md:mt-0">
           <a
-            class="mx-1 flex w-[120px] items-center justify-center rounded-md bg-primary px-3 py-2 text-white hover:bg-primary-dark"
+            class="btn-primary mx-1 flex w-[120px] items-center justify-center rounded-md"
             href="https://github.com/markbirds"
             target="_blank"
           >
@@ -41,7 +39,7 @@
             <Icon name="uim:github-alt" class="text-white" />
           </a>
           <a
-            class="mx-1 flex w-[120px] items-center justify-center rounded-md bg-primary px-3 py-2 text-white hover:bg-primary-dark"
+            class="btn-primary mx-1 flex w-[120px] items-center justify-center rounded-md"
             href="https://www.linkedin.com/in/owen-patrick-falculan-4500b521a/"
             target="_blank"
           >

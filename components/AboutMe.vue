@@ -1,10 +1,10 @@
 <template>
   <div id="about-me" class="bg-topography py-1 sm:py-8">
-    <section class="container my-8 grid grid-cols-1 gap-8 lg:grid-cols-2">
-      <div class="mx-auto mt-3 max-w-[500px]">
+    <section class="grid-lg-two container my-8">
+      <div class="content-centered-500 mt-3">
         <Divider>
           <template #title>
-            <span class="section-title">
+            <span class="title">
               <span class="mr-2">A Little Bit About Me </span>
               <Icon
                 name="twemoji:see-no-evil-monkey"
@@ -14,7 +14,7 @@
             </span>
           </template>
         </Divider>
-        <div class="section-description w-full">
+        <div class="description">
           Helloooooo! I'm Owen, a cute software developer with a passion for
           building apps. I mostly work on backend and web-based applications,
           but I can also build mobile and desktop apps. Outside of software
@@ -23,14 +23,12 @@
           in food or something related to software development.
         </div>
       </div>
-      <div class="mx-auto max-w-[500px] sm:mt-3">
-        <div class="px-3 sm:px-0">
-          <img
-            class="w-full rounded-xl"
-            src="~assets/images/about-me.jpeg"
-            alt="about-me"
-          />
-        </div>
+      <div class="content-centered-500 content-padding-x">
+        <img
+          class="w-full rounded-xl"
+          src="~assets/images/about-me.jpeg"
+          alt="about-me"
+        />
         <div class="media-description">
           Me and my source of stress — taken while building this website (May 2,
           2025).

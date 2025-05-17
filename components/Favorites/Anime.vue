@@ -1,9 +1,6 @@
 <template>
-  <section
-    class="rounded-xl p-3"
-    :class="allLoaded && 'bg-white bg-opacity-60'"
-  >
-    <div class="text-justify text-lg leading-[2]">
+  <section class="p-3">
+    <div class="text-description bg-soft-white">
       These are some of the anime shows I really enjoyed watching. For Bleach,
       the soundtrack hits just as hard as the fights, so I added a few of my
       favorite tracks below.

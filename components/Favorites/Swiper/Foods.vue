@@ -1,8 +1,6 @@
 <template>
   <div class="flex items-center justify-center text-2xl">
-    <div
-      class="flex items-center rounded-full bg-white bg-opacity-20 px-4 py-1 shadow-lg"
-    >
+    <div class="swiper-card-title">
       <span>Foods</span>
       <Icon name="twemoji:face-savoring-food" class="ml-2" />
     </div>
@@ -10,9 +8,7 @@
   <div class="mt-10">
     <section>
       <div class="mb-2 mt-4 flex items-center">
-        <div
-          class="flex h-7 w-7 items-center justify-center rounded-full bg-white"
-        >
+        <div class="swiper-card-item-icon">
           <Icon name="twemoji:pizza" size="20" />
         </div>
         <div class="ml-2 flex items-center">
@@ -33,9 +29,7 @@
     </section>
     <section>
       <div class="mb-2 mt-4 flex items-center">
-        <div
-          class="flex h-7 w-7 items-center justify-center rounded-full bg-white"
-        >
+        <div class="swiper-card-item-icon">
           <Icon name="twemoji:chicken" size="20" />
         </div>
         <div class="ml-2 flex items-center">
@@ -56,9 +50,7 @@
     </section>
     <section>
       <div class="mb-2 mt-4 flex items-center">
-        <div
-          class="flex h-7 w-7 items-center justify-center rounded-full bg-white"
-        >
+        <div class="swiper-card-item-icon">
           <Icon name="twemoji:tomato" size="20" />
         </div>
         <div class="ml-2 flex items-center">

@@ -1,8 +1,6 @@
 <template>
   <div class="flex items-center justify-center text-2xl">
-    <div
-      class="flex items-center rounded-full bg-white bg-opacity-20 px-4 py-1 shadow-lg"
-    >
+    <div class="swiper-card-title">
       <span>Anime</span>
       <Icon name="twemoji:television" class="ml-2" />
     </div>
@@ -10,9 +8,7 @@
   <div class="mt-10">
     <section>
       <div class="mb-2 mt-4 flex items-center">
-        <div
-          class="flex h-7 w-7 items-center justify-center rounded-full bg-white"
-        >
+        <div class="swiper-card-item-icon">
           <Icon name="twemoji:crossed-swords" size="18" />
         </div>
         <div class="ml-2 flex items-center">
@@ -33,9 +29,7 @@
     </section>
     <section>
       <div class="mb-2 mt-4 flex items-center">
-        <div
-          class="flex h-7 w-7 items-center justify-center rounded-full bg-white"
-        >
+        <div class="swiper-card-item-icon">
           <Icon name="twemoji:oncoming-fist-medium-light-skin-tone" size="20" />
         </div>
         <div class="ml-2 flex items-center">
@@ -56,9 +50,7 @@
     </section>
     <section>
       <div class="mb-2 mt-4 flex items-center">
-        <div
-          class="flex h-7 w-7 items-center justify-center rounded-full bg-white"
-        >
+        <div class="swiper-card-item-icon">
           <Icon name="twemoji:basketball" size="20" />
         </div>
         <div class="ml-2 flex items-center">

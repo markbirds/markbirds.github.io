@@ -1,12 +1,10 @@
 <template>
-  <div id="favorites" class="bg-food py-1 sm:py-8">
-    <section
-      class="container grid grid-cols-1 gap-8 rounded-lg py-4 lg:grid-cols-2"
-    >
-      <div class="mx-auto w-full max-w-[500px]">
+  <div id="favorites" class="bg-food py-5 sm:py-12">
+    <section class="grid-lg-two container">
+      <div class="content-centered-500">
         <Divider>
           <template #title>
-            <span class="section-title">
+            <span class="title">
               <span class="mr-2">My Favorites </span>
               <Icon name="twemoji:red-heart" size="24" class="animate-wiggle" />
             </span>

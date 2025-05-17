@@ -1,9 +1,9 @@
 <template>
   <div id="sports-and-games" class="bg-shapes py-8">
-    <div class="mx-auto max-w-[500px] lg:container">
+    <div class="content-centered-500 lg:container">
       <Divider>
         <template #title>
-          <span class="section-title">
+          <span class="title">
             <span class="mr-2">Sports and Games </span>
             <Icon name="twemoji:basketball" size="24" class="animate-wiggle" />
           </span>
@@ -11,15 +11,13 @@
       </Divider>
     </div>
     <div class="py-0 lg:py-8">
-      <section class="container grid grid-cols-1 gap-8 lg:grid-cols-2">
-        <div class="mx-auto my-auto max-w-[500px]">
+      <section class="grid-lg-two container">
+        <div class="content-centered-500 my-auto">
           <div class="flex items-center justify-center">
-            <span class="mr-1 rounded-xl bg-white bg-opacity-60 p-2 text-lg"
-              >Basketball
-            </span>
+            <span class="bg-soft-white mr-1 p-2 text-lg">Basketball </span>
             <Icon name="twemoji:basketball" size="20" />
           </div>
-          <div class="section-description">
+          <div class="description">
             I play a lot of sports like volleyball, badminton, and table tennis,
             but basketball is my absolute favorite. I’m not really “that” good
             at sports, but it’s fun to play, especially with friends. This is my
@@ -28,9 +26,9 @@
             me take over—the greatest shooter ever, just kidding.
           </div>
         </div>
-        <div class="bg-opacity-60 px-3 text-center sm:px-0">
+        <div class="content-padding-x text-center">
           <video
-            class="mx-auto w-full max-w-[500px] rounded-lg shadow-xl"
+            class="content-centered-500 rounded-lg shadow-xl"
             controls
             preload="metadata"
           >
@@ -45,21 +43,21 @@
       <section
         class="container mt-8 flex flex-col-reverse gap-8 lg:mt-10 lg:flex-row"
       >
-        <div class="mx-auto max-w-[500px] px-3 sm:px-0">
+        <div class="content-centered-500 content-padding-x">
           <img
             class="w-full rounded-xl"
             src="~assets/images/chess.jpeg"
             alt="chess"
           />
         </div>
-        <div class="mx-auto my-auto max-w-[500px] flex-1">
+        <div class="content-centered-500 my-auto">
           <div class="flex items-center justify-center">
-            <span class="mr-1 rounded-xl bg-white bg-opacity-60 p-2 text-lg"
+            <span class="bg-soft-white mr-1 p-2 text-lg"
               >Chess and Perdigana
             </span>
             <Icon name="twemoji:chess-pawn" size="20" />
           </div>
-          <div class="section-description">
+          <div class="description">
             Perdigana, if you didn’t know, is a game similar to checkers or dama
             (a popular Filipino board game), but it’s the opposite because you
             win by losing all your pieces. I first learned about it through
@@ -67,14 +65,14 @@
             where I even participated in a competition. I actually like
             Perdigana more than Dama because it’s faster to play and more fun.
           </div>
-          <div class="section-description">
+          <div class="description">
             Since Perdigana isn’t very popular and it’s hard to find players,
             even online, I learned chess instead. If you have the time, let’s
             play!
           </div>
           <div class="mt-5">
             <a
-              class="btn-primary-blue mx-auto flex w-[180px] items-center justify-center"
+              class="btn-primary mx-auto flex w-[180px] items-center justify-center"
               href="https://www.chess.com/member/markbirds"
               target="_blank"
             >

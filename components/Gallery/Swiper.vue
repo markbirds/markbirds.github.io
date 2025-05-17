@@ -85,7 +85,7 @@ useSwiper(containerRef, {
   },
   grid: {
     fill: "row",
-    rows: 2,
+    rows: 1,
   },
   loop: true,
   spaceBetween: 10,
@@ -97,12 +97,21 @@ useSwiper(containerRef, {
   breakpoints: {
     1024: {
       slidesPerView: 4,
+      grid: {
+        rows: 2,
+      },
     },
     768: {
       slidesPerView: 3,
+      grid: {
+        rows: 2,
+      },
     },
     520: {
       slidesPerView: 2,
+      grid: {
+        rows: 1,
+      },
     },
   },
 });

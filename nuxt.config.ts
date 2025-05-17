@@ -3,7 +3,7 @@ import { defineNuxtConfig } from "nuxt/config";
 export default defineNuxtConfig({
   app: {
     head: {
-      title: "Hi! I'm Owen",
+      title: "Hi, I'm Owen!",
     },
   },
   css: ["~/assets/css/main.css"],

@@ -1,11 +1,11 @@
 <template>
-  <section class="section-description">
+  <section class="description">
     <div>
       Below are some of my favorite comfort foods. These are the meals that
       never fail to make me happy, whether I’m eating out or at home. Got
       anything you think I should try? Maybe I’ll find a new favorite.
     </div>
-    <section class="mt-8 grid grid-cols-1 gap-4 lg:grid-cols-2">
+    <section class="grid-lg-two gap-4! mt-8">
       <section>
         <div>
           <div>

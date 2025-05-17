@@ -1,6 +1,6 @@
 <template>
   <div class="bg-jigsaw pb-16 pt-24 lg:pb-36">
-    <section class="container my-8 grid grid-cols-1 gap-8 lg:grid-cols-2">
+    <section class="grid-lg-two container my-8">
       <section
         class="mx-auto flex w-full max-w-[700px] flex-1 items-center justify-center md:-rotate-[0.3rad] md:pl-24 lg:pl-12"
       >
@@ -24,7 +24,7 @@
           />
         </div>
       </section>
-      <section class="mx-auto max-w-[500px]">
+      <section class="content-centered-500">
         <section
           class="section-padding mt-16 flex flex-col items-start justify-center lg:ml-10"
         >
@@ -74,7 +74,7 @@
             </div>
             <div class="mt-8">
               <a
-                class="btn-primary-blue"
+                class="btn-primary"
                 href="/collaborate-with-me"
                 target="_blank"
               >
