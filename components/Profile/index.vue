@@ -1,8 +1,8 @@
 <template>
-  <div class="bg-jigsaw pb-16 pt-24 lg:pb-36">
-    <section class="grid-lg-two container my-8">
+  <div class="bg-jigsaw pt-24 pb-16 lg:pb-36">
+    <section class="grid-lg-cols-2 section-container my-8">
       <section
-        class="mx-auto flex w-full max-w-[700px] flex-1 items-center justify-center md:-rotate-[0.3rad] md:pl-24 lg:pl-12"
+        class="flex-center content-centered-600 flex-1 md:-rotate-[0.3rad] md:pl-24 lg:pl-12"
       >
         <div class="hidden md:block">
           <img
@@ -18,15 +18,15 @@
         </div>
         <div>
           <img
-            class="w-full max-w-[300px] rounded-full md:-ml-8 md:mt-20 md:rotate-[0.3rad]"
+            class="w-full max-w-[300px] rounded-full md:mt-20 md:-ml-8 md:rotate-[0.3rad]"
             :src="shuffledImages[2]"
             alt="shuffled-image-3"
           />
         </div>
       </section>
-      <section class="content-centered-500">
+      <section class="content-centered-550">
         <section
-          class="section-padding mt-16 flex flex-col items-start justify-center lg:ml-10"
+          class="mt-16 flex flex-col items-start justify-center lg:ml-10"
         >
           <div class="text-center text-3xl lg:text-left">
             <span id="typed-text"></span>
@@ -47,29 +47,11 @@
             </div>
             <div class="mt-5">
               <SectionLink
-                to="#about-me"
-                text="A Little Bit About Me"
-                icon="twemoji:see-no-evil-monkey"
-              />
-              <SectionLink
-                to="#favorites"
-                text="My Favorites"
-                icon="twemoji:red-heart"
-              />
-              <SectionLink
-                to="#sports-and-games"
-                text="Sports and Games"
-                icon="twemoji:basketball"
-              />
-              <SectionLink
-                to="#gallery"
-                text="Gallery"
-                icon="twemoji:framed-picture"
-              />
-              <SectionLink
-                to="#follow-me"
-                text="Follow Me"
-                icon="twemoji:mobile-phone"
+                v-for="link in sectionLinks"
+                :key="link.to"
+                :to="link.to"
+                :text="link.text"
+                :icon="link.icon"
               />
             </div>
             <div class="mt-8">
@@ -96,10 +78,38 @@ const showDetails = ref(false);
 const evenSecond = ref(true);
 
 const shuffledImages = ref([
-  "/images/me1.jpeg",
-  "/images/me3.jpeg",
-  "/images/me2.jpeg",
+  "/images/profile/me1.jpeg",
+  "/images/profile/me3.jpeg",
+  "/images/profile/me2.jpeg",
 ]);
+
+const sectionLinks = [
+  {
+    to: "#about-me",
+    text: "A Little Bit About Me",
+    icon: "twemoji:see-no-evil-monkey",
+  },
+  {
+    to: "#favorites",
+    text: "My Favorites",
+    icon: "twemoji:red-heart",
+  },
+  {
+    to: "#sports-and-games",
+    text: "Sports and Games",
+    icon: "twemoji:basketball",
+  },
+  {
+    to: "#gallery",
+    text: "Gallery",
+    icon: "twemoji:framed-picture",
+  },
+  {
+    to: "#follow-me",
+    text: "Follow Me",
+    icon: "twemoji:mobile-phone",
+  },
+];
 
 function shuffle() {
   const copy = [];

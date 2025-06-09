@@ -1,4 +1,5 @@
 import { defineNuxtConfig } from "nuxt/config";
+import tailwindcss from "@tailwindcss/vite";
 
 export default defineNuxtConfig({
   app: {
@@ -7,10 +8,13 @@ export default defineNuxtConfig({
     },
   },
   css: ["~/assets/css/main.css"],
+  vite: {
+    plugins: [tailwindcss()],
+  },
 
   modules: [
     "dayjs-nuxt",
-    "@nuxtjs/tailwindcss",
+    // "@nuxtjs/tailwindcss",
     "@nuxt/eslint",
     "@nuxtjs/stylelint-module",
     "@nuxt/icon",
