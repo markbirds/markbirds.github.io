@@ -1,11 +1,11 @@
 <template>
-  <section class="description">
-    <div>
+  <section>
+    <SectionDescription>
       Below are some of my favorite comfort foods. These are the meals that
       never fail to make me happy, whether I’m eating out or at home. Got
       anything you think I should try? Maybe I’ll find a new favorite.
-    </div>
-    <section class="grid-lg-two gap-4! mt-8">
+    </SectionDescription>
+    <section class="grid-lg-cols-2 mt-8 gap-4!">
       <section>
         <div>
           <div>
@@ -43,3 +43,6 @@
     </section>
   </section>
 </template>
+<script setup lang="ts">
+import SectionDescription from "@/components/commons/SectionDescription.vue";
+</script>

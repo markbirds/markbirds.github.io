@@ -1,6 +1,6 @@
 <template>
-  <section class="content-padding-x py-3">
-    <div class="text-description bg-soft-white">
+  <section>
+    <SectionDescription>
       I really enjoy sci-fi movies, especially those with dystopian or
       apocalyptic themes. I like how different the settings are from everyday
       life, and they make me imagine what it would be like to live in those
@@ -8,16 +8,21 @@
       story is written, and I find the connection to higher beings beyond humans
       really fascinating. I’ve embedded the trailer below if you want to check
       it out.
-    </div>
-    <div class="bg-soft-white mt-8">
+    </SectionDescription>
+    <div class="relative my-8">
+      <section v-if="!loaded" class="top-0 left-0 h-full w-full lg:absolute">
+        <div class="w-full rounded-md">
+          <div class="flex animate-pulse space-x-4">
+            <div class="flex-1 space-y-6 py-1">
+              <div class="h-[350px] rounded-2xl bg-gray-100"></div>
+            </div>
+          </div>
+        </div>
+      </section>
       <div
-        v-if="!loaded"
-        class="flex items-center justify-center"
-        style="margin-top: 120px"
+        class="top-0 left-0 h-full w-full lg:absolute"
+        :class="['video-frame', { loaded: loaded }]"
       >
-        <Loading />
-      </div>
-      <div :class="['video-frame', { loaded: loaded }]">
         <iframe
           style="border-radius: 12px"
           width="100%"
@@ -37,7 +42,7 @@
   </section>
 </template>
 <script setup lang="ts">
-import Loading from "@/components/commons/Loading.vue";
+import SectionDescription from "@/components/commons/SectionDescription.vue";
 
 const loaded = ref(false);
 </script>

@@ -1,74 +1,51 @@
 <template>
-  <div class="flex items-center justify-center text-2xl">
+  <div class="flex-center text-2xl">
     <div class="swiper-card-title">
       <span>Movies</span>
       <Icon name="twemoji:movie-camera" class="ml-2" />
     </div>
   </div>
   <div class="mt-10">
-    <section>
-      <div class="mb-2 mt-4 flex items-center">
+    <section v-for="movie in movies" :key="movie.title">
+      <div class="mt-4 mb-2 flex items-center">
         <div class="swiper-card-item-icon">
-          <Icon name="twemoji:input-numbers" size="18" />
+          <Icon :name="movie.icon" size="18" />
         </div>
         <div class="ml-2 flex items-center">
-          <span class="font-bold">Knowing (2009)</span>
-          <a
-            href="https://www.imdb.com/title/tt0448011/"
-            target="_blank"
-            class="ml-2 pt-1.5"
-          >
+          <span class="font-bold">{{ movie.title }}</span>
+          <a :href="movie.link" target="_blank" class="ml-2 pt-1.5">
             <Icon name="twemoji:magnifying-glass-tilted-right" size="24" />
           </a>
         </div>
       </div>
       <div class="text-justify text-sm">
-        A disaster thriller with a mysterious list of numbers that predicts
-        tragic events. It really made me think about fate and whether we’re just
-        following a plan we can’t change.
-      </div>
-    </section>
-    <section>
-      <div class="mb-2 mt-4 flex items-center">
-        <div class="swiper-card-item-icon">
-          <Icon name="openmoji:black-hole" size="24" />
-        </div>
-        <div class="ml-2 flex items-center">
-          <span class="font-bold">Interstellar (2014)</span>
-          <a
-            href="https://www.imdb.com/title/tt0816692/"
-            target="_blank"
-            class="ml-2 pt-1.5"
-          >
-            <Icon name="twemoji:magnifying-glass-tilted-right" size="24" />
-          </a>
-        </div>
-      </div>
-      <div class="text-justify text-sm">
-        This is a mind-blowing and visually amazing space movie. It’s about a
-        father traveling through space and time to save humanity
-      </div>
-    </section>
-    <section>
-      <div class="mb-2 mt-4 flex items-center">
-        <div class="swiper-card-item-icon">
-          <Icon name="twemoji:family" />
-        </div>
-        <div class="ml-2 flex items-center">
-          <span class="font-bold">Hidden (2015)</span>
-          <a
-            href="https://www.imdb.com/title/tt2131532/"
-            target="_blank"
-            class="ml-2 pt-1.5"
-          >
-            <Icon name="twemoji:magnifying-glass-tilted-right" size="24" />
-          </a>
-        </div>
-      </div>
-      <div class="text-justify text-sm">
-        A suspenseful story about a family hiding in a bunker after a disaster.
-        It’s tense all throughout, and the twist made it even better.
+        {{ movie.description }}
       </div>
     </section>
   </div>
 </template>
+<script setup lang="ts">
+const movies = [
+  {
+    title: "Knowing (2009)",
+    link: "https://www.imdb.com/title/tt0448011/",
+    icon: "twemoji:input-numbers",
+    description:
+      "A disaster thriller with a mysterious list of numbers that predicts tragic events. It really made me think about fate and whether we’re just following a plan we can’t change.",
+  },
+  {
+    title: "Interstellar (2014)",
+    link: "https://www.imdb.com/title/tt0816692/",
+    icon: "openmoji:black-hole",
+    description:
+      "This is a mind-blowing and visually amazing space movie. It’s about a father traveling through space and time to save humanity",
+  },
+  {
+    title: "Hidden (2015)",
+    link: "https://www.imdb.com/title/tt2131532/",
+    icon: "twemoji:family",
+    description:
+      "A suspenseful story about a family hiding in a bunker after a disaster. It’s tense all throughout, and the twist made it even better.",
+  },
+];
+</script>

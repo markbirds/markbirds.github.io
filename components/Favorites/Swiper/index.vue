@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col items-center justify-center p-3">
+  <div class="flex flex-col items-center">
     <ClientOnly>
       <swiper-container
         ref="containerRef"
@@ -77,13 +77,6 @@ useSwiper(containerRef, {
   height: 650px;
 }
 
-@media (width > 560px) {
-  .swiper-container {
-    width: 470px;
-    height: 580px;
-  }
-}
-
 @media (width > 1023px) {
   .swiper-container {
     width: 290px;
@@ -107,6 +100,7 @@ useSwiper(containerRef, {
 .slider-content {
   border-radius: 25px;
   height: 100%;
+  width: 100%;
   color: white;
 }
 

@@ -1,11 +1,11 @@
 <template>
-  <div class="relative mb-8 flex items-center justify-center">
-    <div class="h-px flex-1 bg-gradient-to-r from-transparent to-text"></div>
+  <div class="flex-center relative mb-5">
+    <div class="to-text h-px flex-1 bg-gradient-to-r from-transparent"></div>
 
-    <div class="z-10 whitespace-nowrap px-4 text-xl">
+    <div class="z-10 px-4 text-xl whitespace-nowrap">
       <slot name="title" />
     </div>
 
-    <div class="h-px flex-1 bg-gradient-to-r from-text to-transparent"></div>
+    <div class="from-text h-px flex-1 bg-gradient-to-r to-transparent"></div>
   </div>
 </template>
