@@ -50,23 +50,6 @@ export default defineNuxtConfig({
   css: ["~/assets/css/main.css"],
   vite: {
     plugins: [tailwindcss()],
-    build: {
-      minify: "terser",
-      rollupOptions: {
-        output: {
-          manualChunks: {
-            vendor: ["vue", "nuxt"],
-            swiper: ["nuxt-swiper"],
-          },
-        },
-      },
-      terserOptions: {
-        compress: {
-          drop_console: true,
-          drop_debugger: true,
-        },
-      },
-    },
   },
 
   modules: [
