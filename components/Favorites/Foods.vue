@@ -9,9 +9,9 @@
       <section>
         <div>
           <div>
-            <img
+            <NuxtImg
               class="w-full rounded-xl"
-              src="~assets/images/foods/shakeys.jpeg"
+              src="/images/foods/shakeys.jpeg"
               alt="shakeys"
             />
           </div>
@@ -19,9 +19,9 @@
         </div>
         <div>
           <div>
-            <img
+            <NuxtImg
               class="w-full rounded-xl"
-              src="~assets/images/foods/greenwich.jpg"
+              src="/images/foods/greenwich.jpg"
               alt="greenwich"
             />
           </div>
@@ -31,9 +31,9 @@
       <section class="my-auto">
         <div>
           <div>
-            <img
+            <NuxtImg
               class="w-full rounded-xl"
-              src="~assets/images/foods/jo-cooks.jpg"
+              src="/images/foods/jo-cooks.jpg"
               alt="jo-cooks"
             />
           </div>

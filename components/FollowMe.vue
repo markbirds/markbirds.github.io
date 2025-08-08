@@ -33,6 +33,8 @@
             class="btn-primary mx-1 flex w-[120px] items-center justify-center rounded-md"
             href="https://github.com/markbirds"
             target="_blank"
+            aria-label="Visit Owen's GitHub profile"
+            title="GitHub Profile"
           >
             <span class="mr-2">GitHub </span>
             <Icon name="uim:github-alt" class="text-white" />
@@ -41,6 +43,8 @@
             class="btn-primary mx-1 flex w-[120px] items-center justify-center rounded-md"
             href="https://www.linkedin.com/in/owen-patrick-falculan-4500b521a/"
             target="_blank"
+            aria-label="Visit Owen's LinkedIn profile"
+            title="LinkedIn Profile"
           >
             <span class="mr-2">LinkedIn </span>
             <Icon name="akar-icons:linkedin-box-fill" class="text-white" />
@@ -48,19 +52,35 @@
         </div>
         <section class="mt-12 mb-4 text-center text-gray-600">
           <div class="italic">
-            <a href="/internetdog.gif" target="_blank">
+            <a
+              href="/internetdog.gif"
+              target="_blank"
+              aria-label="View internet dog GIF"
+              title="Internet Dog GIF"
+            >
               On the Internet, nobody knows you're a dog
             </a>
           </div>
           <div class="flex-center mt-8">
             <span class="mx-2">Built with</span>
             <Tooltip tooltip-text="Nuxt">
-              <a href="https://nuxt.com" target="_blank">
+              <a
+                href="https://nuxt.com"
+                target="_blank"
+                aria-label="Visit Nuxt.js website"
+                title="Nuxt.js"
+              >
                 <Icon name="logos:nuxt-icon" size="24" />
               </a>
             </Tooltip>
             <Tooltip tooltip-text="Tailwind CSS">
-              <a href="https://tailwindcss.com" class="ml-1" target="_blank">
+              <a
+                href="https://tailwindcss.com"
+                class="ml-1"
+                target="_blank"
+                aria-label="Visit Tailwind CSS website"
+                title="Tailwind CSS"
+              >
                 <Icon name="logos:tailwindcss-icon" size="24" />
               </a>
             </Tooltip>
