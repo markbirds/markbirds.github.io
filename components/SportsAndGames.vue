@@ -44,10 +44,12 @@
         class="section-container mt-8 flex flex-col-reverse gap-8 lg:mt-10 lg:flex-row"
       >
         <div class="content-centered-550">
-          <NuxtImg
+          <img
             class="w-full rounded-xl"
-            src="/images/chess.jpeg"
+            src="/images/chess.webp"
             alt="chess"
+            loading="lazy"
+            decoding="async"
           />
         </div>
         <div class="content-centered-550">

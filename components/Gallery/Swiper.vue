@@ -11,7 +11,12 @@
           :key="index"
           class="swiper-slide"
         >
-          <NuxtImg :src="image" :alt="`pic-${index + 1}`" />
+          <img
+            :src="image"
+            :alt="`pic-${index + 1}`"
+            loading="lazy"
+            decoding="async"
+          />
         </swiper-slide>
       </swiper-container>
       <div class="mt-5 flex justify-center gap-4">
@@ -37,24 +42,24 @@
 const containerRef = ref(null);
 
 const images = [
-  "/images/gallery/pic1.jpeg",
-  "/images/gallery/pic2.jpeg",
-  "/images/gallery/pic3.jpg",
-  "/images/gallery/pic4.jpeg",
-  "/images/gallery/pic5.jpeg",
-  "/images/gallery/pic6.jpeg",
-  "/images/gallery/pic7.jpg",
-  "/images/gallery/pic8.jpg",
-  "/images/gallery/pic9.jpeg",
-  "/images/gallery/pic10.jpeg",
-  "/images/gallery/pic11.jpeg",
-  "/images/gallery/pic12.jpeg",
-  "/images/gallery/pic13.jpg",
-  "/images/gallery/pic14.jpeg",
-  "/images/gallery/pic15.jpg",
-  "/images/gallery/pic16.jpg",
-  "/images/gallery/pic17.jpeg",
-  "/images/gallery/pic18.jpeg",
+  "/images/gallery/pic1.webp",
+  "/images/gallery/pic2.webp",
+  "/images/gallery/pic3.webp",
+  "/images/gallery/pic4.webp",
+  "/images/gallery/pic5.webp",
+  "/images/gallery/pic6.webp",
+  "/images/gallery/pic7.webp",
+  "/images/gallery/pic8.webp",
+  "/images/gallery/pic9.webp",
+  "/images/gallery/pic10.webp",
+  "/images/gallery/pic11.webp",
+  "/images/gallery/pic12.webp",
+  "/images/gallery/pic13.webp",
+  "/images/gallery/pic14.webp",
+  "/images/gallery/pic15.webp",
+  "/images/gallery/pic16.webp",
+  "/images/gallery/pic17.webp",
+  "/images/gallery/pic18.webp",
 ];
 
 useSwiper(containerRef, {

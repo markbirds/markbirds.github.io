@@ -10,7 +10,7 @@
       it out.
     </SectionDescription>
     <div class="relative my-8">
-      <section v-if="!loaded" class="top-0 left-0 h-full w-full lg:absolute">
+      <section class="top-0 left-0 h-full w-full lg:absolute">
         <div class="w-full rounded-md">
           <div class="flex animate-pulse space-x-4">
             <div class="flex-1 space-y-6 py-1">
@@ -19,12 +19,9 @@
           </div>
         </div>
       </section>
-      <div
-        class="top-0 left-0 h-full w-full lg:absolute"
-        :class="['video-frame', { loaded: loaded }]"
-      >
+      <div class="top-0 left-0 h-full w-full lg:absolute">
         <iframe
-          loading="lazy"
+          loading="eager"
           style="border-radius: 12px"
           width="100%"
           height="350"
@@ -35,7 +32,6 @@
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin"
           allowfullscreen
-          @load="loaded = true"
         ></iframe>
       </div>
       <div class="media-description">Knowing (2009) Trailer</div>
@@ -44,16 +40,4 @@
 </template>
 <script setup lang="ts">
 import SectionDescription from "@/components/commons/SectionDescription.vue";
-
-const loaded = ref(false);
 </script>
-<style scoped>
-.video-frame {
-  opacity: 0;
-  transition: opacity 1s ease;
-}
-
-.video-frame.loaded {
-  opacity: 1;
-}
-</style>

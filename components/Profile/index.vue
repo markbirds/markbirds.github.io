@@ -5,22 +5,28 @@
         class="flex-center content-centered-600 flex-1 md:-rotate-[0.3rad] md:pl-24 lg:pl-12"
       >
         <div class="hidden md:block">
-          <NuxtImg
+          <img
             class="max-w-[230px] rotate-[0.3rad] rounded-full"
             :src="shuffledImages[0]"
             alt="shuffled-image-1"
+            loading="lazy"
+            decoding="async"
           />
-          <NuxtImg
+          <img
             class="mt-1.5 max-w-[200px] rotate-[0.3rad] rounded-full"
             :src="shuffledImages[1]"
             alt="shuffled-image-2"
+            loading="lazy"
+            decoding="async"
           />
         </div>
         <div>
-          <NuxtImg
+          <img
             class="w-full max-w-[300px] rounded-full md:mt-20 md:-ml-8 md:rotate-[0.3rad]"
             :src="shuffledImages[2]"
             alt="shuffled-image-3"
+            loading="lazy"
+            decoding="async"
           />
         </div>
       </section>
@@ -78,9 +84,9 @@ const showDetails = ref(false);
 const evenSecond = ref(true);
 
 const shuffledImages = ref([
-  "/images/profile/me1.jpeg",
-  "/images/profile/me3.jpeg",
-  "/images/profile/me2.jpeg",
+  "/images/profile/me1.webp",
+  "/images/profile/me3.webp",
+  "/images/profile/me2.webp",
 ]);
 
 const sectionLinks = [

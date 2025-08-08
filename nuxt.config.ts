@@ -57,13 +57,8 @@ export default defineNuxtConfig({
     "@nuxtjs/stylelint-module",
     "@nuxt/icon",
     "nuxt-swiper",
-    "@nuxt/image",
   ],
 
-  image: {
-    formats: ["webp", "avif", "jpeg"],
-  },
-
-  ssr: false,
+  ssr: true,
   compatibilityDate: "2024-08-11",
 });

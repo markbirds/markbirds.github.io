@@ -9,20 +9,24 @@
       <section>
         <div>
           <div>
-            <NuxtImg
+            <img
               class="w-full rounded-xl"
-              src="/images/foods/shakeys.jpeg"
+              src="/images/foods/shakeys.webp"
               alt="shakeys"
+              loading="lazy"
+              decoding="async"
             />
           </div>
           <div class="media-description">Shakey's Pizza</div>
         </div>
         <div>
           <div>
-            <NuxtImg
+            <img
               class="w-full rounded-xl"
-              src="/images/foods/greenwich.jpg"
+              src="/images/foods/greenwich.webp"
               alt="greenwich"
+              loading="lazy"
+              decoding="async"
             />
           </div>
           <div class="media-description">Greenwich Lasagna</div>
@@ -31,10 +35,12 @@
       <section class="my-auto">
         <div>
           <div>
-            <NuxtImg
+            <img
               class="w-full rounded-xl"
-              src="/images/foods/jo-cooks.jpg"
+              src="/images/foods/jo-cooks.webp"
               alt="jo-cooks"
+              loading="lazy"
+              decoding="async"
             />
           </div>
           <div class="media-description">Cordon Bleu from Jo Cooks</div>

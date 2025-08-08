@@ -25,10 +25,12 @@
         </SectionDescription>
       </div>
       <div class="content-centered-550">
-        <NuxtImg
+        <img
           class="w-full rounded-xl"
-          src="/images/about-me.jpeg"
+          src="/images/about-me.webp"
           alt="about-me"
+          loading="lazy"
+          decoding="async"
         />
         <div class="media-description">
           Me and my source of stress — taken while building this website (May 2,
