@@ -10,15 +10,6 @@
       it out.
     </SectionDescription>
     <div class="relative my-8">
-      <section class="top-0 left-0 h-full w-full lg:absolute">
-        <div class="w-full rounded-md">
-          <div class="flex animate-pulse space-x-4">
-            <div class="flex-1 space-y-6 py-1">
-              <div class="h-[350px] rounded-2xl bg-gray-100"></div>
-            </div>
-          </div>
-        </div>
-      </section>
       <div class="top-0 left-0 h-full w-full lg:absolute">
         <iframe
           loading="eager"
