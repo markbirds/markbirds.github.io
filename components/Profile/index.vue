@@ -5,19 +5,19 @@
         class="flex-center content-centered-600 flex-1 md:-rotate-[0.3rad] md:pl-24 lg:pl-12"
       >
         <div class="hidden md:block">
-          <img
+          <NuxtImg
             class="max-w-[230px] rotate-[0.3rad] rounded-full"
             :src="shuffledImages[0]"
             alt="shuffled-image-1"
           />
-          <img
+          <NuxtImg
             class="mt-1.5 max-w-[200px] rotate-[0.3rad] rounded-full"
             :src="shuffledImages[1]"
             alt="shuffled-image-2"
           />
         </div>
         <div>
-          <img
+          <NuxtImg
             class="w-full max-w-[300px] rounded-full md:mt-20 md:-ml-8 md:rotate-[0.3rad]"
             :src="shuffledImages[2]"
             alt="shuffled-image-3"

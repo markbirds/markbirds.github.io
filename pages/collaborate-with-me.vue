@@ -18,14 +18,14 @@
       </div>
       <section class="mt-5">
         <SectionDescription class="my-5 md:my-2">
-          Hi, I’m Owen, a software developer. I collaborate on projects through
+          Hi, I'm Owen, a software developer. I collaborate on projects through
           <span class="font-medium">Co.Lab Software Solutions</span>, where we
           take on freelance and contract-based work. Co.Lab stands for
           collaborative problem-solving, where your ideas and our code come
           together.
         </SectionDescription>
         <SectionDescription class="my-5 md:my-2">
-          Whether it’s web, mobile, or desktop development, we’re open to
+          Whether it's web, mobile, or desktop development, we're open to
           working with you. We can also help with deployments, data analysis and
           visualization, and even AI or machine learning projects.
         </SectionDescription>
@@ -39,7 +39,12 @@
         >
           <div class="bg-soft-white p-3">
             <Tooltip v-for="t in tech" :key="t.name" :tooltip-text="t.name">
-              <a :href="t.url" target="_blank">
+              <a
+                :href="t.url"
+                target="_blank"
+                :aria-label="`Visit ${t.name} website`"
+                :title="`Visit ${t.name}`"
+              >
                 <Icon :name="t.icon" size="48" class="mx-1" />
               </a>
             </Tooltip>
@@ -54,6 +59,8 @@
             class="text-blue-500 hover:underline"
             href="https://mail.google.com/mail/?view=cm&to=contact.colab@gmail.com"
             target="_blank"
+            aria-label="Send email to contact.colab@gmail.com"
+            title="Send Email"
           >
             contact.colab@gmail.com
           </a>
@@ -61,7 +68,12 @@
           hear about what you are building.
         </SectionDescription>
         <div class="mt-5 text-center">
-          <a href="https://forms.gle/nLA6chjSr4Fa7yHk6" target="_blank">
+          <a
+            href="https://forms.gle/nLA6chjSr4Fa7yHk6"
+            target="_blank"
+            aria-label="Fill out project inquiry form"
+            title="Project Inquiry Form"
+          >
             <button class="btn-primary">Get Started</button>
           </a>
         </div>

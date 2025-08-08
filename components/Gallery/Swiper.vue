@@ -11,7 +11,7 @@
           :key="index"
           class="swiper-slide"
         >
-          <img :src="image" :alt="`pic-${index + 1}`" />
+          <NuxtImg :src="image" :alt="`pic-${index + 1}`" />
         </swiper-slide>
       </swiper-container>
       <div class="mt-5 flex justify-center gap-4">
@@ -54,7 +54,7 @@ const images = [
   "/images/gallery/pic15.jpg",
   "/images/gallery/pic16.jpg",
   "/images/gallery/pic17.jpeg",
-  "/images/gallery/pic18.JPG",
+  "/images/gallery/pic18.jpeg",
 ];
 
 useSwiper(containerRef, {

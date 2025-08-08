@@ -24,6 +24,7 @@
         :class="['video-frame', { loaded: loaded }]"
       >
         <iframe
+          loading="lazy"
           style="border-radius: 12px"
           width="100%"
           height="350"

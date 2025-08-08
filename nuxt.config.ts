@@ -5,21 +5,81 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: "Hi, I'm Owen!",
+      htmlAttrs: {
+        lang: "en",
+      },
+      meta: [
+        { charset: "utf-8" },
+        { name: "viewport", content: "width=device-width, initial-scale=1" },
+        { name: "description", content: "Owen Falculan - Personal Portfolio" },
+        { name: "theme-color", content: "#000000" },
+      ],
+      link: [
+        { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+        {
+          rel: "preload",
+          href: "/fonts/Quicksand/Quicksand-Regular.woff2",
+          as: "font",
+          type: "font/woff2",
+          crossorigin: "",
+        },
+        {
+          rel: "preload",
+          href: "/fonts/Quicksand/Quicksand-Medium.woff2",
+          as: "font",
+          type: "font/woff2",
+          crossorigin: "",
+        },
+        {
+          rel: "preload",
+          href: "/fonts/Quicksand/Quicksand-SemiBold.woff2",
+          as: "font",
+          type: "font/woff2",
+          crossorigin: "",
+        },
+        {
+          rel: "preload",
+          href: "/fonts/Quicksand/Quicksand-Bold.woff2",
+          as: "font",
+          type: "font/woff2",
+          crossorigin: "",
+        },
+      ],
     },
   },
   css: ["~/assets/css/main.css"],
   vite: {
     plugins: [tailwindcss()],
+    build: {
+      minify: "terser",
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            vendor: ["vue", "nuxt"],
+            swiper: ["nuxt-swiper"],
+          },
+        },
+      },
+      terserOptions: {
+        compress: {
+          drop_console: true,
+          drop_debugger: true,
+        },
+      },
+    },
   },
 
   modules: [
-    "dayjs-nuxt",
-    // "@nuxtjs/tailwindcss",
     "@nuxt/eslint",
     "@nuxtjs/stylelint-module",
     "@nuxt/icon",
     "nuxt-swiper",
+    "@nuxt/image",
   ],
+
+  image: {
+    formats: ["webp", "avif", "jpeg"],
+  },
 
   ssr: false,
   compatibilityDate: "2024-08-11",

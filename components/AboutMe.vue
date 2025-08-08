@@ -25,9 +25,9 @@
         </SectionDescription>
       </div>
       <div class="content-centered-550">
-        <img
+        <NuxtImg
           class="w-full rounded-xl"
-          src="~assets/images/about-me.jpeg"
+          src="/images/about-me.jpeg"
           alt="about-me"
         />
         <div class="media-description">

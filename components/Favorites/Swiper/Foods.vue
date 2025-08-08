@@ -13,7 +13,13 @@
         </div>
         <div class="ml-2 flex items-center">
           <span class="font-bold">{{ food.title }}</span>
-          <a :href="food.link" target="_blank" class="ml-2 pt-1.5">
+          <a
+            :href="food.link"
+            target="_blank"
+            class="ml-2 pt-1.5"
+            :aria-label="`Search for ${food.title} food`"
+            title="Search on Google"
+          >
             <Icon name="twemoji:magnifying-glass-tilted-right" size="24" />
           </a>
         </div>

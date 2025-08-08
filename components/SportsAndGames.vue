@@ -44,9 +44,9 @@
         class="section-container mt-8 flex flex-col-reverse gap-8 lg:mt-10 lg:flex-row"
       >
         <div class="content-centered-550">
-          <img
+          <NuxtImg
             class="w-full rounded-xl"
-            src="~assets/images/chess.jpeg"
+            src="/images/chess.jpeg"
             alt="chess"
           />
         </div>
