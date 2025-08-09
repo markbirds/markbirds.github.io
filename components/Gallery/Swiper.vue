@@ -72,6 +72,7 @@ useSwiper(containerRef, {
     fill: "row",
     rows: 1,
   },
+  loop: true,
   spaceBetween: 10,
   autoplay: {
     delay: 2500,
