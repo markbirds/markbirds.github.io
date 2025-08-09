@@ -24,24 +24,28 @@ export default defineNuxtConfig({
           href: "/fonts/Quicksand/Quicksand-Regular.woff2",
           as: "font",
           type: "font/woff2",
+          crossorigin: "anonymous",
         },
         {
           rel: "preload",
           href: "/fonts/Quicksand/Quicksand-Medium.woff2",
           as: "font",
           type: "font/woff2",
+          crossorigin: "anonymous",
         },
         {
           rel: "preload",
           href: "/fonts/Quicksand/Quicksand-SemiBold.woff2",
           as: "font",
           type: "font/woff2",
+          crossorigin: "anonymous",
         },
         {
           rel: "preload",
           href: "/fonts/Quicksand/Quicksand-Bold.woff2",
           as: "font",
           type: "font/woff2",
+          crossorigin: "anonymous",
         },
         {
           rel: "preload",
