@@ -12,7 +12,7 @@
     <div class="relative my-8">
       <div class="top-0 left-0 h-full w-full lg:absolute">
         <iframe
-          loading="eager"
+          loading="lazy"
           style="border-radius: 12px"
           width="100%"
           height="350"
