@@ -9,14 +9,12 @@
             class="max-w-[230px] rotate-[0.3rad] rounded-full"
             :src="shuffledImages[0]"
             alt="shuffled-image-1"
-            loading="lazy"
             decoding="async"
           />
           <img
             class="mt-1.5 max-w-[200px] rotate-[0.3rad] rounded-full"
             :src="shuffledImages[1]"
             alt="shuffled-image-2"
-            loading="lazy"
             decoding="async"
           />
         </div>
@@ -25,7 +23,6 @@
             class="w-full max-w-[300px] rounded-full md:mt-20 md:-ml-8 md:rotate-[0.3rad]"
             :src="shuffledImages[2]"
             alt="shuffled-image-3"
-            loading="lazy"
             decoding="async"
           />
         </div>
