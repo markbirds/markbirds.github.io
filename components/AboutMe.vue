@@ -29,7 +29,8 @@
           class="w-full rounded-xl"
           src="/images/about-me.webp"
           alt="about-me"
-          loading="lazy"
+          fetchpriority="high"
+          loading="eager"
           decoding="async"
         />
         <div class="media-description">
