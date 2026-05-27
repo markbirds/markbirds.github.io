@@ -1,3 +1,4 @@
+<!-- Personal bio + casual photo -->
 <template>
   <div id="about-me" class="bg-topography py-8 sm:py-16">
     <section class="grid-lg-cols-2 section-container">
@@ -14,14 +15,15 @@
             </span>
           </template>
         </Divider>
+
         <SectionDescription>
-          Helloooooo! I'm Owen, a <small><q>cute</q></small> software developer
-          with a passion for building apps. I mostly work on backend and
-          web-based applications, but I can also build mobile and desktop apps.
-          Outside of software development, I'm interested in learning more about
-          blockchain and cybersecurity. Right now, my goal is to start a
-          business, preferably in food or something related to software
-          development.
+          <span>
+            Helloooooo! I'm Owen. I mostly write code for a living, backend and
+            web stuff, sometimes mobile too. Outside of that I like to run,
+            hike, and play basketball with friends when I get the chance. This
+            is the chill version of my site. If you wanted the work/portfolio
+            version instead, switch to <strong>Portfolio</strong> up top.
+          </span>
         </SectionDescription>
       </div>
       <div class="content-centered-550">
@@ -34,13 +36,14 @@
           decoding="async"
         />
         <div class="media-description">
-          Me and my source of stress — taken while building this website (May 2,
+          Me and my source of stress, taken while building this website (May 2,
           2025).
         </div>
       </div>
     </section>
   </div>
 </template>
+
 <script setup lang="ts">
 import Divider from "@/components/commons/Divider.vue";
 import SectionDescription from "@/components/commons/SectionDescription.vue";

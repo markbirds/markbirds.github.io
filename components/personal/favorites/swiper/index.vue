@@ -32,10 +32,10 @@
   </div>
 </template>
 <script setup lang="ts">
-import Movies from "@/components/Favorites/Swiper/Movies.vue";
-import Songs from "@/components/Favorites/Swiper/Songs.vue";
-import Foods from "@/components/Favorites/Swiper/Foods.vue";
-import Anime from "@/components/Favorites/Swiper/Anime.vue";
+import Movies from "@/components/personal/favorites/swiper/Movies.vue";
+import Songs from "@/components/personal/favorites/swiper/Songs.vue";
+import Foods from "@/components/personal/favorites/swiper/Foods.vue";
+import Anime from "@/components/personal/favorites/swiper/Anime.vue";
 
 const emit = defineEmits(["change"]);
 

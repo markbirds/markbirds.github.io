@@ -1,3 +1,4 @@
+<!-- Hover label for icon links (e.g. footer tech stack) -->
 <template>
   <div class="group relative inline-block">
     <slot />

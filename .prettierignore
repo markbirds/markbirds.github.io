@@ -77,6 +77,11 @@ typings/
 # Nuxt generate
 dist
 
+# Static assets and SEO files (no Prettier parser)
+public/images/**
+public/robots.txt
+public/sitemap.xml
+
 # vuepress build output
 .vuepress/dist
 

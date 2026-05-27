@@ -1,3 +1,4 @@
+<!-- Sports and games lists (personal site only) -->
 <template>
   <div id="sports-and-games" class="bg-shapes py-8">
     <div class="content-centered-550 lg:section-container">

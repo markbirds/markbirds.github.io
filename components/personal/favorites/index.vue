@@ -1,3 +1,4 @@
+<!-- Favorites: swiper on mobile, category tabs on desktop -->
 <template>
   <div id="favorites" class="bg-food py-8 sm:py-16">
     <section class="grid-lg-cols-2 section-container">
@@ -36,11 +37,11 @@
 </template>
 <script setup lang="ts">
 import Divider from "@/components/commons/Divider.vue";
-import Swiper from "@/components/Favorites/Swiper/index.vue";
-import Movies from "@/components/Favorites/Movies.vue";
-import Songs from "@/components/Favorites/Songs.vue";
-import Foods from "@/components/Favorites/Foods.vue";
-import Anime from "@/components/Favorites/Anime.vue";
+import Swiper from "@/components/personal/favorites/swiper/index.vue";
+import Movies from "@/components/personal/favorites/Movies.vue";
+import Songs from "@/components/personal/favorites/Songs.vue";
+import Foods from "@/components/personal/favorites/Foods.vue";
+import Anime from "@/components/personal/favorites/Anime.vue";
 
 const index = ref(0);
 

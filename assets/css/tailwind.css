@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+/* Design tokens: breakpoints, colors, fonts, max content widths */
 @theme {
   --breakpoint-xs: 480px;
   --breakpoint-sm: 640px;
@@ -19,6 +20,7 @@
   --content-centered-550: 550px;
   --content-centered-600: 600px;
   --content-centered-800: 800px;
+  --content-centered-1000: 1000px;
   --content-centered-1238: 1238px;
 }
 
@@ -78,13 +80,18 @@
   @apply mx-auto w-full max-w-[--value(--content-centered-*)];
 }
 
+/* Reusable layout and UI patterns */
 @layer components {
   .btn-primary {
     @apply bg-primary hover:bg-primary-dark cursor-pointer rounded-full px-5 py-2 text-white;
   }
+  .badge {
+    @apply border-secondary/25 bg-secondary/10 text-primary inline-flex items-center rounded-full border px-3 py-0.5 text-sm font-medium;
+  }
   .bg-soft-white {
     @apply rounded-xl bg-white/50;
   }
+  /* Horizontal padding + max width for all sections */
   .section-container {
     @apply mx-auto w-full max-w-[var(--breakpoint-xl)] px-7 sm:px-8;
   }

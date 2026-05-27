@@ -1,3 +1,4 @@
+<!-- Personal hero: rotating profile photos + typed greeting + section nav -->
 <template>
   <div class="bg-jigsaw pt-24 pb-16 lg:pb-36">
     <section class="grid-lg-cols-2 section-container my-8">
@@ -8,7 +9,7 @@
           <img
             class="max-w-[230px] rotate-[0.3rad] rounded-full"
             :src="shuffledImages[0]"
-            alt="shuffled-image-1"
+            alt="Owen Patrick Falculan"
             fetchpriority="high"
             loading="eager"
             decoding="async"
@@ -16,7 +17,7 @@
           <img
             class="mt-1.5 max-w-[200px] rotate-[0.3rad] rounded-full"
             :src="shuffledImages[1]"
-            alt="shuffled-image-2"
+            alt="Owen Patrick Falculan"
             fetchpriority="high"
             loading="eager"
             decoding="async"
@@ -26,25 +27,28 @@
           <img
             class="w-full max-w-[300px] rounded-full md:mt-20 md:-ml-8 md:rotate-[0.3rad]"
             :src="shuffledImages[2]"
-            alt="shuffled-image-3"
+            alt="Owen Patrick Falculan"
             fetchpriority="high"
             loading="eager"
             decoding="async"
           />
         </div>
       </section>
-      <section class="content-centered-550">
+
+      <section class="content-centered-600">
         <section
           class="mt-16 flex flex-col items-start justify-center lg:ml-10"
         >
+          <h1 class="sr-only">Owen Patrick Falculan</h1>
+
           <div class="text-center text-3xl lg:text-left">
-            <span id="typed-text"></span>
+            <span id="typed-text" :key="typedKey"></span>
             <span v-if="showDetails">
-              <Icon name="twemoji:pizza" size="28" />
-              <Icon v-if="evenSecond" name="twemoji:winking-face" size="28" />
-              <Icon v-else name="twemoji:slightly-smiling-face" size="28" />
+              <Icon name="twemoji:person-running" size="28" class="ml-0.5" />
+              <Icon name="twemoji:mountain" size="28" class="ml-0.5" />
             </span>
           </div>
+
           <section v-if="showDetails" class="mx-auto text-lg lg:mx-0">
             <div class="mt-5 flex items-center">
               <span class="mr-2 text-xl">Check out what's here</span>
@@ -56,22 +60,30 @@
             </div>
             <div class="mt-5">
               <SectionLink
-                v-for="link in sectionLinks"
-                :key="link.to"
-                :to="link.to"
-                :text="link.text"
-                :icon="link.icon"
+                to="#about-me"
+                text="A Little Bit About Me"
+                icon="twemoji:see-no-evil-monkey"
               />
-            </div>
-            <div class="mt-8">
-              <a
-                class="btn-primary"
-                href="/collaborate-with-me"
-                target="_blank"
-              >
-                <span class="mr-2">Let's collaborate!</span>
-                <Icon name="streamline:collaborations-idea-solid" size="20" />
-              </a>
+              <SectionLink
+                to="#favorites"
+                text="My Favorites"
+                icon="twemoji:red-heart"
+              />
+              <SectionLink
+                to="#sports-and-games"
+                text="Sports and Games"
+                icon="twemoji:basketball"
+              />
+              <SectionLink
+                to="#gallery"
+                text="Gallery"
+                icon="twemoji:framed-picture"
+              />
+              <SectionLink
+                to="#follow-me"
+                text="Follow Me"
+                icon="twemoji:mobile-phone"
+              />
             </div>
           </section>
         </section>
@@ -79,12 +91,18 @@
     </section>
   </div>
 </template>
-<script setup>
+
+<script setup lang="ts">
 import Typed from "typed.js";
-import SectionLink from "@/components/Profile/SectionLink.vue";
+import SectionLink from "@/components/personal/profile/SectionLink.vue";
+
+// Typed.js copy — shown in #typed-text
+const typedStrings = [`<span>Hi, I'm Owen! I run and hike for fun!</span>`];
 
 const showDetails = ref(false);
-const evenSecond = ref(true);
+const typedKey = ref(0);
+let typedInstance: Typed | null = null;
+let imageInterval: ReturnType<typeof setInterval> | null = null;
 
 const shuffledImages = ref([
   "/images/profile/me1.webp",
@@ -92,34 +110,7 @@ const shuffledImages = ref([
   "/images/profile/me2.webp",
 ]);
 
-const sectionLinks = [
-  {
-    to: "#about-me",
-    text: "A Little Bit About Me",
-    icon: "twemoji:see-no-evil-monkey",
-  },
-  {
-    to: "#favorites",
-    text: "My Favorites",
-    icon: "twemoji:red-heart",
-  },
-  {
-    to: "#sports-and-games",
-    text: "Sports and Games",
-    icon: "twemoji:basketball",
-  },
-  {
-    to: "#gallery",
-    text: "Gallery",
-    icon: "twemoji:framed-picture",
-  },
-  {
-    to: "#follow-me",
-    text: "Follow Me",
-    icon: "twemoji:mobile-phone",
-  },
-];
-
+// Rotate which photo appears in each slot every 3s
 function shuffle() {
   const copy = [];
   copy[0] = shuffledImages.value[1];
@@ -132,12 +123,22 @@ function updateImages() {
   shuffledImages.value = shuffle().slice(0, 3);
 }
 
-onMounted(() => {
-  new Typed("#typed-text", {
-    strings: [
-      `<span>Hi, I'm Owen! I love pizza!</span>`,
-      `<span>Hi, I'm Owen! I love <span class="line-through">pizza!</span> building apps. </span>`,
-    ],
+function destroyTyped() {
+  if (typedInstance) {
+    typedInstance.destroy();
+    typedInstance = null;
+  }
+}
+
+function initTyped() {
+  destroyTyped();
+  showDetails.value = false;
+
+  const el = document.getElementById("typed-text");
+  if (!el) return;
+
+  typedInstance = new Typed("#typed-text", {
+    strings: typedStrings,
     typeSpeed: 50,
     backSpeed: 50,
     backDelay: 1000,
@@ -145,15 +146,31 @@ onMounted(() => {
     showCursor: false,
     cursorChar: "|",
     onComplete: () => {
+      // Reveal section links after typing finishes
       showDetails.value = true;
     },
   });
+}
 
-  setInterval(updateImages, 3000);
+function startImageRotation() {
+  stopImageRotation();
+  imageInterval = setInterval(updateImages, 3000);
+}
 
-  setInterval(() => {
-    const now = new Date().getSeconds();
-    evenSecond.value = now % 2 === 0;
-  }, 1000);
+function stopImageRotation() {
+  if (imageInterval) {
+    clearInterval(imageInterval);
+    imageInterval = null;
+  }
+}
+
+onMounted(() => {
+  initTyped();
+  startImageRotation();
+});
+
+onBeforeUnmount(() => {
+  destroyTyped();
+  stopImageRotation();
 });
 </script>

@@ -1,3 +1,4 @@
+<!-- Photo gallery swiper -->
 <template>
   <div id="gallery" class="bg-temple py-8">
     <section class="section-container content-centered-1238">
@@ -30,5 +31,5 @@
 <script setup lang="ts">
 import Divider from "@/components/commons/Divider.vue";
 import SectionDescription from "@/components/commons/SectionDescription.vue";
-import Swiper from "@/components/Gallery/Swiper.vue";
+import Swiper from "@/components/personal/gallery/Swiper.vue";
 </script>

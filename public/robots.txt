@@ -1,0 +1,6 @@
+# Tells search engines they are allowed to crawl this site.
+User-agent: *
+Allow: /
+
+# Points Google to the sitemap file below.
+Sitemap: https://www.owenfalculan.com/sitemap.xml

@@ -1,3 +1,4 @@
+<!-- Section heading with gradient lines on each side -->
 <template>
   <div class="flex-center relative mb-5">
     <div class="to-text h-px flex-1 bg-gradient-to-r from-transparent"></div>
