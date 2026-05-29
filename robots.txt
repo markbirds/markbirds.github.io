@@ -1,6 +1,9 @@
 # Tells search engines they are allowed to crawl this site.
 User-agent: *
 Allow: /
+Disallow: /index.html
+Disallow: /200.html
+Disallow: /404.html
 
 # Points Google to the sitemap file below.
 Sitemap: https://www.owenfalculan.com/sitemap.xml

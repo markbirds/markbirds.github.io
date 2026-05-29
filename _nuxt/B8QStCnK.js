@@ -1,1 +1,0 @@
-import{X as s,U as u,q as r,t as o,s as c,a0 as i}from"./DbVdojll.js";function a(e){const t=e||u();return t?.ssrContext?.head||t?.runWithContext(()=>{if(r())return o(c)})}function d(e,t={}){const n=a(t.nuxt);if(n)return s(e,{head:n,...t})}function f(e,t={}){const n=a(t.nuxt);if(n)return i(e,{head:n,...t})}export{f as a,d as u};
