@@ -35,6 +35,8 @@ Personal portfolio site for Owen Patrick Falculan (`www.owenfalculan.com`), depl
 - Tailwind utility classes in templates; shared tokens and breakpoints in `@theme` inside `assets/css/tailwind.css`. Prettier sorts classes via `prettier-plugin-tailwindcss`.
 - Use standard `<img>` tags with WebP assets in `public/images/` — not `NuxtImg`.
 - External links use `target="_blank"` with `rel="noopener noreferrer"`. Include accessibility attributes (`aria-label`, `sr-only` headings, `role` where appropriate).
+- **Project entries** (`components/portfolio/Projects.vue`): each project has a plain-language `overview` (2–3 sentences, no jargon — what it does and who it's for), a `tech` tag list, a `screenshots` array (hero shot first), an `architecture` diagram, and a `githubUrl` (empty string ⇒ renders "Coming soon"). Screenshots and diagrams live in `public/projects/`; architecture diagrams are SVGs exported from Excalidraw — keep the editable `.excalidraw` source in that project's own repo, not here.
+- **`tech` tags** list what an employer or developer scans for, roughly ordered backend → frontend → infra (~8–12 tags): language, web + API frameworks, ORM/data layer, realtime, datastores, job queue / background processing, object storage, and containerization. Use product names (e.g. `Supabase`, `PostgreSQL`, `Docker`). Omit incidental tooling (linters, test runners, error tracking) unless it's central to the project.
 - Commit messages follow conventional prefixes: `feat:`, `fix:`, `refactor:`, `chore:`.
 - Pre-commit hook runs `lint-staged` (ESLint, Stylelint, Prettier check). CI also runs `lintfix` then `lint` before deploy.
 
