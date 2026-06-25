@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="Project diagram placeholder">
+  <rect width="800" height="450" fill="#f8fafc"/>
+  <rect x="0.5" y="0.5" width="799" height="449" fill="none" stroke="#e2e8f0"/>
+  <text x="400" y="222" text-anchor="middle" font-family="system-ui, sans-serif" font-size="20" font-weight="600" fill="#94a3b8">Diagram coming soon</text>
+</svg>
