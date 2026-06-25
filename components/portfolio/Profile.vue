@@ -21,7 +21,7 @@
           <div class="text-center lg:text-left">
             <p class="text-2xl font-medium">
               <span class="bg-soft-white inline-block py-2">
-                Hey, I'm Owen. I build software and architect systems.
+                Hey, I'm Owen. I design and build systems.
               </span>
             </p>
             <p class="mt-3 text-lg">
@@ -32,12 +32,15 @@
           </div>
 
           <SectionDescription class="mt-3">
-            I've been writing code for years across backend, web, mobile, and
-            desktop, though backend and web are where I do my best work. I care
-            about choosing the right tools for the job, not forcing one stack
-            everywhere, and building systems that stay clean and maintainable.
-            If you're building something and need a developer who takes the work
-            seriously, let's talk.
+            I'm a software engineer specializing in backend and web development,
+            with experience building applications across web, mobile, and
+            desktop platforms. I care about clean architecture, maintainable
+            code, and solving real business problems with the right technology.
+          </SectionDescription>
+
+          <SectionDescription class="mt-3">
+            If you're looking for someone to design, build, and maintain
+            reliable systems, I'd be happy to help.
           </SectionDescription>
 
           <div class="mt-8 flex justify-center">

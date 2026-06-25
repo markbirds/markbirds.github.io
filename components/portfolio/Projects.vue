@@ -16,7 +16,10 @@
           class="flex flex-col rounded-xl border border-gray-200/80 bg-white/80 p-5"
         >
           <h3 class="text-xl font-semibold">{{ project.title }}</h3>
-          <p class="mt-2 text-lg leading-relaxed">{{ project.overview }}</p>
+          <p v-if="project.period" class="mt-1 text-sm text-gray-500">
+            {{ project.period }}
+          </p>
+          <p class="mt-2 text-base leading-relaxed">{{ project.overview }}</p>
 
           <button
             type="button"
@@ -128,6 +131,7 @@ import SectionDescription from "@/components/commons/SectionDescription.vue";
 
 type Project = {
   title: string;
+  period?: string;
   overview: string;
   tech: string[];
   screenshots: string[];
@@ -138,9 +142,10 @@ type Project = {
 // Spartner uses real assets; other entries are placeholders until ready.
 const projects: Project[] = [
   {
-    title: "Spartner",
+    title: "Spartner V2",
+    period: "Sept 2021 · Rebuilt June 2026",
     overview:
-      "Spartner helps BatStateU students find study partners. You set up a profile, get matched with someone who shares your interests, chat in real time, join study rooms, and stay connected with people you want to study with again.",
+      "Spartner helps BatStateU students find study partners. You set up a profile, get matched with someone who shares your interests, chat in real time, join study rooms, and stay connected with people you want to study with again. V2 is a ground-up rebuild of the app I first shipped in 2021, modernized for faster matching, real-time chat, and a smoother web experience.",
     tech: [
       "Python",
       "FastAPI",
