@@ -1,4 +1,4 @@
-<!-- Personal social section — LinkedIn only -->
+<!-- Personal social section — Strava -->
 <template>
   <div id="follow-me" class="bg-wiggle pt-8 pb-4">
     <section class="section-container">
@@ -18,22 +18,21 @@
 
         <div class="text-center text-lg leading-[2]">
           <span class="bg-soft-white inline-block px-3 py-3">
-            I'm most active on LinkedIn. Follow me there if you'd like to
-            connect!
+            I'm on Strava if you'd like to follow my runs and hikes!
           </span>
         </div>
 
         <div class="flex-center mt-6">
           <a
             class="btn-primary flex w-[120px] items-center justify-center rounded-md"
-            :href="LINKEDIN_URL"
+            :href="STRAVA_URL"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Visit Owen's LinkedIn profile"
-            title="LinkedIn Profile"
+            aria-label="Visit Owen's Strava profile"
+            title="Strava Profile"
           >
-            <span class="mr-2">LinkedIn </span>
-            <Icon name="akar-icons:linkedin-box-fill" class="text-white" />
+            <span class="mr-2">Strava </span>
+            <Icon name="simple-icons:strava" class="text-white" />
           </a>
         </div>
 
@@ -46,5 +45,5 @@
 <script setup lang="ts">
 import Divider from "@/components/commons/Divider.vue";
 import SiteFooter from "@/components/commons/SiteFooter.vue";
-import { LINKEDIN_URL } from "@/seo";
+import { STRAVA_URL } from "@/seo";
 </script>
