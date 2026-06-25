@@ -14,9 +14,11 @@ export const DEFAULT_OG_IMAGE = `${SITE_URL}/images/about-me-portfolio.webp`;
 export const LINKEDIN_URL =
   "https://www.linkedin.com/in/owen-patrick-falculan/";
 
+export const STRAVA_URL = "https://www.strava.com/athletes/148126157";
+
 export const CONTACT_EMAIL = "fowenpatrick@gmail.com";
 
 export const CONTACT_MAILTO = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("Project inquiry")}`;
 
 // JSON-LD sameAs — keep in sync with visible social links
-export const SOCIAL_PROFILES = [LINKEDIN_URL];
+export const SOCIAL_PROFILES = [LINKEDIN_URL, STRAVA_URL];
