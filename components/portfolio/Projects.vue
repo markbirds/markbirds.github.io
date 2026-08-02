@@ -9,15 +9,15 @@
         A few things I've built or worked on:
       </SectionDescription>
 
-      <div class="mt-8 grid gap-6 md:grid-cols-2">
+      <div class="mt-8 grid gap-6 md:grid-cols-2 md:grid-rows-[repeat(6,auto)]">
         <article
           v-for="project in projects"
           :key="project.title"
-          class="flex flex-col rounded-xl border border-gray-200/80 bg-white/80 p-5"
+          class="grid grid-rows-subgrid gap-0 rounded-xl border border-gray-200/80 bg-white/80 p-5 md:row-span-6"
         >
           <h3 class="text-xl font-semibold">{{ project.title }}</h3>
-          <p v-if="project.period" class="mt-1 text-sm text-gray-500">
-            {{ project.period }}
+          <p class="mt-1 min-h-5 text-sm text-gray-500">
+            {{ project.period ?? "" }}
           </p>
           <p class="mt-2 text-base leading-relaxed">{{ project.overview }}</p>
 
@@ -47,7 +47,7 @@
             </span>
           </div>
 
-          <div class="mt-auto flex flex-wrap items-center gap-3 pt-5">
+          <div class="flex flex-wrap items-center gap-3 pt-5">
             <a
               v-if="project.sourceUrl"
               class="btn-primary inline-flex items-center justify-center rounded-md px-4 py-2"
@@ -188,14 +188,17 @@ const projects: Project[] = [
       "Pinoy Henyo brings the classic Filipino word-guessing party game to the web. Play solo on one device or join a real-time room with a friend, pick a category, and race to guess the word before time runs out. I built it so my girlfriend and I would have something fun to play together.",
     tech: [
       "TypeScript",
-      "Nuxt 4",
       "Nitro",
       "WebSockets",
       "SQLite",
-      "Vue 3",
+      "Nuxt 4",
       "Pinia",
       "Nuxt UI",
+      "Tailwind CSS",
       "Docker",
+      "GitLab",
+      "Claude Code",
+      "Cursor",
     ],
     screenshots: [
       "/projects/pinoy-henyo/1-home.png",
