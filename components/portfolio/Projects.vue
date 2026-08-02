@@ -49,22 +49,32 @@
 
           <div class="mt-auto flex flex-wrap items-center gap-3 pt-5">
             <a
-              v-if="project.githubUrl"
+              v-if="project.sourceUrl"
               class="btn-primary inline-flex items-center justify-center rounded-md px-4 py-2"
-              :href="project.githubUrl"
+              :href="project.sourceUrl"
               target="_blank"
               rel="noopener noreferrer"
             >
               Source code
             </a>
             <button
+              v-if="project.architecture"
               type="button"
               class="border-primary text-primary inline-flex cursor-pointer items-center justify-center rounded-md border px-4 py-2"
               @click="openArchitecture(project)"
             >
               Architecture
             </button>
-            <span v-if="!project.githubUrl" class="text-sm text-gray-400">
+            <a
+              v-else-if="project.liveUrl"
+              class="border-primary text-primary inline-flex items-center justify-center rounded-md border px-4 py-2"
+              :href="project.liveUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Try it
+            </a>
+            <span v-if="!project.sourceUrl" class="text-sm text-gray-400">
               Coming soon
             </span>
           </div>
@@ -135,11 +145,11 @@ type Project = {
   overview: string;
   tech: string[];
   screenshots: string[];
-  architecture: string;
-  githubUrl: string;
+  architecture?: string;
+  liveUrl?: string;
+  sourceUrl: string;
 };
 
-// Spartner uses real assets; other entries are placeholders until ready.
 const projects: Project[] = [
   {
     title: "Spartner V2",
@@ -169,16 +179,36 @@ const projects: Project[] = [
       "/projects/spartner/6-settings.png",
     ],
     architecture: "/projects/spartner-architecture.svg",
-    githubUrl: "https://gitlab.com/fowenpatrick/spartner",
+    sourceUrl: "https://gitlab.com/fowenpatrick/spartner",
   },
   {
-    title: "Project Two",
+    title: "Pinoy Henyo",
+    period: "May 2026",
     overview:
-      "Placeholder project. A short, plain-language summary of what it does and who it's for goes here.",
-    tech: ["TypeScript", "Vue", "Node.js"],
-    screenshots: ["/projects/screenshot-1.svg"],
-    architecture: "/projects/placeholder.svg",
-    githubUrl: "",
+      "Pinoy Henyo brings the classic Filipino word-guessing party game to the web. Play solo on one device or join a real-time room with a friend, pick a category, and race to guess the word before time runs out. I built it so my girlfriend and I would have something fun to play together.",
+    tech: [
+      "TypeScript",
+      "Nuxt 4",
+      "Nitro",
+      "WebSockets",
+      "SQLite",
+      "Vue 3",
+      "Pinia",
+      "Nuxt UI",
+      "Docker",
+    ],
+    screenshots: [
+      "/projects/pinoy-henyo/1-home.png",
+      "/projects/pinoy-henyo/2-play-with-friend-mode.png",
+      "/projects/pinoy-henyo/3-play-with-friend-setup.png",
+      "/projects/pinoy-henyo/4-play-with-friend-guess.png",
+      "/projects/pinoy-henyo/5-play-with-friend-hint.png",
+      "/projects/pinoy-henyo/6-play-with-friend-correct.png",
+      "/projects/pinoy-henyo/7-play-with-friend-win.png",
+      "/projects/pinoy-henyo/8-solo-mode.png",
+    ],
+    liveUrl: "https://pinoy-henyo.owenfalculan.com/",
+    sourceUrl: "https://gitlab.com/pinoy-games/pinoy-henyo",
   },
   {
     title: "Project Three",
@@ -187,7 +217,7 @@ const projects: Project[] = [
     tech: ["Python", "PostgreSQL", "Docker"],
     screenshots: ["/projects/screenshot-1.svg"],
     architecture: "/projects/placeholder.svg",
-    githubUrl: "",
+    sourceUrl: "",
   },
 ];
 
@@ -202,6 +232,7 @@ function openGallery(project: Project) {
 }
 
 function openArchitecture(project: Project) {
+  if (!project.architecture) return;
   lightboxTitle.value = `${project.title} architecture`;
   lightboxIndex.value = 0;
   lightboxImages.value = [project.architecture];
