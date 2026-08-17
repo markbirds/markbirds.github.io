@@ -23,7 +23,7 @@
           <div class="text-center lg:text-left">
             <p class="text-2xl font-medium">
               <span class="bg-soft-white inline-block py-2">
-                Hey, I'm Owen. I design and build systems.
+                Hey, I'm Owen. I design and build reliable software.
               </span>
             </p>
             <p class="mt-3 text-lg">
