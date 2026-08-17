@@ -13,7 +13,7 @@
         <article
           v-for="project in projects"
           :key="project.title"
-          class="grid grid-rows-subgrid gap-0 rounded-xl border border-gray-200/80 bg-white/80 p-5 md:row-span-6"
+          class="flex min-w-0 flex-col rounded-xl border border-gray-200/80 bg-white/80 p-5 md:row-span-6 md:grid md:grid-rows-subgrid md:gap-0"
         >
           <h3 class="text-xl font-semibold">{{ project.title }}</h3>
           <p class="mt-1 min-h-5 text-sm text-gray-500">
@@ -30,7 +30,7 @@
             <img
               :src="project.screenshots[0]"
               :alt="`${project.title} screenshot`"
-              class="mx-auto w-full"
+              class="mx-auto h-auto w-full max-w-full"
               loading="lazy"
             />
             <span
