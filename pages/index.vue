@@ -41,7 +41,7 @@ useHead({
             "@type": "Person",
             name: SITE_NAME,
             url: SITE_URL,
-            jobTitle: "Software Developer",
+            jobTitle: "Senior Software Engineer",
             sameAs: SOCIAL_PROFILES,
             image: `${SITE_URL}/images/about-me-portfolio.webp`,
           },

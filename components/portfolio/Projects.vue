@@ -3,10 +3,12 @@
   <div id="projects" class="py-8 sm:py-16">
     <section class="section-container content-centered-1000">
       <h2 class="section-title mb-3 inline-flex px-0 text-2xl font-semibold">
-        Projects
+        Apps & Games
       </h2>
       <SectionDescription class="mb-4">
-        A few things I've built or worked on:
+        I use AI tools to modernize older projects and ship new ideas faster.
+        Some started as school or side projects; others are games for my
+        girlfriend, friends, and family. Feel free to check them out.
       </SectionDescription>
 
       <div class="mt-8 grid gap-6 md:grid-cols-2 md:grid-rows-[repeat(6,auto)]">

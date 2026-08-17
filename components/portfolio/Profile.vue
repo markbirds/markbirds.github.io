@@ -16,7 +16,9 @@
 
         <div>
           <!-- Visible to screen readers and search engines -->
-          <h1 class="sr-only">Owen Patrick Falculan, Software Developer</h1>
+          <h1 class="sr-only">
+            Owen Patrick Falculan, Senior Software Engineer
+          </h1>
 
           <div class="text-center lg:text-left">
             <p class="text-2xl font-medium">
@@ -32,10 +34,13 @@
           </div>
 
           <SectionDescription class="mt-3">
-            I'm a software engineer specializing in backend and web development,
-            with experience building applications across web, mobile, and
-            desktop platforms. I care about clean architecture, maintainable
-            code, and solving real business problems with the right technology.
+            I'm a senior software engineer specializing in backend and web
+            development, with experience building applications across web,
+            mobile, and desktop platforms. I use AI tools in my workflow
+            <em>(insert emdash)</em> they help me ship and iterate faster, but I
+            still own the architecture, trade-offs, and code quality. I care
+            about maintainable systems and solving real business problems with
+            the right technology.
           </SectionDescription>
 
           <SectionDescription class="mt-3">
