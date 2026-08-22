@@ -216,7 +216,35 @@ const projects: Project[] = [
     sourceUrl: "https://gitlab.com/pinoy-games/pinoy-henyo",
   },
   {
-    title: "Project Three",
+    title: "Laberinto",
+    period: "Aug 2026",
+    overview:
+      "Laberinto is a real-time maze race for two to four players. In Laban-laban everyone races for the exit and the first one through wins the round; in Sama-sama the group has to collect every token before anyone can leave. You can also run a maze alone with a difficulty and a timer. Built to sit beside a voice call, the way we already played games with friends.",
+    tech: [
+      "TypeScript",
+      "Nitro",
+      "WebSockets",
+      "Nuxt 4",
+      "Pinia",
+      "Nuxt UI",
+      "Tailwind CSS",
+      "Vitest",
+      "Docker",
+      "GitLab",
+      "Claude Code",
+      "Cursor",
+    ],
+    screenshots: [
+      "/projects/laberinto/1-home.png",
+      "/projects/laberinto/2-lobby.png",
+      "/projects/laberinto/3-laban-laban.png",
+      "/projects/laberinto/4-sama-sama.png",
+    ],
+    liveUrl: "https://laberinto.owenfalculan.com/",
+    sourceUrl: "https://gitlab.com/pinoy-games/laberinto",
+  },
+  {
+    title: "Project Four",
     overview:
       "Placeholder project. Swap in the real overview, screenshots, architecture diagram, and tech tags when it's ready.",
     tech: ["Python", "PostgreSQL", "Docker"],
