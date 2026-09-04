@@ -243,15 +243,6 @@ const projects: Project[] = [
     liveUrl: "https://laberinto.owenfalculan.com/",
     sourceUrl: "https://gitlab.com/pinoy-games/laberinto",
   },
-  {
-    title: "Project Four",
-    overview:
-      "Placeholder project. Swap in the real overview, screenshots, architecture diagram, and tech tags when it's ready.",
-    tech: ["Python", "PostgreSQL", "Docker"],
-    screenshots: ["/projects/screenshot-1.svg"],
-    architecture: "/projects/placeholder.svg",
-    sourceUrl: "",
-  },
 ];
 
 const lightboxImages = ref<string[]>([]);
