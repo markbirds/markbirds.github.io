@@ -2,6 +2,9 @@
   "name": "owen-falculan-portfolio",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": "^24"
+  },
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -13,41 +16,46 @@
     "lint:prettier": "prettier --check .",
     "lint": "pnpm run lint:js && pnpm run lint:style && pnpm run lint:prettier",
     "lintfix": "prettier --write --list-different . && pnpm run lint:js --fix && pnpm run lint:style --fix",
-    "prepare": "husky install"
+    "typecheck": "nuxt typecheck",
+    "prepare": "husky"
   },
   "lint-staged": {
-    "*.{js,vue}": "eslint --cache",
+    "*.{js,ts,vue}": "eslint --cache",
     "*.{css,scss,sass,html,vue}": "stylelint",
-    "*.**": "prettier --check"
+    "*.{js,ts,vue,css,md,json,yml,yaml,mjs}": "prettier --check"
   },
   "dependencies": {
-    "@nuxt/icon": "1.12.0",
-    "@tailwindcss/vite": "^4.1.8",
-    "dayjs": "^1.11.13",
-    "dayjs-nuxt": "2.1.11",
-    "nuxt": "^3.17.1",
-    "nuxt-swiper": "2.0.0",
-    "tailwindcss": "^4.1.8",
+    "@iconify-json/carbon": "^1.2.15",
+    "@iconify-json/devicon": "^1.2.62",
+    "@iconify-json/logos": "^1.2.11",
+    "@iconify-json/material-symbols": "^1.2.40",
+    "@iconify-json/simple-icons": "^1.2.84",
+    "@iconify-json/twemoji": "^1.2.4",
+    "@nuxt/icon": "^2.2.3",
+    "@tailwindcss/vite": "^4.3.0",
+    "nuxt": "^4.5.2",
+    "nuxt-swiper": "^2.0.2",
+    "tailwindcss": "^4.3.0",
     "typed.js": "^2.1.0",
-    "vue": "^3.5.13"
+    "vue": "^3.5.34",
+    "vue-router": "^5.0.7"
   },
   "devDependencies": {
-    "@iconify-json/devicon": "^1.2.62",
-    "@nuxt/eslint": "^1.3.0",
-    "@nuxtjs/stylelint-module": "^5.2.1",
-    "@types/node": "^22.15.3",
-    "eslint": "^9.25.1",
+    "@nuxt/eslint": "^1.16.0",
+    "@types/node": "^24.10.1",
+    "eslint": "^10.0.0",
     "eslint-config-prettier": "^10.1.2",
     "husky": "^9.1.7",
-    "lint-staged": "^15.5.1",
+    "lint-staged": "^16.2.0",
     "postcss-html": "^1.8.0",
-    "prettier": "^3.5.3",
-    "prettier-plugin-tailwindcss": "^0.6.11",
-    "stylelint": "^16.19.1",
-    "stylelint-config-recommended-vue": "^1.6.0",
-    "stylelint-config-standard": "^37.0.0",
+    "prettier": "^3.6.2",
+    "prettier-plugin-tailwindcss": "^0.6.14",
+    "stylelint": "^16.25.0",
+    "stylelint-config-recommended-vue": "^1.6.1",
+    "stylelint-config-standard": "^39.0.0",
     "stylelint-prettier": "^5.0.3",
-    "typescript": "^5.8.3"
+    "typescript": "^5.9.3",
+    "vue-tsc": "^3.1.1"
   },
   "packageManager": "pnpm@9.15.4+sha512.b2dc20e2fc72b3e18848459b37359a32064663e5627a51e4c74b2c29dd8e8e0491483c3abb40789cfd578bf362fb6ba8261b05f0387d76792ed6e23ea3b1b6a0"
 }

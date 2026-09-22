@@ -3,7 +3,7 @@ import withNuxt from "./.nuxt/eslint.config.mjs";
 
 export default withNuxt(
   {
-    ignores: [".nuxt/**", ".output/**", ".gitignore"],
+    ignores: [".nuxt/**", ".output/**", "dist/**", ".gitignore"],
     files: ["**/*.js", "**/*.ts", "**/*.vue"],
     rules: {
       "@typescript-eslint/no-empty-object-type": "off",

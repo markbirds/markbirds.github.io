@@ -1,63 +1,28 @@
-# Nuxt 3 Minimal Starter
+# owenfalculan.com
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Personal site for Owen Patrick Falculan. Nuxt 4, statically generated to GitHub Pages.
 
 ## Setup
 
-Make sure to install the dependencies:
-
 ```bash
-# npm
-npm install
-
-# pnpm
 pnpm install
-
-# yarn
-yarn install
+pnpm dev
 ```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
+## Production (GitHub Pages)
 
 ```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
+pnpm generate
 ```
 
-## Production
+Output is `.output/public`. CI copies `CNAME` into that folder and deploys.
 
-Build the application for production:
+## Scripts
 
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+| Command          | What it does                  |
+| ---------------- | ----------------------------- |
+| `pnpm dev`       | Dev server                    |
+| `pnpm generate`  | Static HTML for Pages         |
+| `pnpm preview`   | Preview the generated output  |
+| `pnpm lint`      | ESLint + Stylelint + Prettier |
+| `pnpm typecheck` | `nuxt typecheck`              |
