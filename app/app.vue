@@ -1,5 +1,10 @@
-<!-- Root layout: mode toggle stays visible; page content renders below -->
+<!-- Root layout: Personal / Portfolio toggle only on the homepage -->
 <template>
-  <ModeToggle />
+  <ModeToggle v-if="isHome" />
   <NuxtPage />
 </template>
+
+<script setup lang="ts">
+const route = useRoute();
+const isHome = computed(() => route.path === "/");
+</script>
