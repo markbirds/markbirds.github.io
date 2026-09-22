@@ -1,11 +1,10 @@
 <!-- Homepage: one URL, two layouts switched by Personal / Portfolio toggle -->
 <template>
   <section class="animate-fade-in">
-    <!-- Default: freelance / work-focused layout -->
+    <!-- Default: portfolio layout -->
     <div v-if="isPortfolio" class="bg-circuit">
       <PortfolioProfile />
       <PortfolioProjects />
-      <PortfolioWorkWithMeSection />
       <PortfolioFollowMe />
     </div>
 
