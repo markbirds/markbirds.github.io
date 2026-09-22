@@ -35,6 +35,7 @@
         </a>
       </Tooltip>
     </div>
+    <AppVersion />
   </section>
 </template>
 

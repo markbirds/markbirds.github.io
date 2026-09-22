@@ -1,4 +1,5 @@
 import tailwindcss from "@tailwindcss/vite";
+import { version } from "./package.json";
 import {
   DEFAULT_DESCRIPTION,
   DEFAULT_OG_IMAGE,
@@ -131,6 +132,13 @@ export default defineNuxtConfig({
   },
 
   ssr: true,
+
+  runtimeConfig: {
+    public: {
+      // Baked at generate time from package.json; shown in the footer.
+      version,
+    },
+  },
 
   routeRules: {
     "/**": { prerender: true },
