@@ -43,7 +43,7 @@ Deviations from the Nuxt stack conventions (Nuxt UI, `@nuxt/image`, `@nuxt/fonts
 - **`tech` tags** list what an employer or developer scans for, roughly ordered backend → frontend → infra (~8–12 tags): language, web + API frameworks, ORM/data layer, realtime, datastores, job queue / background processing, object storage, and containerization. Use product names (e.g. `Supabase`, `PostgreSQL`, `Docker`). Omit incidental tooling (linters, test runners, error tracking) unless it's central to the project.
 - Commit messages follow conventional prefixes: `feat:`, `fix:`, `refactor:`, `chore:`.
 - Pre-commit hook runs `lint-staged` (ESLint, Stylelint, Prettier check). CI runs `lint`, `typecheck`, then `generate` before deploy.
-- Site version is `package.json` `version`, baked into `runtimeConfig.public.version` at generate, shown in the footer as `vX.Y.Z`. Git tags are `v<version>` on `master` after merge.
+- Site version is `package.json` `version`, shown in the footer as `vX.Y.Z`. CI bakes `NUXT_PUBLIC_VERSION` at generate (git tag `v*` on tag pushes, otherwise `package.json`). Git tags are `v<version>` on `master` after merge. Every push to `master`/`main` or `v*` rebuilds and deploys Pages.
 
 ## Forbidden patterns
 

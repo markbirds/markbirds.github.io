@@ -135,8 +135,9 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      // Baked at generate time from package.json; shown in the footer.
-      version,
+      // Baked at generate time. CI sets NUXT_PUBLIC_VERSION from the git tag
+      // (or package.json on branch pushes).
+      version: process.env.NUXT_PUBLIC_VERSION || version,
     },
   },
 
