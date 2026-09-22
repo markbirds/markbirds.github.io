@@ -7,5 +7,7 @@ export default {
   ],
   rules: {
     "declaration-empty-line-before": "never",
+    // Vue inline `style=""` is a false positive with postcss-html + this rule.
+    "no-invalid-position-declaration": null,
   },
 };

@@ -1,4 +1,3 @@
-import { defineNuxtConfig } from "nuxt/config";
 import tailwindcss from "@tailwindcss/vite";
 import {
   DEFAULT_DESCRIPTION,
@@ -6,9 +5,13 @@ import {
   DEFAULT_TITLE,
   SITE_NAME,
   SITE_URL,
-} from "./seo";
+} from "./shared/seo";
 
 export default defineNuxtConfig({
+  compatibilityDate: "2026-09-22",
+
+  modules: ["@nuxt/eslint", "@nuxt/icon", "nuxt-swiper"],
+
   app: {
     head: {
       // SSR defaults — useHomePageSeo() keeps these in sync on the client
@@ -103,17 +106,12 @@ export default defineNuxtConfig({
       ],
     },
   },
+
   css: ["~/assets/css/main.css"],
+
   vite: {
     plugins: [tailwindcss()],
   },
-
-  modules: [
-    "@nuxt/eslint",
-    "@nuxtjs/stylelint-module",
-    "@nuxt/icon",
-    "nuxt-swiper",
-  ],
 
   icon: {
     clientBundle: {
@@ -121,15 +119,35 @@ export default defineNuxtConfig({
       icons: ["devicon:nuxtjs", "devicon:tailwindcss"],
     },
     serverBundle: {
-      collections: ["devicon"],
+      collections: [
+        "carbon",
+        "devicon",
+        "logos",
+        "material-symbols",
+        "simple-icons",
+        "twemoji",
+      ],
     },
   },
 
   ssr: true,
-  compatibilityDate: "2024-08-11",
+
+  routeRules: {
+    "/**": { prerender: true },
+  },
+
+  typescript: {
+    strict: true,
+    tsConfig: {
+      compilerOptions: {
+        noUncheckedIndexedAccess: true,
+        noImplicitOverride: true,
+      },
+    },
+  },
+
   nitro: {
     prerender: {
-      // Static HTML for crawlers
       crawlLinks: true,
       routes: ["/"],
     },

@@ -76,6 +76,13 @@ typings/
 
 # Nuxt generate
 dist
+.output
+
+# Lockfile
+pnpm-lock.yaml
+
+# Prettier has no parser for this file
+.prettierignore
 
 # Static assets and SEO files (no Prettier parser)
 public/images/**

@@ -1,6 +1,7 @@
 name: ci
 
 on:
+  pull_request:
   push:
     branches:
       - main
@@ -8,42 +9,36 @@ on:
 
 jobs:
   ci:
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-        node: [22.15.1]
+    runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout 🛎
-        uses: actions/checkout@master
-
-      - name: Setup node env 🏗
-        uses: actions/setup-node@v2.1.4
-        with:
-          node-version: ${{ matrix.node }}
-          check-latest: true
+      - name: Checkout
+        uses: actions/checkout@v5
 
       - name: Setup pnpm
-        uses: pnpm/action-setup@v2
+        uses: pnpm/action-setup@v5
+
+      - name: Setup Node
+        uses: actions/setup-node@v5
         with:
-          version: 8
+          node-version: 24
+          cache: pnpm
 
-      - name: Install dependencies 👨🏻‍💻
-        run: pnpm install
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
 
-      - name: Format files
-        run: pnpm lintfix
-
-      - name: Run linter 👀
+      - name: Lint
         run: pnpm lint
+
+      - name: Typecheck
+        run: pnpm typecheck
 
       - name: Generate
         run: pnpm generate && cp CNAME ./.output/public
 
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+        if: github.event_name == 'push' && (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main')
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./.output/public
