@@ -12,10 +12,8 @@ Personal portfolio site for Owen Patrick Falculan (`www.owenfalculan.com`), depl
 - Styling: Tailwind CSS v4 via `@tailwindcss/vite`; design tokens in `app/assets/css/tailwind.css`
 - Package manager: pnpm (`packageManager` field pins pnpm 9.15.4); Node `^24`
 - Key modules: `@nuxt/icon`, `nuxt-swiper`, `typed.js`
-- Formatter: Prettier + `prettier-plugin-tailwindcss` (team-mandated on this repo; see `docs/adr/002-custom-visual-not-nuxt-ui.md`)
+- Formatter: Prettier + `prettier-plugin-tailwindcss`
 - Test runner: none configured
-
-Deviations from the Nuxt stack conventions (Nuxt UI, `@nuxt/image`, `@nuxt/fonts`, Docker `node-server`) are recorded in `docs/adr/`.
 
 ## Dev commands
 
