@@ -105,6 +105,7 @@ export const PROJECTS: Project[] = [
       "/projects/resumie/5-rewrite.png",
       "/projects/resumie/6-api-keys.png",
     ],
+    architecture: "/projects/resumie-architecture.png",
     liveUrl: "https://resumie.owenfalculan.com/",
     sourceUrl: "https://gitlab.com/fowenpatrick/resumie",
   },
