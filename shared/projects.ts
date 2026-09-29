@@ -83,7 +83,7 @@ export const PROJECTS: Project[] = [
     featured: true,
     period: "Sept 2026",
     overview:
-      "Resumie is an AI resume builder. Upload the resume you already have or start from blank, fill in the fields, and watch the page take shape beside them. The model reads the whole page, scores it, and suggests fixes you accept one at a time. It can rewrite a bullet too, and where it does not know a number it asks you instead of making one up. Your name and contact details are swapped for placeholders before any text goes to the model, and your resumes stay in your browser. You paste your own Groq or OpenRouter key. There is no login.",
+      "Resumie is an AI resume builder. Upload the resume you already have, fill in the fields, and watch the page take shape beside them. The model scores the whole page and suggests fixes you accept one at a time. Your name and contact details never reach it, and your resumes stay in your browser. You paste your own Groq or OpenRouter key. There is no login.",
     tech: [
       "TypeScript",
       "Nitro",
@@ -115,7 +115,7 @@ export const PROJECTS: Project[] = [
     featured: true,
     period: "Sept 2026",
     overview:
-      "Grammarie is an AI grammar checker with guardrails. Paste what you are about to send, in a chat or an email, and get it back corrected, with one line per fix explaining why, and the same message said three ways: formal, casual and concise. The model is only allowed to correct grammar. It gets your text as data, can only answer in a fixed shape, and code grades every reply before you see it, so a question or an instruction hidden in your text gets corrected, not answered. You paste your own Groq key. Nothing is stored and there is no login. My first app on Next.js rather than Nuxt.",
+      "Grammarie is an AI grammar checker with guardrails. Paste what you are about to send and get it back corrected, with a note per fix and three rewrites: formal, casual and concise. The model can only correct grammar, and code checks every reply, so a hidden instruction is corrected, not followed. You paste your own Groq key. There is no login and nothing is stored. My first app on Next.js.",
     tech: [
       "TypeScript",
       "Next.js 16",
