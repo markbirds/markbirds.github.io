@@ -60,7 +60,7 @@
               @click="openGallery(project)"
             >
               <img
-                :src="project.screenshots[0]"
+                :src="coverImage(project)"
                 :alt="`${project.title} screenshot`"
                 class="h-full w-full object-cover object-top"
                 loading="lazy"
@@ -134,7 +134,7 @@
 
 <script setup lang="ts">
 import type { ProjectKind } from "~~/shared/projects";
-import { PROJECTS } from "~~/shared/projects";
+import { PROJECTS, coverImage } from "~~/shared/projects";
 
 type KindFilter = "all" | ProjectKind;
 

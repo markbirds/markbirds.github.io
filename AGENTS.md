@@ -60,6 +60,17 @@ Personal portfolio site for Owen Patrick Falculan (`www.owenfalculan.com`), depl
 - CI (`.github/workflows/ci.yml`) runs on push to `main`/`master`: install → `lint` → `typecheck` → `generate` → copy `CNAME` → deploy to GitHub Pages via `peaceiris/actions-gh-pages`.
 - Production deploy uses `pnpm generate` (static output in `.output/public`), not `pnpm build`.
 
+## Images
+
+Project screenshots and architecture diagrams live under `public/projects/` as WebP, never PNG. Take the screenshot as a PNG, drop it in, then run `pnpm images` (needs `cwebp`: `brew install webp`), which converts every PNG there and deletes it:
+
+- Screenshots keep full resolution at WebP q88 for the lightbox, and get a 960px `-card.webp` copy. The cards and the `/apps` list load that copy through `coverImage()` in `shared/projects.ts`; the lightbox loads the full file.
+- Architecture diagrams (`*-architecture.png`) are converted lossless, because lossy WebP rings around their thin strokes and small labels.
+
+Reference the `.webp` path in `shared/projects.ts`, never the `-card.webp` one; `coverImage()` derives it. The first entry in `screenshots` is the card image.
+
+The hero, `public/images/about-me-portfolio.webp`, is 1200px wide at q75. It is also the `og:image`, the `twitter:image` and the JSON-LD image, so replace it at the same path and size rather than dropping in a camera original: the last one was 4284x5712 and 1.17 MB for a 500px slot.
+
 ## Repo notes
 
 - Case-duplicated paths under `personal/` (`Profile/` vs `profile/`, `Favorites/` vs `favorites/`) exist; follow the import path already used by the file you are editing.

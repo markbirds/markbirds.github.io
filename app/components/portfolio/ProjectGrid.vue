@@ -20,7 +20,7 @@
           @click="openGallery(project)"
         >
           <img
-            :src="project.screenshots[0]"
+            :src="coverImage(project)"
             :alt="`${project.title} screenshot`"
             class="mx-auto h-auto w-full max-w-full"
             loading="lazy"
@@ -87,6 +87,7 @@
 
 <script setup lang="ts">
 import type { Project } from "~~/shared/projects";
+import { coverImage } from "~~/shared/projects";
 
 defineProps<{
   projects: Project[];
