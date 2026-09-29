@@ -10,7 +10,7 @@ const { version } = useRuntimeConfig().public;
       target="_blank"
       rel="noopener noreferrer"
       class="hover:text-gray-600"
-      :aria-label="`Site version ${version}`"
+      :aria-label="`v${version} release on GitHub`"
     >
       v{{ version }}
     </a>

@@ -16,12 +16,14 @@
         <button
           type="button"
           class="group relative mt-4 block w-full cursor-pointer overflow-hidden rounded-lg border border-gray-200/80 bg-white transition-shadow hover:shadow-md"
-          :aria-label="`View ${project.title} screenshots`"
+          :aria-label="galleryLabel(project)"
           @click="openGallery(project)"
         >
           <img
             :src="coverImage(project)"
             :alt="`${project.title} screenshot`"
+            width="960"
+            height="600"
             class="mx-auto h-auto w-full max-w-full"
             loading="lazy"
           />
@@ -88,6 +90,14 @@
 <script setup lang="ts">
 import type { Project } from "~~/shared/projects";
 import { coverImage } from "~~/shared/projects";
+
+// Starts with the badge's visible text, so voice control can target the button by what it shows.
+function galleryLabel(project: Project) {
+  const count = project.screenshots.length;
+  return count > 1
+    ? `${count} screenshots of ${project.title}`
+    : `View ${project.title} screenshot`;
+}
 
 defineProps<{
   projects: Project[];

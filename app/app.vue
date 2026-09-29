@@ -1,7 +1,9 @@
 <!-- Root layout: Personal / Portfolio toggle only on the homepage -->
 <template>
   <ModeToggle v-if="isHome" />
-  <NuxtPage />
+  <main>
+    <NuxtPage />
+  </main>
 </template>
 
 <script setup lang="ts">

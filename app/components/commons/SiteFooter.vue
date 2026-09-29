@@ -2,12 +2,7 @@
 <template>
   <section class="mt-12 mb-4 w-full text-center text-gray-600">
     <div class="italic">
-      <a
-        href="/internetdog.gif"
-        target="_blank"
-        aria-label="View internet dog GIF"
-        title="Internet Dog GIF"
-      >
+      <a href="/internetdog.gif" target="_blank" title="Internet Dog GIF">
         On the Internet, nobody knows you're a dog
       </a>
     </div>
