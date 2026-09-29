@@ -30,15 +30,6 @@ useHomePageSeo();
 
 // Structured data for search engines (Person + WebSite)
 useHead({
-  // The portfolio hero is this page's LCP image, and no other page shows it.
-  link: [
-    {
-      rel: "preload",
-      href: "/images/about-me-portfolio.webp",
-      as: "image",
-      type: "image/webp",
-    },
-  ],
   script: [
     {
       type: "application/ld+json",

@@ -69,7 +69,7 @@ Project screenshots and architecture diagrams live under `public/projects/` as W
 
 Reference the `.webp` path in `shared/projects.ts`, never the `-card.webp` one; `coverImage()` derives it. The first entry in `screenshots` is the card image.
 
-The hero, `public/images/about-me-portfolio.webp`, is 1200px wide at q75. It is also the `og:image`, the `twitter:image` and the JSON-LD image, so replace it at the same path and size rather than dropping in a camera original: the last one was 4284x5712 and 1.17 MB for a 500px slot.
+The hero, `public/images/about-me-portfolio.webp`, is 1200px wide at q75. It is also the `og:image`, the `twitter:image` and the JSON-LD image, so replace it at the same path and size rather than dropping in a camera original: the last one was 4284x5712 and 1.17 MB for a 500px slot. Its 640px sibling, `about-me-portfolio-640.webp`, is what phones load; `app/components/portfolio/Profile.vue` lists both once and uses that list for the `<img>` and its preload, so a new hero means regenerating both from the original.
 
 ## Repo notes
 
