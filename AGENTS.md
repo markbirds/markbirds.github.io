@@ -11,7 +11,7 @@ Personal portfolio site for Owen Patrick Falculan (`www.owenfalculan.com`), depl
 - Layout: Nuxt 4 `app/` directory; shared constants in `shared/`
 - Styling: Tailwind CSS v4 via `@tailwindcss/vite`; design tokens in `app/assets/css/tailwind.css`
 - Package manager: pnpm (`packageManager` field pins pnpm 9.15.4); Node `^24`
-- Key modules: `@nuxt/icon`, `nuxt-swiper`, `typed.js`
+- Key modules: `@nuxt/icon`, `typed.js`. Carousels use `swiper` directly through `app/composables/useSwiper.ts`, which loads it only when a carousel mounts, so Portfolio visits never download it. The `build:manifest` hook in `nuxt.config.ts` is what keeps it that way: without it Nuxt prefetches the Swiper chunk on every page, which cost 2 Lighthouse points when measured
 - Formatter: Prettier + `prettier-plugin-tailwindcss`
 - Test runner: none configured
 

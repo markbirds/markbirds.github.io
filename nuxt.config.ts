@@ -11,7 +11,21 @@ import {
 export default defineNuxtConfig({
   compatibilityDate: "2026-09-22",
 
-  modules: ["@nuxt/eslint", "@nuxt/icon", "nuxt-swiper"],
+  modules: ["@nuxt/eslint", "@nuxt/icon"],
+
+  hooks: {
+    // Nuxt prefetches every dynamic import, which would download Swiper on every visit; it belongs to Personal mode only.
+    "build:manifest": (manifest) => {
+      for (const [key, chunk] of Object.entries(manifest)) {
+        if (key.includes("/swiper/")) chunk.prefetch = false;
+      }
+    },
+  },
+
+  // swiper-* are Swiper's web components, registered by useSwiper().
+  vue: {
+    compilerOptions: { isCustomElement: (tag) => tag.startsWith("swiper-") },
+  },
 
   app: {
     head: {
@@ -82,6 +96,8 @@ export default defineNuxtConfig({
 
   vite: {
     plugins: [tailwindcss()],
+    // Pre-bundled for the dev server, so the first carousel does not force a reload.
+    optimizeDeps: { include: ["swiper/element/bundle"] },
   },
 
   icon: {
