@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Personal portfolio site for Owen Patrick Falculan (`www.owenfalculan.com`), deployed as a static Nuxt app to GitHub Pages. A single homepage (`app/pages/index.vue`) renders two layouts — **Portfolio** (freelance/work-focused) and **Personal** (casual) — toggled client-side via `useSiteMode()` and persisted in `localStorage`. SEO defaults and contact/social constants live in `shared/seo/index.ts`.
+Personal portfolio site for Owen Patrick Falculan (`www.owenfalculan.com`), deployed as a static Nuxt app to GitHub Pages. A single homepage (`app/pages/index.vue`) renders two layouts — **Portfolio** (freelance/work-focused) and **Personal** (casual) — toggled client-side via `useSiteMode()`. Every visit starts in Portfolio; the choice is deliberately not remembered, so a returning visitor never lands in Personal. SEO defaults and contact/social constants live in `shared/seo/index.ts`.
 
 ## Stack
 
