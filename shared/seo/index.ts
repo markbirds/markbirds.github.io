@@ -18,7 +18,7 @@ export const STRAVA_URL = "https://www.strava.com/athletes/148126157";
 
 export const CONTACT_EMAIL = "fowenpatrick@gmail.com";
 
-export const CONTACT_GMAIL = `https://mail.google.com/mail/?view=cm&fs=1&to=${CONTACT_EMAIL}&su=${encodeURIComponent("Let's collaborate")}`;
+export const CONTACT_MAILTO = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("Let's collaborate")}`;
 
 // JSON-LD sameAs — keep in sync with visible social links
 export const SOCIAL_PROFILES = [LINKEDIN_URL, STRAVA_URL];
