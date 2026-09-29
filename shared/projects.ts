@@ -110,6 +110,27 @@ export const PROJECTS: Project[] = [
     sourceUrl: "https://gitlab.com/fowenpatrick/resumie",
   },
   {
+    title: "Grammarie",
+    kind: "app",
+    featured: true,
+    period: "Sept 2026",
+    overview:
+      "Grammarie is an AI grammar checker with guardrails. Paste what you are about to send, in a chat or an email, and get it back corrected, with one line per fix explaining why, and the same message said three ways: formal, casual and concise. The model is only allowed to correct grammar. It gets your text as data, can only answer in a fixed shape, and code grades every reply before you see it, so a question or an instruction hidden in your text gets corrected, not answered. You paste your own Groq key. Nothing is stored and there is no login. My first app on Next.js rather than Nuxt.",
+    tech: [
+      "TypeScript",
+      "Next.js 16",
+      "React 19",
+      "Groq",
+      "Zod",
+      "Tailwind CSS",
+      "Vercel",
+    ],
+    screenshots: ["/projects/grammarie/1-check.png"],
+    architecture: "/projects/grammarie-architecture.png",
+    liveUrl: "https://grammarie.owenfalculan.com/",
+    sourceUrl: "https://gitlab.com/fowenpatrick/grammarie",
+  },
+  {
     title: "Pinoy Henyo",
     kind: "game",
     featured: true,
