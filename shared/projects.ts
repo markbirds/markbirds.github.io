@@ -65,7 +65,7 @@ export const PROJECTS: Project[] = [
       "Nuxt 4",
       "Nuxt UI",
       "Tailwind CSS",
-      "Docker",
+      "Vercel",
     ],
     screenshots: [
       "/projects/conversie/2-home.webp",
@@ -118,12 +118,16 @@ export const PROJECTS: Project[] = [
       "Speaksie is a 30-day English speaking program for Filipino learners. One lesson a day, and you speak out loud in every step: warm up, shadow a passage, record a task, review what you flagged. You record the same passage on Day 1, 15 and 30 and hear the change. Everything stays in your browser. A Groq key is optional, for a coach note and three conversation days.",
     tech: [
       "TypeScript",
+      "Nitro",
+      "Groq",
+      "Whisper",
+      "TTS",
+      "IndexedDB",
       "Nuxt 4",
       "Nuxt UI",
       "Pinia",
       "Zod",
       "Tailwind CSS",
-      "Groq",
       "Vercel",
     ],
     screenshots: [
