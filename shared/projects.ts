@@ -115,7 +115,7 @@ export const PROJECTS: Project[] = [
     featured: true,
     period: "Sept 2026",
     overview:
-      "Grammarie is an AI grammar checker with guardrails. Paste what you are about to send and get it back corrected, with a note per fix and three rewrites: formal, casual and concise. The model can only correct grammar, and code checks every reply, so a hidden instruction is corrected, not followed. You paste your own Groq key. There is no login and nothing is stored. My first app on Next.js.",
+      "Grammarie is an AI grammar checker with guardrails. Paste what you are about to send and get it back corrected, with a note per fix and three rewrites: formal, casual and concise. The model can only correct grammar, and code checks every reply, so a hidden instruction is corrected, not followed. You paste your own Groq key. There is no login and nothing is stored.",
     tech: [
       "TypeScript",
       "Next.js 16",
