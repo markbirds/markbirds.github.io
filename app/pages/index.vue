@@ -1,6 +1,6 @@
 <!-- Homepage: one URL, two layouts switched by Personal / Portfolio toggle -->
 <template>
-  <section class="animate-fade-in">
+  <section class="motion-safe:animate-fade-in">
     <!-- Default: portfolio layout -->
     <div v-if="isPortfolio" class="bg-circuit">
       <PortfolioProfile />
