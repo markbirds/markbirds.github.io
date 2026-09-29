@@ -43,7 +43,14 @@
           <div
             class="mt-8 flex flex-wrap items-center justify-center gap-4 lg:justify-start"
           >
-            <a class="btn-primary" :href="CONTACT_MAILTO">Let's collaborate</a>
+            <a
+              class="btn-primary"
+              :href="CONTACT_GMAIL"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Let's collaborate
+            </a>
             <a
               class="border-primary text-primary inline-flex items-center justify-center rounded-md border bg-white px-4 py-2"
               :href="LINKEDIN_URL"
@@ -53,16 +60,6 @@
               Chat me on LinkedIn
             </a>
           </div>
-
-          <!-- For a visitor with no mail app set up, where the button would do nothing. -->
-          <p class="mt-4 text-center text-sm text-gray-500 lg:text-left">
-            Or email me at
-            <a
-              class="text-primary underline underline-offset-2"
-              :href="CONTACT_MAILTO"
-              >{{ CONTACT_EMAIL }}</a
-            >
-          </p>
         </div>
       </div>
     </section>
@@ -71,7 +68,7 @@
 
 <script setup lang="ts">
 import SectionDescription from "~/components/commons/SectionDescription.vue";
-import { CONTACT_EMAIL, CONTACT_MAILTO, LINKEDIN_URL } from "~~/shared/seo";
+import { CONTACT_GMAIL, LINKEDIN_URL } from "~~/shared/seo";
 
 // One definition for the <img> and its preload, so both pick the same file and it downloads once.
 const heroSrcset =

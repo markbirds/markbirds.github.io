@@ -59,7 +59,7 @@ Personal portfolio site for Owen Patrick Falculan (`www.owenfalculan.com`), depl
 - Use conventional commit prefixes (`feat:`, `fix:`, `refactor:`, `chore:`).
 - CI (`.github/workflows/ci.yml`) runs on push to `main`/`master`: install → `lint` → `typecheck` → `generate` → copy `CNAME` → deploy to GitHub Pages via `peaceiris/actions-gh-pages`.
 - Production deploy uses `pnpm generate` (static output in `.output/public`), not `pnpm build`.
-- To confirm a deploy is live, check that `https://www.owenfalculan.com/_nuxt/builds/latest.json` has a `timestamp` after your push. Cloudflare sits in front and rewrites email addresses and `mailto:` links in the served HTML, then decodes them in the browser, so searching the live HTML for an address never matches. Check links in a browser.
+- To confirm a deploy is live, check that `https://www.owenfalculan.com/_nuxt/builds/latest.json` has a `timestamp` after your push.
 
 ## Images
 
