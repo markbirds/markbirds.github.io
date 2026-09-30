@@ -1,5 +1,5 @@
 // Portfolio apps and games.
-// `featured: true` = best apps, shown on the homepage. Everything is listed on /apps.
+// `featured: true` = best apps, shown on the homepage, which keeps exactly eight (four rows of two). Everything is listed on /apps.
 
 export type ProjectKind = "app" | "game";
 
