@@ -2,13 +2,31 @@
 <template>
   <div class="min-h-screen bg-white pt-8 pb-16">
     <section class="section-container content-centered-1000">
-      <NuxtLink
-        to="/apps"
-        class="text-primary inline-flex items-center gap-1 font-medium hover:underline"
+      <nav
+        class="flex flex-wrap items-center justify-between gap-3"
+        aria-label="App page navigation"
       >
-        <Icon name="material-symbols:arrow-left-alt-rounded" size="24" />
-        All apps and games
-      </NuxtLink>
+        <button
+          v-if="cameFromSite"
+          type="button"
+          class="text-primary inline-flex cursor-pointer items-center gap-1 font-medium hover:underline"
+          @click="router.back()"
+        >
+          <Icon name="material-symbols:arrow-left-alt-rounded" size="24" />
+          Back
+        </button>
+        <NuxtLink
+          v-else
+          to="/"
+          class="text-primary inline-flex items-center gap-1 font-medium hover:underline"
+        >
+          <Icon name="material-symbols:arrow-left-alt-rounded" size="24" />
+          Home
+        </NuxtLink>
+        <NuxtLink to="/apps" class="text-primary font-medium hover:underline">
+          All apps and games
+        </NuxtLink>
+      </nav>
 
       <header class="mt-6">
         <p class="text-sm text-gray-500">
@@ -134,6 +152,7 @@ import { cardImage, projectBySlug, projectPath } from "~~/shared/projects";
 import { SITE_URL } from "~~/shared/seo";
 
 const route = useRoute();
+const router = useRouter();
 const found = projectBySlug(String(route.params.slug));
 if (!found) {
   throw createError({
@@ -152,6 +171,12 @@ const heroSrcset = computed(() => {
 
 const { images, index, title, open, openArchitecture, close, next, prev } =
   useProjectLightbox();
+
+// Back returns to the page on this site that led here, scroll and all; someone landing from outside gets Home instead.
+const cameFromSite = ref(false);
+onMounted(() => {
+  cameFromSite.value = typeof window.history.state?.back === "string";
+});
 
 // Opens the viewer on one screenshot, with the rest a swipe away.
 function openAt(i: number) {
