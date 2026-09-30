@@ -5,7 +5,7 @@ export const SITE_NAME = "Owen Patrick Falculan";
 
 // Used in nuxt.config (SSR) and useHomePageSeo (client)
 export const DEFAULT_DESCRIPTION =
-  "Owen Patrick Falculan, senior software engineer at Billease.";
+  "Owen Patrick Falculan, senior software engineer at Billease, building bank and payment integrations in Go and Python.";
 
 export const DEFAULT_TITLE = `${SITE_NAME} | Senior Software Engineer`;
 

@@ -28,11 +28,11 @@
           </div>
 
           <SectionDescription class="mt-3">
-            I'm a senior software engineer. I work at Billease, one of the
-            leading fintech apps in the Philippines. Currently, my work is
-            focused on integrations for payments like QRPh, OTC payments, and
-            cards, and on cash disbursal with other banks. When working on a
-            project, I keep my code clean, maintainable, performant, and secure.
+            I'm a senior software engineer at Billease, a Philippine buy now,
+            pay later fintech. I've built backend services that connect Billease
+            to banks and payment partners, mostly in Go and Python, for QR Ph
+            and over-the-counter payments, disbursements through partner banks,
+            and the Billease Access Card.
           </SectionDescription>
 
           <SectionDescription class="mt-3">
