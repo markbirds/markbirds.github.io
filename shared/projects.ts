@@ -221,6 +221,36 @@ export const PROJECTS: Project[] = [
     liveUrl: "https://laberinto.owenfalculan.com/",
     sourceUrl: "https://gitlab.com/pinoy-games/laberinto",
   },
+  {
+    title: "Pinoy Word Hunt",
+    kind: "game",
+    featured: true,
+    period: "Sept 2026",
+    overview:
+      "Pinoy Word Hunt is a word search for one or two players. Hunt a board alone, or race a friend on the same grid over a voice call: you see which words they have found but never where, and the first to find all eight wins. Boards come in English and Tagalog, and a six-letter room code is all you share.",
+    tech: [
+      "TypeScript",
+      "Nitro",
+      "WebSockets",
+      "Nuxt 4",
+      "Nuxt UI",
+      "Pinia",
+      "Zod",
+      "Tailwind CSS",
+      "Docker",
+    ],
+    screenshots: [
+      "/projects/pinoy-word-hunt/1-home.webp",
+      "/projects/pinoy-word-hunt/2-lobby.webp",
+      "/projects/pinoy-word-hunt/3-race.webp",
+      "/projects/pinoy-word-hunt/4-win.webp",
+      "/projects/pinoy-word-hunt/5-solo-setup.webp",
+      "/projects/pinoy-word-hunt/6-solo-board.webp",
+    ],
+    architecture: "/projects/pinoy-word-hunt-architecture.webp",
+    liveUrl: "https://pinoy-word-hunt.owenfalculan.com/",
+    sourceUrl: "https://gitlab.com/pinoy-games/pinoy-word-hunt",
+  },
 ];
 
 export const featuredProjects = PROJECTS.filter((project) => project.featured);
