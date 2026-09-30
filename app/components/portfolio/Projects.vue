@@ -11,7 +11,13 @@
         finish new ideas faster. Feel free to check them out.
       </SectionDescription>
 
-      <PortfolioProjectGrid class="mt-8" :projects="featuredProjects" />
+      <div class="mt-8 grid gap-6 md:grid-cols-2">
+        <PortfolioProjectCard
+          v-for="project in featuredProjects"
+          :key="project.slug"
+          :project="project"
+        />
+      </div>
 
       <div class="mt-10 flex justify-center">
         <NuxtLink

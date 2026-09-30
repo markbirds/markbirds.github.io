@@ -2,7 +2,7 @@
 <template>
   <div
     v-if="images.length"
-    class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
+    class="fixed inset-0 z-[60] flex items-center justify-center bg-black/80 p-4"
     role="dialog"
     aria-modal="true"
     @click="close"

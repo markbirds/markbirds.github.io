@@ -5,6 +5,10 @@ export type ProjectKind = "app" | "game";
 
 export type Project = {
   title: string;
+  // The page at /apps/<slug> and the screenshot folder; never change it once published.
+  slug: string;
+  // One plain line for the cards; the full overview lives on the app's own page.
+  tagline: string;
   kind: ProjectKind;
   featured: boolean;
   period?: string;
@@ -19,6 +23,9 @@ export type Project = {
 export const PROJECTS: Project[] = [
   {
     title: "Spartner V2",
+    slug: "spartner",
+    tagline:
+      "Study-partner matching for BatStateU students, with live chat and study rooms.",
     kind: "app",
     featured: true,
     period: "Sept 2021 · Rebuilt June 2026",
@@ -51,6 +58,9 @@ export const PROJECTS: Project[] = [
   },
   {
     title: "Conversie",
+    slug: "conversie",
+    tagline:
+      "Practice English by talking with an AI character in everyday scenes.",
     kind: "app",
     featured: true,
     period: "July 2026",
@@ -79,6 +89,9 @@ export const PROJECTS: Project[] = [
   },
   {
     title: "Resumie",
+    slug: "resumie",
+    tagline:
+      "Build your resume beside a live preview, with AI fixes you accept one by one.",
     kind: "app",
     featured: true,
     period: "Sept 2026",
@@ -111,6 +124,9 @@ export const PROJECTS: Project[] = [
   },
   {
     title: "Speaksie",
+    slug: "speaksie",
+    tagline:
+      "A month of daily speaking lessons for Filipino learners of English.",
     kind: "app",
     featured: true,
     period: "Sept 2026",
@@ -145,6 +161,9 @@ export const PROJECTS: Project[] = [
   },
   {
     title: "Grammarie",
+    slug: "grammarie",
+    tagline:
+      "Paste your text and get it back corrected, with a note for every fix.",
     kind: "app",
     featured: true,
     period: "Sept 2026",
@@ -166,6 +185,9 @@ export const PROJECTS: Project[] = [
   },
   {
     title: "Intervie",
+    slug: "intervie",
+    tagline:
+      "Practice software engineering interviews out loud, with feedback on every answer.",
     kind: "app",
     featured: true,
     period: "Sept 2026",
@@ -194,6 +216,9 @@ export const PROJECTS: Project[] = [
   },
   {
     title: "Pinoy Henyo",
+    slug: "pinoy-henyo",
+    tagline:
+      "The Filipino word-guessing party game, solo or with a friend in real time.",
     kind: "game",
     featured: true,
     period: "May 2026",
@@ -225,6 +250,8 @@ export const PROJECTS: Project[] = [
   },
   {
     title: "Laberinto",
+    slug: "laberinto",
+    tagline: "A real-time maze race to play with friends over a voice call.",
     kind: "game",
     featured: true,
     period: "Aug 2026",
@@ -251,6 +278,8 @@ export const PROJECTS: Project[] = [
   },
   {
     title: "Pinoy Word Hunt",
+    slug: "pinoy-word-hunt",
+    tagline: "A word search to hunt alone or race a friend on the same board.",
     kind: "game",
     featured: false,
     period: "Sept 2026",
@@ -283,7 +312,23 @@ export const PROJECTS: Project[] = [
 
 export const featuredProjects = PROJECTS.filter((project) => project.featured);
 
-// The 960px copy of the first screenshot, for cards and the /apps list; the lightbox loads the full one.
+// The 960px copy of a screenshot, for cards and thumbnails; the lightbox and the app page's hero load the full one.
+export function cardImage(src: string): string {
+  return src.replace(/\.webp$/, "-card.webp");
+}
+
+// The card copy of the first screenshot, the one every card shows.
 export function coverImage(project: Project): string | undefined {
-  return project.screenshots[0]?.replace(/\.webp$/, "-card.webp");
+  const first = project.screenshots[0];
+  return first ? cardImage(first) : undefined;
+}
+
+// The app's own page.
+export function projectPath(project: Project): string {
+  return `/apps/${project.slug}`;
+}
+
+// The project behind an /apps/<slug> page, if there is one.
+export function projectBySlug(slug: string): Project | undefined {
+  return PROJECTS.find((project) => project.slug === slug);
 }

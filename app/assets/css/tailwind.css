@@ -85,6 +85,9 @@
   .btn-primary {
     @apply bg-primary hover:bg-primary-dark cursor-pointer rounded-full px-5 py-2 text-white;
   }
+  .btn-outline {
+    @apply border-primary text-primary hover:bg-primary/5 inline-flex cursor-pointer items-center justify-center rounded-full border px-5 py-2;
+  }
   .badge {
     @apply border-secondary/25 bg-secondary/10 text-primary inline-flex items-center rounded-full border px-3 py-0.5 text-sm font-medium;
   }
