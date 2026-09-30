@@ -165,6 +165,34 @@ export const PROJECTS: Project[] = [
     sourceUrl: "https://gitlab.com/fowenpatrick/grammarie",
   },
   {
+    title: "Intervie",
+    kind: "app",
+    featured: true,
+    period: "Sept 2026",
+    overview:
+      "Intervie is a voice interview trainer for software engineers. Pick a track, from behavioral and system design to payments and Go, then answer out loud or type. With your own Groq key, you see what you said, fix it, and get a score with what you covered, what you missed and a strong answer. Without one, you check yourself against that strong answer. There is no login.",
+    tech: [
+      "TypeScript",
+      "Nitro",
+      "Groq",
+      "Whisper",
+      "TTS",
+      "Nuxt 4",
+      "Nuxt UI",
+      "Pinia",
+      "Zod",
+      "Tailwind CSS",
+      "Vercel",
+    ],
+    screenshots: [
+      "/projects/intervie/1-tracks.webp",
+      "/projects/intervie/2-debrief.webp",
+    ],
+    architecture: "/projects/intervie-architecture.webp",
+    liveUrl: "https://intervie.owenfalculan.com/",
+    sourceUrl: "https://gitlab.com/fowenpatrick/intervie",
+  },
+  {
     title: "Pinoy Henyo",
     kind: "game",
     featured: true,
@@ -224,7 +252,7 @@ export const PROJECTS: Project[] = [
   {
     title: "Pinoy Word Hunt",
     kind: "game",
-    featured: true,
+    featured: false,
     period: "Sept 2026",
     overview:
       "Pinoy Word Hunt is a word search for one or two players. Hunt a board alone, or race a friend on the same grid over a voice call: you see which words they have found but never where, and the first to find all eight wins. Boards come in English and Tagalog, and a six-letter room code is all you share.",
