@@ -35,7 +35,7 @@
     "@iconify-json/twemoji": "^1.2.4",
     "@nuxt/icon": "^2.2.3",
     "@tailwindcss/vite": "^4.3.0",
-    "nuxt": "^4.5.2",
+    "nuxt": "^4.6.2",
     "swiper": "^12.2.0",
     "tailwindcss": "^4.3.0",
     "typed.js": "^2.1.0",
